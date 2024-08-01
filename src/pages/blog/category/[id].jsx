@@ -72,7 +72,7 @@ const PostsDetail = ( props ) => {
 export default PostsDetail;
 
 export async function getStaticPaths() {
-    const paths = getAllCategoriesIds()
+    const paths = await getAllCategoriesIds()
 
     return {
       paths,

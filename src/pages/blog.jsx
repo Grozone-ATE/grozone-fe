@@ -9,7 +9,7 @@ import SubscribeSection from "@components/sections/Subscribe";
 import Layouts from "@layouts/Layouts";
 
 import { getSortedCategoriesData } from "@library/categories";
-import { getPaginatedPostsData, getFeaturedPostsData } from "@library/posts";
+import { getPaginatedPostsData, getFeaturedPostsData, getPosts } from "@library/posts";
 
 import PopularsPostsData from "@data/sections/popular-posts.json";
 
@@ -32,7 +32,7 @@ const Blog = ( { posts, totalPosts, currentPage, categories, popular } ) => {
 
                       <ul className="mil-category-list">
                           {categories.map((item, key) => (
-                          <li key={`categories-item-${key}`}><Link href={`/blog/category/${item.id}`}>{item.title}</Link></li>
+                          <li key={`categories-item-${key}`}><Link href={`/blog/category/${item.id}`}>{item.attributes.name}</Link></li>
                           ))}
                           <li><Link href="/blog" className="mil-active">All categories</Link></li>
                       </ul>
@@ -63,9 +63,9 @@ const Blog = ( { posts, totalPosts, currentPage, categories, popular } ) => {
 export default Blog;
 
 export async function getStaticProps() {
-  const { posts, total } = getPaginatedPostsData( PER_PAGE, 1 );
+  const { posts, total } = await getPaginatedPostsData( PER_PAGE, 1 );
   const categoriesData = await getSortedCategoriesData()
-  const popularsData = await getFeaturedPostsData(PopularsPostsData.featured)
+  const popularsData = await getFeaturedPostsData();
 
   return {
     props: {

@@ -3,6 +3,7 @@ import { getAllPostsIds, getPostData, getRelatedPosts } from "@library/posts";
 import Date from '@library/date';
 import PageBanner from "@components/PageBanner";
 import RelatedPostsSection from "@components/sections/RelatedPosts";
+import { removeHtmlTags } from "@/src/common/utilits";
 
 const PostsDetail = ( props ) => {
   
@@ -10,7 +11,7 @@ const PostsDetail = ( props ) => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={postData.introTitle} breadTitle={postData.title} align={"center"} headingSize={2} />
+      <PageBanner pageTitle={postData.attributes.title} breadTitle={removeHtmlTags(postData.attributes.title)} align={"center"} headingSize={2} />
       
       {/* publication */}
       <section id="blog">
@@ -19,20 +20,20 @@ const PostsDetail = ( props ) => {
                   <div className="col-lg-12">
 
                       <div className="mil-image-frame mil-horizontal mil-up">
-                          <img src={postData.image} alt={postData.title} className="mil-scale" data-value-1=".90" data-value-2="1.15" />
+                          <img src={`${process.env.STRAPI_URL}${postData.attributes.image.data.attributes.url}`} alt={removeHtmlTags(postData.attributes.title)} className="mil-scale" data-value-1=".90" data-value-2="1.15" />
                       </div>
                       <div className="mil-info mil-up mil-mb-90">
-                          <div>Category: &nbsp;<span className="mil-dark">{postData.category}</span></div>
-                          <div>Date: &nbsp;<span className="mil-dark"><Date dateString={postData.date} /></span></div>
-                          <div>Author: &nbsp;<span className="mil-dark">{postData.author.name}</span></div>
+                          <div>Category: &nbsp;<span className="mil-dark">{postData.attributes.category.data.attributes.name}</span></div>
+                          <div>Date: &nbsp;<span className="mil-dark"><Date dateString={postData.attributes.createdAt} /></span></div>
+                          <div>Author: &nbsp;<span className="mil-dark">{postData.attributes.author}</span></div>
                       </div>
 
                   </div>
                   <div className="col-lg-8">
 
-                      <div className="mil-text mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : postData.contentHtml}} />
+                      <div className="mil-text mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : postData.attributes.content}} />
                       
-                      {typeof postData.gallery != "undefined" &&
+                      {/* {typeof postData.gallery != "undefined" &&
                       <>
                         {postData.gallery.enabled == 1 &&
                         <>
@@ -58,7 +59,7 @@ const PostsDetail = ( props ) => {
                           <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.additional.content}} />
                           }
                         </>
-                      }
+                      } */}
                       
                   </div>
               </div>
@@ -73,7 +74,7 @@ const PostsDetail = ( props ) => {
 export default PostsDetail;
 
 export async function getStaticPaths() {
-    const paths = getAllPostsIds()
+    const paths = await getAllPostsIds();
 
     return {
       paths,
@@ -83,7 +84,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
-    const relatedPosts = await getRelatedPosts(params.id)
+    const relatedPosts = await getRelatedPosts(postData.attributes.category.data.id, params.id)
 
     return {
       props: {

@@ -1,3 +1,4 @@
+import { removeHtmlTags } from "@/src/common/utilits";
 import Data from "@data/sections/related-posts.json";
 import Date from '@library/date';
 import Link from "next/link";
@@ -27,15 +28,15 @@ const RelatedPostsSection = ( Content ) => {
 
                             <Link href={`/blog/${item.id}`} className="mil-blog-card mil-mb-60">
                                 <div className="mil-cover-frame mil-up">
-                                    <img src={item.image} alt={item.title} />
+                                    <img src={`${process.env.STRAPI_URL}${item.attributes.image.data.attributes.url}`} alt={removeHtmlTags(item.attributes.title)} />
                                 </div>
                                 <div className="mil-post-descr">
                                     <div className="mil-labels mil-up mil-mb-30">
-                                        <div className="mil-label mil-upper mil-accent">{item.category}</div>
-                                        <div className="mil-label mil-upper"><Date dateString={item.date} /></div>
+                                        <div className="mil-label mil-upper mil-accent">{item.attributes.category.data.attributes.name}</div>
+                                        <div className="mil-label mil-upper"><Date dateString={item.attributes.createdAt} /></div>
                                     </div>
-                                    <h4 className="mil-up mil-mb-30">{item.title}</h4>
-                                    <p className="mil-post-text mil-up mil-mb-30">{item.short}</p>
+                                    <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html: item.attributes.title}}></h4>
+                                    <p className="mil-post-text mil-up mil-mb-30">{item.attributes.shortDescription}</p>
                                     <div className="mil-link mil-dark mil-arrow-place mil-up">
                                         <span>Read more</span>
                                     </div>
