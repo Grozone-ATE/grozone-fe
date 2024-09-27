@@ -6,7 +6,7 @@ import { removeHtmlTags } from "@/src/common/utilits";
 
 // Helper function to construct full image URL
 function getFullImageUrl(image) {
-    const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337'; // Ensure the base URL is defined
+    const baseUrl = process.env.STRAPI_URL || 'http://localhost:1337'; // Ensure the base URL is defined
     return `${baseUrl}${image}`;
 }
 
