@@ -1,4 +1,3 @@
-import React from 'react'; 
 import Layouts from "@layouts/Layouts";
 import { getAllPostsIds, getPostData, getRelatedPosts } from "@library/posts";
 import Date from '@library/date';
@@ -10,84 +9,6 @@ import { removeHtmlTags } from "@/src/common/utilits";
 function getFullImageUrl(image) {
     const baseUrl = process.env.STRAPI_URL || 'https://cms.grozone.vn';
     return `${baseUrl}${image || ''}`;
-}
-
-// Function to handle rendering content from Strapi
-function renderContent(content) {
-    return content.map((block, index) => {
-        let element;
-        switch (block.type) {
-            case 'paragraph':
-                element = <p key={index}>{renderChildren(block.children)}</p>;
-                break;
-            case 'heading':
-                element = React.createElement(`h${block.level}`, { key: index }, renderChildren(block.children));
-                break;
-            case 'list':
-                const ListTag = block.format === 'ordered' ? 'ol' : 'ul';
-                element = (
-                    <ListTag key={index}>
-                        {block.children.map((listItem, listIndex) => (
-                            <li key={listIndex}>{renderChildren(listItem.children)}</li>
-                        ))}
-                    </ListTag>
-                );
-                break;
-            case 'image':
-                element = (
-                    <img
-                        key={index}
-                        src={block.image.url}
-                        alt={block.image.alternativeText || 'Image'}
-                        style={{ maxWidth: '100%' }}
-                    />
-                );
-                break;
-            case 'quote':
-                element = <blockquote key={index}>{renderChildren(block.children)}</blockquote>;
-                break;
-            case 'code':
-                element = (
-                    <pre key={index}>
-                        <code>{block.children[0]?.text}</code>
-                    </pre>
-                );
-                break;
-            default:
-                element = null;
-        }
-        return element;
-    });
-}
-
-// Function to handle rendering text with inline styles like bold, italic, etc.
-function renderChildren(children) {
-    return children.map((child, index) => {
-        let element = <span key={index}>{child.text}</span>;
-        if (child.bold) {
-            element = <strong key={index}>{child.text}</strong>;
-        }
-        if (child.italic) {
-            element = <em key={index}>{child.text}</em>;
-        }
-        if (child.underline) {
-            element = <u key={index}>{child.text}</u>;
-        }
-        if (child.strikethrough) {
-            element = <del key={index}>{child.text}</del>;
-        }
-        if (child.code) {
-            element = <code key={index}>{child.text}</code>;
-        }
-        if (child.type === 'link') {
-            element = (
-                <a key={index} href={child.url} target="_blank" rel="noopener noreferrer">
-                    {child.children[0]?.text}
-                </a>
-            );
-        }
-        return element;
-    });
 }
 
 const PostsDetail = (props) => {
@@ -143,9 +64,10 @@ const PostsDetail = (props) => {
                         </div>
 
                         <div className="col-lg-8">
-                            <div className="mil-text mil-up mil-mb-60">
-                                {postData.content ? renderContent(postData.content) : 'No content available'}
-                            </div>
+                            <div
+                                className="mil-text mil-up mil-mb-60"
+                                dangerouslySetInnerHTML={{ __html: postData.content || '' }}
+                            />
                         </div>
                     </div>
                 </div>
