@@ -3,8 +3,13 @@ import Data from "@data/sections/related-posts.json";
 import Date from '@library/date';
 import Link from "next/link";
 
-const RelatedPostsSection = ( Content ) => {
+// Helper function to construct full image URL
+function getFullImageUrl(image) {
+    const baseUrl = process.env.STRAPI_URL || 'https://cms.grozone.vn';
+    return `${baseUrl}${image}`;
+}
 
+const RelatedPostsSection = ({ items }) => {
     return (
         <>
             {/* related posts */}
@@ -23,27 +28,30 @@ const RelatedPostsSection = ( Content ) => {
                         </div>
                     </div>
                     <div className="row">
-                        {Content.items.slice(0, Data.numOfItems).map((item, key) => (
-                        <div className="col-lg-6" key={`related-posts-item-${key}`}>
-
-                            <Link href={`/blog/${item.id}`} className="mil-blog-card mil-mb-60">
-                                <div className="mil-cover-frame mil-up">
-                                    <img src={`${process.env.STRAPI_URL}${item.attributes.image.data.attributes.url}`} alt={removeHtmlTags(item.attributes.title)} />
-                                </div>
-                                <div className="mil-post-descr">
-                                    <div className="mil-labels mil-up mil-mb-30">
-                                        <div className="mil-label mil-upper mil-accent">{item.attributes.category.data.attributes.name}</div>
-                                        <div className="mil-label mil-upper"><Date dateString={item.attributes.createdAt} /></div>
+                        {items.slice(0, Data.numOfItems).map((item, key) => (
+                            <div className="col-lg-6" key={`related-posts-item-${key}`}>
+                                <Link href={`/blog/${item.documentId}`} className="mil-blog-card mil-mb-60">
+                                    <div className="mil-cover-frame mil-up">
+                                        <img
+                                            src={getFullImageUrl(item.image?.url || '')}
+                                            alt={removeHtmlTags(item.title)}
+                                        />
                                     </div>
-                                    <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html: item.attributes.title}}></h4>
-                                    <p className="mil-post-text mil-up mil-mb-30">{item.attributes.shortDescription}</p>
-                                    <div className="mil-link mil-dark mil-arrow-place mil-up">
-                                        <span>Read more</span>
+                                    <div className="mil-post-descr">
+                                        <div className="mil-labels mil-up mil-mb-30">
+                                            <div className="mil-label mil-upper mil-accent">{item.category?.name}</div>
+                                            <div className="mil-label mil-upper">
+                                                <Date dateString={item.createdAt} />
+                                            </div>
+                                        </div>
+                                        <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{ __html: item.title }}></h4>
+                                        <p className="mil-post-text mil-up mil-mb-30">{item.shortDescription}</p>
+                                        <div className="mil-link mil-dark mil-arrow-place mil-up">
+                                            <span>Read more</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-
-                        </div>
+                                </Link>
+                            </div>
                         ))}
                     </div>
                 </div>

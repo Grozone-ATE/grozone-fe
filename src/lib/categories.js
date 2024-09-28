@@ -16,7 +16,7 @@ export async function getAllCategoriesIds() {
     return res.data.map(category => {
       return {
         params: {
-          id: category.id.toString()
+          documentId: category.documentId.toString()
         }
       }
     });
