@@ -1,4 +1,4 @@
-import { fetchData } from './api'
+import { fetchData } from './api';
 
 export async function getSortedPostsData() {
   const res = await fetchData('/posts?populate=*&sort=createdAt:desc');
@@ -9,7 +9,7 @@ export async function getSortedPostsData() {
 }
 
 export async function getCategoryPosts(cat_id) {
-  const res = await fetchData('/posts?populate=*&sort=createdAt:desc&filters[category][id][$eq]=' + cat_id);
+  const res = await fetchData('/posts?populate=*&sort=createdAt:desc&filters[category][documentId][$eq]=' + cat_id);
 
   if (res) return res.data;
 
@@ -19,7 +19,7 @@ export async function getCategoryPosts(cat_id) {
 export async function getPaginatedPostsData(limit, page) {
   const res = await fetchData(`/posts?populate=*&sort=createdAt:desc&pagination[page]=${page}&pagination[pageSize]=${limit}`);
 
-  return { posts: res.data, total: res.meta.pagination.total }
+  return { posts: res.data, total: res.meta.pagination.total };
 }
 
 export async function getFeaturedPostsData() {
@@ -31,7 +31,7 @@ export async function getFeaturedPostsData() {
 }
 
 export async function getRelatedPosts(cat_id, current_id) {
-  const res = await fetchData('/posts?populate=*&sort=createdAt:desc&filters[category][id][$eq]=' + cat_id + '&filters[id][$ne]=' + current_id);
+  const res = await fetchData('/posts?populate=*&sort=createdAt:desc&filters[category][documentId][$eq]=' + cat_id + '&filters[documentId][$ne]=' + current_id);
 
   if (res) return res.data;
 
@@ -39,21 +39,21 @@ export async function getRelatedPosts(cat_id, current_id) {
 }
 
 export async function getAllPostsIds() {
-  const res = await fetchData('/posts?fields[0]id');
+  const res = await fetchData('/posts?fields[0]=documentId');
 
   if (res) {
     return res.data.map(post => {
       return {
         params: {
-          id: post.id.toString()
-        }
-      }
+          documentId: post.documentId.toString(),
+        },
+      };
     });
   }
 }
 
 export async function getPostData(id) {
-  const res = await fetchData('/posts?populate=*&filters[id][$eq]=' + id);
+  const res = await fetchData('/posts?populate=*&filters[documentId][$eq]=' + id);
 
   if (res) return res.data[0];
 
