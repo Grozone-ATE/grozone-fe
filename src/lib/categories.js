@@ -24,7 +24,7 @@ export async function getAllCategoriesIds() {
 }
 
 export async function getCategoryData(id) {
-  const res = await fetchData('/categories?populate=*&filters[id][$eq]=' + id);
+  const res = await fetchData('/categories?populate=*&filters[documentId][$eq]=' + id);
 
   if (res) return res.data[0];
 

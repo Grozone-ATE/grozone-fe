@@ -14,8 +14,8 @@ const PostsDetail = (props) => {
   return (
     <Layouts>
       <PageBanner
-        pageTitle={postData.introTitle}
-        breadTitle={postData.title}
+        pageTitle={postData.name}
+        breadTitle={postData.name}
         anchorLabel={"Publications"}
         anchorLink={"#blog"}
         paddingBottom={1}
