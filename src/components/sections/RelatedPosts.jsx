@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Helper function to construct full image URL
 function getFullImageUrl(image) {
-    const baseUrl = process.env.STRAPI_URL || 'https://cms.grozone.vn';
+    const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://cms.grozone.vn';
     return `${baseUrl}${image}`;
 }
 
