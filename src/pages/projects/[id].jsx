@@ -73,15 +73,6 @@ const ProjectDetail = ( props ) => {
 };
 export default ProjectDetail;
 
-export async function getStaticPaths() {
-    const paths = getAllProjectsIds()
-
-    return {
-      paths,
-      fallback: false
-    }
-}
-
 export async function getServerSideProps({ params }) {
     const postData = await getProjectData(params.id)
     const allProjects = await getSortedProjectsData()

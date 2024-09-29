@@ -73,15 +73,6 @@ const ServiceDetail = ( { data, related } ) => {
 };
 export default ServiceDetail;
 
-export async function getStaticPaths() {
-    const paths = getAllServicesIds()
-
-    return {
-      paths,
-      fallback: false
-    }
-}
-
 export async function getServerSideProps({ params }) {
     const postData = await getServiceData(params.id)
     const relatedServices = await getRelatedServices(params.id)
