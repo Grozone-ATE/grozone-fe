@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "skipLibCheck": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6"
+    },
+    "include": ["**/*.js"],
+    "exclude": ["node_modules"]
+  }
+  
