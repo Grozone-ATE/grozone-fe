@@ -64,7 +64,7 @@ const Services = (props) => {
 };
 export default Services;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const allServices = getSortedServicesData();
 
   return {

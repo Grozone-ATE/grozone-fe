@@ -90,7 +90,7 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     try {
         const postData = await getPostData(params.documentId);
 

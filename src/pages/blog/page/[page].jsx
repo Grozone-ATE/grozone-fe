@@ -77,7 +77,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const page = Number(params?.page) || 1;
   const { posts, total } = await getPaginatedPostsData(PER_PAGE, page);
   const categoriesData = await getSortedCategoriesData();

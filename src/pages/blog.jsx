@@ -66,7 +66,7 @@ const Blog = ({ posts, totalPosts, currentPage, categories, popular }) => {
 };
 export default Blog;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { posts, total } = await getPaginatedPostsData(PER_PAGE, 1);
   const categoriesData = await getSortedCategoriesData();
   const popularsData = await getFeaturedPostsData();

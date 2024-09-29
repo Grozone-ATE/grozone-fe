@@ -92,7 +92,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const categoryData = await getCategoryData(params.documentId);
   const categoriesData = await getSortedCategoriesData();
   const categoryPosts = await getCategoryPosts(params.documentId);
