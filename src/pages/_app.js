@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
           {/* seo end */}        
       </Head>
       <Component {...pageProps} />
+      <SpeedInsights />
     </>
   );
 }
