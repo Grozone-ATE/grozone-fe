@@ -66,18 +66,7 @@ const Blog = ({ posts, currentPage, totalPosts, categories }) => {
 };
 export default Blog;
 
-export async function getStaticPaths() {
-  const paths = Array.from({ length: 5 }).map((_, i) => ({
-    params: { page: (i + 2).toString() }, // Create pages for 2 and beyond
-  }));
-
-  return {
-    paths,
-    fallback: 'blocking',
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const page = Number(params?.page) || 1;
   const { posts, total } = await getPaginatedPostsData(PER_PAGE, page);
   const categoriesData = await getSortedCategoriesData();

@@ -15,7 +15,7 @@ const Projects3 = (props) => {
 };
 export default Projects3;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const allProjects = getSortedProjectsData();
 
   return {

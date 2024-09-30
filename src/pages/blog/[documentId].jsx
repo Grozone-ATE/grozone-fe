@@ -81,16 +81,7 @@ const PostsDetail = (props) => {
 
 export default PostsDetail;
 
-export async function getStaticPaths() {
-    const paths = await getAllPostsIds();
-
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     try {
         const postData = await getPostData(params.documentId);
 

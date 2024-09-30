@@ -83,16 +83,9 @@ const PostsDetail = (props) => {
 
 export default PostsDetail;
 
-export async function getStaticPaths() {
-  const paths = await getAllCategoriesIds();
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const categoryData = await getCategoryData(params.documentId);
   const categoriesData = await getSortedCategoriesData();
   const categoryPosts = await getCategoryPosts(params.documentId);
