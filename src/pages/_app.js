@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }) {
   // Để tắt: đặt NEXT_PUBLIC_ENABLE_404_REDIRECT=false trong file .env hoặc xóa biến đó
   useEffect(() => {
     // Kiểm tra biến môi trường để bật/tắt redirect
-    const enableRedirect = process.env.NEXT_PUBLIC_ENABLE_404_REDIRECT === 'true';
+    // Mặc định: nếu không có biến môi trường thì bật redirect (true)
+    const enableRedirect = process.env.NEXT_PUBLIC_ENABLE_404_REDIRECT !== 'false';
     
     if (!enableRedirect) {
       return;
