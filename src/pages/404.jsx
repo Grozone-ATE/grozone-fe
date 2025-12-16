@@ -18,13 +18,13 @@ const E404 = () => {
               <div className="container">
                   <div className="mil-404-frame">
                       <div className="mil-scale-frame">
-                          <h1 className="mil-404" data-text="404">404</h1>
+                          <h1 className="mil-404" data-text="Coming soon">Coming soon</h1>
                       </div>
 
-                      <h4 className="mil-404-text mil-dark mil-mb-60">Oops! Something went wrong :(</h4>
+                      <h4 className="mil-404-text mil-dark mil-mb-60">We will be celebrating the launch of our new site very soon!</h4>
 
-                      <Link href="/" className="mil-button mil-arrow-place">
-                        <span>Back to homepage</span>
+                      <Link href="/404" className="mil-button mil-arrow-place">
+                        <span>Stay here</span>
                         <ArrowIcon />
                       </Link>
                   </div>

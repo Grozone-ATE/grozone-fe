@@ -865,7 +865,7 @@ circle text
 lines
 
 ------------------------------------------- */
-@mixin move-animation {
+@keyframes move {
     from {
         transform: translateY(-75px);
     }
@@ -877,10 +877,6 @@ lines
     to {
         transform: translateY(-75px);
     }
-}
-
-@keyframes move {
-    @include move-animation;
 }
 
 .mil-lines-place {
@@ -2427,56 +2423,24 @@ price
 
 .mil-404 {
     position: relative;
-    color: $light;
+    display: inline-block;
     font-size: 6em;
     font-weight: 500;
-    animation: glitch-skew 1s infinite linear alternate-reverse;
-
-    &::before {
-        @include glitchCopy;
-        left: 2px;
-        text-shadow: -2px 0 $accent;
-        clip: rect(44px, 450px, 56px, 0);
-        animation: glitch-anim 5s infinite linear alternate-reverse;
-    }
-
-    &::after {
-        @include glitchCopy;
-        left: -2px;
-        text-shadow: -2px 0 $gs-40, 2px 2px $gs-10;
-        animation: glitch-anim2 1s infinite linear alternate-reverse;
-    }
+    background: linear-gradient(90deg, $light 0%, $gs-40 25%, $gs-30 50%, $gs-40 75%, $light 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 3s linear infinite;
 }
 
-@keyframes glitch-anim {
-    $steps: 20;
-
-    @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-            transform: skew((random(100) / 100) + deg);
-        }
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
     }
-}
-
-@keyframes glitch-anim2 {
-    $steps: 20;
-
-    @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-            transform: skew((random(100) / 100) + deg);
-        }
-    }
-}
-
-@keyframes glitch-skew {
-    $steps: 10;
-
-    @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-            transform: skew((random(10) - 5) + deg);
-        }
+    100% {
+        background-position: 200% 50%;
     }
 }
 
