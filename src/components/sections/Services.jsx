@@ -42,7 +42,7 @@ const ServicesSection = () => {
 
                     <div className="row mil-services-grid m-0">
                         {Data.items.map((item, key) => (
-                        <div key={`services-item-${key}`} className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+                        <div key={`services-item-${key}`} className="col-md-6 col-lg-4 mil-services-grid-item p-0">
 
                             <Link href={item.link} className="mil-service-card-sm mil-up">
                                 <h5 className="mil-muted mil-mb-30" dangerouslySetInnerHTML={{__html : item.title}} />

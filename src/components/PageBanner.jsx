@@ -33,7 +33,7 @@ const PageBanner = ({ pageTitle, breadTitle, anchorLabel, anchorLink = 0, paddin
           </div>
           <div className="container">
             <ul className={align == "center" ? "mil-breadcrumbs mil-center mil-mb-60" : "mil-breadcrumbs mil-mb-60"}>
-              <li><Link href="/">Homepage</Link></li>
+              <li><Link href="/">Trang chủ</Link></li>
               {asPath.indexOf('/blog/') != -1 &&
               <li>
                 <Link href="/blog">Blog</Link>
@@ -41,12 +41,12 @@ const PageBanner = ({ pageTitle, breadTitle, anchorLabel, anchorLink = 0, paddin
               }
               {asPath.indexOf('/projects/') != -1 &&
               <li>
-                <Link href="/projects">Projects</Link>
+                <Link href="/projects">Dự án</Link>
               </li>
               }
               {asPath.indexOf('/services/') != -1 &&
               <li>
-                <Link href="/services">Services</Link>
+                <Link href="/services">Dịch vụ</Link>
               </li>
               }
               <li><a dangerouslySetInnerHTML={{__html : clearBreadTitle}} /></li>

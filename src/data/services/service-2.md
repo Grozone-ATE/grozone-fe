@@ -1,42 +1,30 @@
 ---
 #preview details
-title: "Website Design and Development"
-preview_title: "Website Design <br>and Development"
-short: "Our creative agency is a team of professionals focused on helping your brand grow."
+title: "Kiến trúc sư & Quản trị Sản phẩm"
+preview_title: "Kiến trúc sư & <br>Quản trị Sản phẩm"
+short: "Một tầm nhìn mà thiếu đi kiến trúc thì chỉ là mơ mộng; kiến trúc mà thiếu đi tầm nhìn thì chỉ là một dự án khoa học."
 
 #full details
-introTitle: Website <span class="mil-thin">Design</span><br> and <span class="mil-thin">Development</span>
+introTitle: Kiến trúc sư<br> và <span class="mil-thin">Quản trị Sản phẩm</span>
 
 description:
-  title: Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span>
-  content: At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.
+  title: Mô tả <span class="mil-thin">ngắn</span>
+  content: "<p>Một tầm nhìn mà thiếu đi kiến trúc thì chỉ là mơ mộng; kiến trúc mà thiếu đi tầm nhìn thì chỉ là một dự án khoa học.</p><p>Chúng tôi đứng tại điểm giao thoa giữa Chiến lược Kinh doanh và Thiết kế Kỹ thuật, chuyển hóa các mục tiêu cấp cao thành những bản thiết kế có khả năng mở rộng.</p><p>Bằng cách đồng bộ hóa câu hỏi 'Tại sao' của quản trị với câu hỏi 'Làm thế nào' của kiến trúc, chúng tôi đảm bảo rằng mỗi sản phẩm được tạo ra không chỉ là một công cụ chức năng, mà còn là một tài sản chiến lược thống lĩnh thị trường.</p>"
   button:
-    link: /projects
-    label: View works
+    link: /contact
+    label: Liên hệ ngay
 
 list:
   items:
-    - label: "UX Audits"
-      value: "
-      <p>A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the website's design, functionality, and content to identify areas of improvement that can enhance the user's overall experience.</p>
-      <p>During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the website's usability, accessibility, and overall user experience.</p>
-      <p>The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness. The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.</p>
-      <p>In summary, a UX audit can help website owners identify areas of improvement that can enhance their website's user experience and increase user engagement and satisfaction.</p>
-      "
+    - label: "Kiến trúc có khả năng mở rộng"
+      value: "<div style=\"margin-top: 20px;\"><p><strong>Thiết kế Cloud-Native:</strong> Kiến trúc Microservices đảm bảo tính sẵn sàng cao và khả năng co giãn.</p><p><strong>Đảm bảo tương lai:</strong> Lựa chọn các nền tảng công nghệ giúp giảm thiểu nợ kỹ thuật dài hạn.</p><p><strong>Bảo mật từ khâu thiết kế:</strong> Tích hợp các giao thức bảo mật và tuân thủ ngay từ cốt lõi.</p></div>"
 
-    - label: "Design thinking"
-      value: "
-      <p>Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback.</p>
-      <p>Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.</p>
-      "
+    - label: "Đồng bộ Chiến lược"
+      value: "<div style=\"margin-top: 20px;\"><p><strong>Chiến lược dựa trên ROI:</strong> Tối ưu hóa quyết định \"Mua hay Tự xây dựng\" để tối đa hóa hiệu quả đầu tư.</p><p><strong>Đồng bộ nguồn lực:</strong> Kết nối lộ trình kỹ thuật và ngân sách với các mục tiêu doanh thu.</p><p><strong>Giảm thiểu rủi ro:</strong> Chủ động xác định các rào cản kỹ thuật trong kế hoạch kinh doanh.</p></div>"
 
-    - label: "Wireframing"
-      value: "
-      <p>Wireframing is a vital step in web design where a visual representation of a website's structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the website's architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development.</p>
-      "
+    - label: "Quản trị Điều hành"
+      value: "<div style=\"margin-top: 20px;\"><p><strong>Tiêu chuẩn quy trình:</strong> Áp dụng các phương pháp Agile/DevOps tốt nhất để có kết quả đồng nhất.</p><p><strong>Phát triển tài năng:</strong> Tuyển dụng và cố vấn cho các đội ngũ kỹ thuật hiệu suất cao.</p><p><strong>Minh bạch với các bên liên quan:</strong> Báo cáo rõ ràng và quản lý kỳ vọng giữa các phòng ban.</p></div>"
 
-    - label: "Methodologies"
-      value: "
-      <p>Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae.</p>
-      "
+    - label: "Dịch vụ Cốt lõi & Thế mạnh (EdTech & AI)"
+      value: "<div style=\"margin-top: 20px;\"><h4 style=\"margin-bottom: 15px; font-weight: 600;\">Lĩnh vực Công nghệ Giáo dục (EdTech)</h4><p><strong>Hệ thống Xếp lịch Thông minh (Smart Scheduler System):</strong> Hệ thống thông minh tự động tạo và tối ưu hóa thời khóa biểu trường học, đảm bảo sử dụng tài nguyên hiệu quả trong khi vẫn tuân thủ các quy tắc và ràng buộc sư phạm.</p><p><strong>AI Tạo sinh (Generative AI):</strong> Các giải pháp AI tạo sinh chuyên biệt được thiết kế để hỗ trợ các nhu cầu cụ thể như soạn thảo email, thông báo, kế hoạch bài giảng và các tài liệu chuẩn hóa với tốc độ và sự nhất quán.</p><p><strong>EDGE AI/ML:</strong> Các giải pháp AI và học máy triển khai trên các thiết bị đầu cuối, cho phép xử lý ngoại tuyến an toàn và tương tác có kiểm soát với các hệ thống bên ngoài mà không làm lộ dữ liệu nhạy cảm.</p><div style=\"margin-top: 30px;\"><h4 style=\"margin-bottom: 15px; font-weight: 600;\">Lĩnh vực Hệ thống ERP</h4><p><strong>Tùy chỉnh & Triển khai Quy trình ERP (Odoo, SAP):</strong> Thiết kế và triển khai các hệ thống ERP để phản ánh chính xác quy trình kinh doanh thực tế, đảm bảo vận hành liền mạch, toàn vẹn dữ liệu và khả năng mở rộng lâu dài.</p><p><strong>Tích hợp Công nghệ, Thiết bị và Hệ thống bên thứ ba:</strong> Kết nối các nền tảng ERP với công nghệ, thiết bị và giải pháp bên thứ ba để tạo ra một hệ sinh thái kỹ thuật số thống nhất và hiệu quả.</p><p><strong>AI/ML:</strong> Thiết kế và triển khai các giải pháp AI và học máy—bao gồm các mô hình tạo sinh và đại lý (agents)—để tự động hóa tác vụ, tăng cường ra quyết định và cải thiện trí tuệ vận hành.</p></div></div>"
 ---

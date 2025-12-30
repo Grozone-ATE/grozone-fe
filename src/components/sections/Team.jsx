@@ -24,60 +24,15 @@ const TeamSection = () => {
                     </div>
                     <div className="col-lg-6">
 
-                        <div className="mil-team-list">
+                        <div className="mil-about-photo mil-mb-90">
                             <div className="mil-lines-place">
                                 <LinesIcon />
                             </div>
-
-                            <div className="row mil-mb-60">
-                                <div className="col-sm-6">
-                                    
-                                    {Data.col1_items.map((item, key) => (
-
-                                    <div key={`services1-item-${key}`} className="mil-team-card mil-up mil-mb-30">
-                                        <img src={item.image} alt={item.name} />
-                                        <div className="mil-description">
-                                            <div className="mil-secrc-text">
-                                                <h5 className="mil-muted mil-mb-5">{item.name}</h5>
-                                                <p className="mil-link mil-light-soft mil-mb-10">{item.role}</p>
-                                                <ul className="mil-social-icons mil-center">
-                                                    {item.social.map((social, key2) => (
-                                                    <li key={`services1-item${key}-social-${key2}`}><a href={social.link} target="_blank" className="social-icon" title={social.title}> <i className={social.icon} /></a></li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    ))}
-
-                                </div>
-                                <div className="col-sm-6">
-
-                                    <p className="mil-mobile-hidden mil-text-sm mil-mb-30" style={{"height": "30px"}} dangerouslySetInnerHTML={{__html : Data.note}} />
-                                    
-                                    {Data.col2_items.map((item, key) => (
-                                    
-                                    <div key={`services2-item-${key}`} className="mil-team-card mil-up mil-mb-30">
-                                        <img src={item.image} alt={item.name} />
-                                        <div className="mil-description">
-                                            <div className="mil-secrc-text">
-                                                <h5 className="mil-muted mil-mb-5">{item.name}</h5>
-                                                <p className="mil-link mil-light-soft mil-mb-10">{item.role}</p>
-                                                <ul className="mil-social-icons mil-center">
-                                                    {item.social.map((social, key2) => (
-                                                    <li key={`services2-item${key}-social-${key2}`}><a href={social.link} target="_blank" className="social-icon" title={social.title}> <i className={social.icon} /></a></li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    ))}
-
-                                </div>
+                            {Data.col1_items.length > 0 && (
+                            <div className="mil-up">
+                                <img src={Data.col1_items[0].image} alt="Grozone" className="mil-scale" data-value-1="1" data-value-2="1.1" style={{width: "100%", height: "auto", display: "block", borderRadius: "8px"}} />
                             </div>
-
+                            )}
                         </div>
 
                     </div>

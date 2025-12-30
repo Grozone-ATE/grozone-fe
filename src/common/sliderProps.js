@@ -37,7 +37,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-var menu = ['<div class="mil-custom-dot mil-slide-1"></div>', '<div class="mil-custom-dot mil-slide-2"></div>', '<div class="mil-custom-dot mil-slide-3"></div>', '<div class="mil-custom-dot mil-slide-4"></div>', '<div class="mil-custom-dot mil-slide-5"></div>', '<div class="mil-custom-dot mil-slide-6"></div>', '<div class="mil-custom-dot mil-slide-7"></div>'];
+var menu = [
+    '<div class="mil-icon-dot"><i class="fas fa-bullseye"></i></div>', 
+    '<div class="mil-icon-dot"><i class="fas fa-cogs"></i></div>', 
+    '<div class="mil-icon-dot"><i class="fas fa-chart-line"></i></div>', 
+    '<div class="mil-custom-dot mil-slide-4"></div>', 
+    '<div class="mil-custom-dot mil-slide-5"></div>', 
+    '<div class="mil-custom-dot mil-slide-6"></div>', 
+    '<div class="mil-custom-dot mil-slide-7"></div>'
+];
 
 export const SliderProps = {
   milReviewsSlider: {

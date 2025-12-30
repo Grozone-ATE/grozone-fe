@@ -1,42 +1,24 @@
 ---
 #preview details
-title: "Creative Consulting Concept Development"
-preview_title: "Creative Consulting <br>Concept Development"
-short: "Our creative agency is a team of professionals focused on helping your brand grow."
+title: "Khoa học Dữ liệu & Quản trị"
+preview_title: "Khoa học Dữ liệu <br>& Quản trị"
+short: "Biến dữ liệu thô thành kim chỉ nam chiến lược cho mọi quyết định"
 
 #full details
-introTitle: Creative <span class="mil-thin">Consulting</span><br> and <span class="mil-thin">Concept</span> Development
+introTitle: Khoa học Dữ liệu<br> và <span class="mil-thin">Quản trị</span>
 
 description:
-  title: Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span>
-  content: At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.
+  title: Biến dữ liệu thô thành <span class="mil-thin">kim chỉ nam</span> chiến lược
+  content: "<p>Tại Grozone & Co, chúng tôi quan niệm rằng dữ liệu không có quản trị là một gánh nặng, và dữ liệu thiếu khoa học chỉ đơn thuần là việc lưu trữ. Chúng tôi tiếp cận dữ liệu như một sản phẩm sống—không ngừng được tinh chỉnh, bảo mật và dân chủ hóa.</p><p>Bằng cách hài hòa giữa \"Nguồn sự thật duy nhất\" (Single Source of Truth) với trí tuệ dự báo, chúng tôi biến những nhiễu loạn thô thành chiếc la bàn tin cậy, dẫn dắt mọi quyết định chiến lược với độ chính xác tuyệt đối.</p>"
   button:
-    link: /projects
-    label: View works
+    link: /contact
+    label: Liên hệ ngay
 
 list:
   items:
-    - label: "UX Audits"
-      value: "
-      <p>A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the website's design, functionality, and content to identify areas of improvement that can enhance the user's overall experience.</p>
-      <p>During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the website's usability, accessibility, and overall user experience.</p>
-      <p>The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness. The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.</p>
-      <p>In summary, a UX audit can help website owners identify areas of improvement that can enhance their website's user experience and increase user engagement and satisfaction.</p>
-      "
+    - label: "Ba Trụ Cột Cốt Lõi Trong Chiến Lược Dữ Liệu"
+      value: "<div style=\"margin-top: 20px;\"><p><strong>Nền tảng Dữ liệu Hiện đại (Modern Data Foundation):</strong> Hợp nhất các kho lưu trữ rời rạc thành một \"Nguồn sự thật duy nhất\" thông qua kiến trúc Lakehouse có khả năng mở rộng và kỹ thuật chất lượng tự động. Chúng tôi xây dựng cơ sở hạ tầng tin cậy, nơi mọi dữ liệu được tập trung và quản lý.</p><p><strong>Phân tích Nâng cao & Trí tuệ (Advanced Analytics & Intelligence):</strong> Chuyển đổi báo cáo tĩnh thành dự báo tương lai và thông tin chuyên sâu tự phục vụ để thúc đẩy các quyết định dựa trên dữ liệu thực tế trong thời gian thực. Thay đổi tư duy từ \"Chuyện gì đã xảy ra?\" sang \"Chuyện gì sẽ xảy ra tiếp theo?\".</p><p><strong>Quản trị & Bảo mật (Governance & Security):</strong> Dân chủ hóa quyền truy cập dữ liệu đồng thời thực thi kiểm soát tuyệt đối, tuân thủ quyền riêng tư và khả năng kiểm chứng tại mọi điểm tiếp xúc. Đảm bảo dữ liệu dễ tìm kiếm nhưng không thể bị lạm dụng.</p></div>"
 
-    - label: "Design thinking"
-      value: "
-      <p>Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback.</p>
-      <p>Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.</p>
-      "
-
-    - label: "Wireframing"
-      value: "
-      <p>Wireframing is a vital step in web design where a visual representation of a website's structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the website's architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development.</p>
-      "
-
-    - label: "Methodologies"
-      value: "
-      <p>Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae.</p>
-      "
+    - label: "Case Study: Từ Ngôn Ngữ Tự Nhiên Đến Trí Tuệ Chiến Lược"
+      value: "<div style=\"margin-top: 20px;\"><p>Chuyển đổi các hàng dữ liệu thô thành thông tin chuyên sâu tức thì—không cần lập trình.</p><p>Hệ thống AI Agent của chúng tôi minh chứng cho sức mạnh của việc kết hợp Khoa học dữ liệu và Quản trị qua quy trình 3 bước:</p><div style=\"margin-top: 25px;\"><h4 style=\"margin-bottom: 15px; font-weight: 600;\">Đầu vào:</h4><p>Người dùng chỉ cần đưa ra yêu cầu đơn giản: \"Tóm tắt tình hình kinh doanh trong 14 ngày qua\".</p><p>Hệ thống tự động giải mã ngữ cảnh về thời gian (từ ngày 07-21/12) và ý định kinh doanh (Doanh thu + Phễu bán hàng + Đội ngũ) mà không cần gợi ý thêm.</p></div><div style=\"margin-top: 25px;\"><h4 style=\"margin-bottom: 15px; font-weight: 600;\">Bộ máy xử lý:</h4><p><strong>Schema Learning:</strong> Tự động ánh xạ ngôn ngữ tự nhiên vào các bảng cơ sở dữ liệu phức tạp (Giao dịch, Khách hàng tiềm năng, Hoạt động) để thực thi các truy vấn chính xác mà không cần SQL.</p><p><strong>Phát hiện bất thường:</strong> Chủ động quét rủi ro, xác định các giao dịch bị \"treo\" có giá trị cao (>500 triệu VNĐ) mà các báo cáo tiêu chuẩn thường bỏ lỡ.</p></div><div style=\"margin-top: 25px;\"><h4 style=\"margin-bottom: 15px; font-weight: 600;\">Kết quả:</h4><p><strong>Báo cáo tức thì:</strong> Cung cấp các chỉ số Doanh thu (1.85 tỷ VNĐ), tăng trưởng hàng tháng (+12%), và tỷ lệ chuyển đổi chỉ trong vài giây.</p><p><strong>Hướng dẫn chủ động:</strong> Gợi ý các bước tiếp theo cụ thể (ví dụ: \"Phân tích lý do thất bại của các deal\") để thúc đẩy việc ra quyết định ngay lập tức.</p></div></div>"
 ---

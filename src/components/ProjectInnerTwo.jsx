@@ -44,14 +44,22 @@ const ProjectInner2 = ({ postData, prev, next }) => {
                     {postData.gallery.enabled == 1 &&
                         <>
                         {postData.gallery.items.map((item, key) => (
-                        <div className="mil-image-frame mil-horizontal mil-up mil-mb-30" key={`gallery-item-${key}`}>
-                            <img src={item.image} alt={item.alt} />
+                        <div className="mil-up mil-mb-30" style={{position: 'relative'}} key={`gallery-item-${key}`}>
+                            <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
                             <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
                                 <img src="/img/icons/zoom.svg" alt="zoom" />
                             </a>
                         </div>
                         ))}
                         </>
+                    }
+                    </>
+                    }
+                    
+                    {typeof postData.rightContent != "undefined" &&
+                    <>
+                    {postData.rightContent.enabled == 1 &&
+                        <div className="mil-text mil-up mil-mt-60" dangerouslySetInnerHTML={{__html : postData.rightContent.content}} />
                     }
                     </>
                     }

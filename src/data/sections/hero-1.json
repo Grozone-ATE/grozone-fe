@@ -1,12 +1,12 @@
 {
-    "title": "Designing <span class=\"mil-thin\">a Better</span><br> World <span class=\"mil-thin\">Today</span>",
-    "description": "Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.",
+    "title": "Grozone<br><span class=\"mil-thin\" style=\"white-space: nowrap;\">Kiến tạo công nghệ</span><br><span class=\"mil-thin\">Kết quả bền vững</span>",
+    "description": "Chúng tôi thu hẹp khoảng cách giữa tham vọng chiến lược và thực tế vận hành bằng cách kết hợp Bản thiết kế chiến lược với AI cấp độ sản xuất và Hạ tầng chủ quyền.",
     "button1": {
         "link": "/services",
-        "label": "What we do"
+        "label": "Dịch vụ"
     },
     "button2": {
         "link": "/projects",
-        "label": "View works"
+        "label": "Dự án của chúng tôi"
     }
 }

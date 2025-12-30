@@ -1,31 +1,41 @@
 {
-    "title1": "Unique <span class=\"mil-thin\">Ideas</span>",
-    "title2": "For Your <span class=\"mil-thin\">Business.</span>",
-    "subtitle": "Professionals focused on helping your brand<br/> grow and move forward.",
+    "title1": "Năng lực <span class=\"mil-thin\">Cốt lõi</span>",
+    "title2": "Của <span class=\"mil-thin\">Grozone</span>",
+    "subtitle": "Chuyển đổi tham vọng chiến lược thành<br/> thực tế vận hành hiệu quả<br/><br/><strong>Lĩnh vực của Grozone:</strong> Công nghệ giáo dục (EdTech), Đại lý vận hành (AI/ML), Giải pháp ERP tùy biến",
     "button": {
-        "link": "/services",
-        "label": "What we do"
+        "link": "/contact",
+        "label": "Liên hệ ngay"
     },
     "items": [
         {
-            "title": "Branding and <br>Identity Design",
-            "text": "Our creative agency is a team of professionals focused on helping your brand grow.",
+            "title": "Phân tích Thị trường <br>& Triển khai Chiến lược",
+            "text": "Chuyển đổi các phân tích tĩnh thành lợi thế cạnh tranh động và các thắng lợi kinh doanh cụ thể.",
             "link": "/services/service-1"
         },
         {
-            "title": "Website Design <br>and Development",
-            "text": "Our creative agency is a team of professionals focused on helping your brand grow.",
+            "title": "Kiến trúc & Điều hành <br>Sản phẩm",
+            "text": "Đóng vai trò là cầu nối giữa chiến lược kinh doanh và thiết kế kỹ thuật để xây dựng các tài sản chiến lược chiếm lĩnh thị trường.",
             "link": "/services/service-2"
         },
         {
-            "title": "Advertising and <br>Marketing Campaigns",
-            "text": "Our creative agency is a team of professionals focused on helping your brand grow.",
+            "title": "Triển khai AI <br>& Học máy",
+            "text": "Biến các thuật toán thô thành các tài sản cấp độ sản xuất có khả năng tự tiến hóa và bảo mật.",
             "link": "/services/service-3"
         },
         {
-            "title": "Creative Consulting <br>and Development",
-            "text": "Our creative agency is a team of professionals focused on helping your brand grow.",
+            "title": "Khoa học Dữ liệu <br>& Quản trị",
+            "text": "Biến dữ liệu từ các kho lưu trữ tĩnh thành \"Nguồn sự thật duy nhất\" đáng tin cậy để dẫn dắt mọi quyết định chiến lược.",
             "link": "/services/service-4"
+        },
+        {
+            "title": "Hạ tầng IT <br>& Bảo mật",
+            "text": "Xây dựng hệ thống hạ tầng tự phục hồi, có khả năng mở rộng cao và bảo mật đa lớp theo mô hình Zero-Trust.",
+            "link": "/services/service-5"
+        },
+        {
+            "title": "Vận hành Sản phẩm <br>& Thành công Khách hàng",
+            "text": "Đồng bộ hóa việc bàn giao sản phẩm mượt mà với các kênh thương mại để biến người dùng thành những tài khoản có giá trị cao.",
+            "link": "/services/service-6"
         }
     ]
 }

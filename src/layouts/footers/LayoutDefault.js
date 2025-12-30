@@ -46,10 +46,9 @@ const DefaultFooter = ( { extraClass } ) => {
                             <div className="col-md-6 col-lg-5">
 
                                 <ul className="mil-menu-list mil-up mil-mb-60">
-                                    <li><a href="#." className="mil-light-soft">Privacy Policy</a></li>
-                                    <li><a href="#." className="mil-light-soft">Terms and conditions</a></li>
-                                    <li><a href="#." className="mil-light-soft">Cookie Policy</a></li>
-                                    <li><a href="#." className="mil-light-soft">Careers</a></li>
+                                    <li className="mil-light-soft">Thanh Thuan Dinh</li>
+                                    <li><a href="https://mail.google.com/mail/?view=cm&to=business@grozone.vn" target="_blank" className="mil-light-soft">business@grozone.vn</a></li>
+                                    <li><a href="tel:+84915011395" className="mil-light-soft">+84915011395</a></li>
                                 </ul>
 
                             </div>
@@ -58,6 +57,8 @@ const DefaultFooter = ( { extraClass } ) => {
                 </div>
 
                 <div className="row justify-content-between flex-sm-row-reverse">
+                    {/* Tạm ẩn phần địa chỉ Canada và Germany */}
+                    {false && (
                     <div className="col-md-7 col-lg-6">
 
                         <div className="row justify-content-between">
@@ -79,6 +80,7 @@ const DefaultFooter = ( { extraClass } ) => {
                         </div>
 
                     </div>
+                    )}
                     <div className="col-md-4 col-lg-6 mil-mb-60">
 
                         <div className="mil-vert-between">

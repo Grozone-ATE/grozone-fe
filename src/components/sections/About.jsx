@@ -16,7 +16,7 @@ const AboutSection = () => {
                                 
                                 <div className="mil-about-quote">
                                     <div className="mil-avatar mil-up">
-                                        <img src={Data.avatar.image} alt={Data.avatar.alt} />
+                                        <img src={Data.avatar.image} alt={Data.avatar.alt} style={{objectFit: "contain", objectPosition: "center", padding: "12px", backgroundColor: "#fff"}} />
                                     </div>
                                     <h6 className="mil-quote mil-up" dangerouslySetInnerHTML={{__html : Data.subtitle}} />
                                 </div>

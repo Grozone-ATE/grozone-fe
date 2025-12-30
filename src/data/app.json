@@ -1,7 +1,7 @@
 {
     "settings": {
         "siteName": "Grozone",
-        "formspreeURL": "https://formspree.io/f/your_api_key",
+        "formspreeURL": "https://formspree.io/f/business@grozone.vn",
         "mailchimp": {
             "url": "",
             "key": ""
@@ -14,34 +14,17 @@
         },
         "menu": [
             {
-                "label": "Homepage",
+                "label": "Trang chủ",
                 "link": "/",
-                "children": [
-                    {
-                        "label": "Landing Page",
-                        "link": "/"
-                    },
-                    {
-                        "label": "Personal",
-                        "link": "/home-2"
-                    },
-                    {
-                        "label": "Home Slider",
-                        "link": "/projects-3"
-                    }
-                ]
+                "children": 0
             },
             {
-                "label": "Portfolio",
+                "label": "Dự án",
                 "link": "/projects",
                 "children": [
                     {
-                        "label": "Grid Type 1",
+                        "label": "Dạng lưới",
                         "link": "/projects"
-                    },
-                    {
-                        "label": "Grid Type 2",
-                        "link": "/projects-2"
                     },
                     {
                         "label": "Slider",
@@ -50,51 +33,23 @@
                 ]
             },
             {
-                "label": "Services",
+                "label": "Dịch vụ",
                 "link": "/services",
                 "children": [
                     {
-                        "label": "Services List",
+                        "label": "Danh sách dịch vụ",
                         "link": "/services"
                     },
                     {
-                        "label": "Single Service",
+                        "label": "Chi tiết dịch vụ",
                         "link": "/services/service-1"
                     }
                 ]
             },
             {
-                "label": "Blog",
-                "link": "/blog",
-                "children": [
-                    {
-                        "label": "Blog list",
-                        "link": "/blog"
-                    },
-                    {
-                        "label": "Publication",
-                        "link": "/blog/play-to-your-strength-and-supercharge-your-business-4"
-                    }
-                ]
-            },
-            {
-                "label": "Contact",
+                "label": "Liên hệ",
                 "link": "/contact",
                 "children": 0
-            },
-            {
-                "label": "Other",
-                "link": "/team",
-                "children": [
-                    {
-                        "label": "Team",
-                        "link": "/team"
-                    },
-                    {
-                        "label": "404",
-                        "link": "/404"
-                    }
-                ]
             }
         ]
     },
@@ -102,27 +57,23 @@
         "logo": {
             "text": "Grozone."
         },
-        "copy": "© 2024 Grozone. All Rights Reserved.",
+        "copy": "© 2025 Grozone. All Rights Reserved.",
         "menu": [
             {
-                "label": "Home",
+                "label": "Trang chủ",
                 "link": "/"
             },
             {
-                "label": "Portfolio",
+                "label": "Dự án",
                 "link": "/projects"
             },
             {
-                "label": "Services",
+                "label": "Dịch vụ",
                 "link": "/services"
             },
             {
-                "label": "Contact",
+                "label": "Liên hệ",
                 "link": "/contact"
-            },
-            {
-                "label": "Blog",
-                "link": "/blog"
             }
         ]
     },

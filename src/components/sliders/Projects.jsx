@@ -29,12 +29,12 @@ const ProjectsSlider = ( { projects } ) => {
                             {...SliderProps.milPortfolioSlider}
                             className="swiper-container mil-portfolio-slider mil-up"
                         >
-                            {projects.map((item, key) => (
+                            {projects.slice(0, 2).map((item, key) => (
                             <SwiperSlide className="swiper-slide" key={`projects-item-${key}`}>
                             <div className="mil-portfolio-item mil-slider-item" data-swiper-parallax="-30">
                                 <div className="mil-cover-frame mil-drag">
                                     <div className="mil-cover" data-swiper-parallax-scale="1.3">
-                                        <img src={item.image} alt={item.title} />
+                                        <img src={item.sliderImage || item.image} alt={item.title} />
                                     </div>
                                 </div>
                                 <div className="mil-descr" data-swiper-parallax-x="104%" data-swiper-parallax-opacity="0">

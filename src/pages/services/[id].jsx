@@ -11,6 +11,7 @@ import { getAllServicesIds, getServiceData, getRelatedServices } from "@library/
 
 import PricingSection from "@components/sections/Pricing";
 import RelatedServices from "@components/sections/RelatedServices";
+import SafeHTML from "@components/SafeHTML";
 
 const ServiceDetail = ( { data, related } ) => {
   const postData = data;
@@ -29,23 +30,29 @@ const ServiceDetail = ( { data, related } ) => {
               <div className="row justify-content-between">
                   <div className="col-lg-4 mil-relative mil-mb-90">
 
-                      <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : postData.description.title}} />
-                      <p className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : postData.description.content}} />
-                      <div className="mil-up">
-                          <Link href={postData.description.button.link} className="mil-link mil-dark mil-arrow-place">
-                              <span>{postData.description.button.label}</span>
-                          </Link>
-                      </div>
+                      {postData.description?.title && (
+                        <SafeHTML html={postData.description.title} tag="h4" className="mil-up mil-mb-30" />
+                      )}
+                      {postData.description?.content && (
+                        <SafeHTML html={postData.description.content} tag="p" className="mil-up mil-mb-30" />
+                      )}
+                      {postData.description?.button && (
+                        <div className="mil-up">
+                            <Link href={postData.description.button.link} className="mil-link mil-dark mil-arrow-place">
+                                <span>{postData.description.button.label}</span>
+                            </Link>
+                        </div>
+                      )}
 
                   </div>
                   <div className="col-lg-6">
-                  {postData.list != undefined &&
+                  {postData.list != undefined && postData.list.items && postData.list.items.length > 0 &&
                   <>
                       {postData.list.items.map((item, key) => (
                       <div className="mil-accordion-group mil-up" key={`service-list-${key}`}>
                           <div className="mil-accordion-menu">
 
-                              <p className="mil-accordion-head">{item.label}</p>
+                              <p className="mil-accordion-head">{item.label || ''}</p>
 
                               <div className="mil-symbol mil-h3">
                                   <div className="mil-plus">+</div>
@@ -53,7 +60,9 @@ const ServiceDetail = ( { data, related } ) => {
                               </div>
 
                           </div>
-                          <div className="mil-accordion-content mil-text" dangerouslySetInnerHTML={{__html : item.value}} />
+                          {item.value && (
+                            <SafeHTML html={item.value} className="mil-accordion-content mil-text" />
+                          )}
                       </div>
                       ))}
                   </>
@@ -64,7 +73,7 @@ const ServiceDetail = ( { data, related } ) => {
       </section>
       {/* service end */}
       
-      <PricingSection />
+      {false && <PricingSection />}
 
       <RelatedServices services={related} />
       

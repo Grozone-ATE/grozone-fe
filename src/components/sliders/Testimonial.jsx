@@ -46,7 +46,7 @@ const TestimonialSlider = () => {
                           <div className="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                               <h5 className="mil-up mil-mb-10">{item.name}</h5>
                               <p className="mil-mb-5 mil-upper mil-up mil-mb-30">{item.role}</p>
-                              <p className="mil-text-xl mil-up">{item.text}</p>
+                              <p className="mil-text-xl mil-up" dangerouslySetInnerHTML={{__html: item.text}} />
                           </div>
                         </SwiperSlide>
                         ))}

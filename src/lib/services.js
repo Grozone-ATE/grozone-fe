@@ -97,10 +97,44 @@ export async function getServiceData(id) {
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
+  // Normalize HTML strings in data to prevent hydration errors
+  const normalizeString = (str) => {
+    if (typeof str !== 'string') return str;
+    // Normalize whitespace: replace multiple spaces/tabs/newlines with single space
+    // but preserve HTML structure
+    return str
+      .replace(/\s+/g, ' ')
+      .replace(/>\s+</g, '><')
+      .trim();
+  };
+
+  const normalizeData = (data) => {
+    if (typeof data === 'string') {
+      return normalizeString(data);
+    }
+    if (Array.isArray(data)) {
+      return data.map(normalizeData);
+    }
+    if (data && typeof data === 'object' && data.constructor === Object) {
+      const normalized = {};
+      for (const key in data) {
+        if (key === 'content' || key === 'value') {
+          normalized[key] = normalizeString(data[key]);
+        } else {
+          normalized[key] = normalizeData(data[key]);
+        }
+      }
+      return normalized;
+    }
+    return data;
+  };
+
+  const normalizedData = normalizeData(matterResult.data);
+
   // Combine the data with the id and contentHtml
   return {
     id,
     contentHtml,
-    ...matterResult.data
+    ...normalizedData
   }
 }

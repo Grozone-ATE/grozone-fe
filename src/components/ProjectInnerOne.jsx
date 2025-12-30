@@ -8,8 +8,8 @@ const ProjectInner1 = ({ postData, prev, next }) => {
     <section className="mil-p-120-0">
         <div className="container mil-p-0-120" id="project">
             {typeof postData.fullImage != "undefined" &&
-            <div className="mil-image-frame mil-horizontal mil-up">
-                <img src={postData.fullImage} alt={postData.title} />
+            <div className="mil-up mil-mb-60" style={{position: 'relative'}}>
+                <img src={postData.fullImage} alt={postData.title} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
                 <a data-fancybox="gallery" data-no-swup href={postData.fullImage} className="mil-zoom-btn">
                     <img src="/img/icons/zoom.svg" alt="zoom" />
                 </a>
@@ -24,36 +24,58 @@ const ProjectInner1 = ({ postData, prev, next }) => {
             }
 
             <div className="mil-p-120-0">
-                {typeof postData.gallery != "undefined" &&
-                <>
-                {postData.gallery.enabled == 1 &&
-                <div className="row">
-                    {postData.gallery.items.map((item, key) => (
-                    <div key={`gallery-item-${key}`} className={postData.gallery.columns == 1 ? "col-lg-12" : "col-lg-6"}>
-                        <div className="mil-image-frame mil-square mil-up mil-mb-30">
-                            <img src={item.image} alt={item.alt} />
-                            <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
-                                <img src="/img/icons/zoom.svg" alt="zoom" />
-                            </a>
-                        </div>
-                    </div>
-                    ))}
-                </div>
-                }
-                </>
-                }
-
                 {typeof postData.description != "undefined" &&
                 <>
                 {postData.description.enabled == 1 &&
-                <div className="row justify-content-between mil-p-90-120">
-                    <div className="col-lg-5">
-                        <h3 className="mil-up mil-mb-60">{postData.description.title}</h3>
-                    </div>
-                    <div className="col-lg-6">
-                    <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content}} />
-                    </div>
-                </div>
+                <>
+                    {postData.description.title && (
+                        <div className="row justify-content-center mil-mb-90">
+                            <div className="col-lg-10">
+                                <h3 className="mil-up mil-mb-60 mil-center">{postData.description.title}</h3>
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Layout xen kẽ: text và image */}
+                    {typeof postData.gallery != "undefined" && postData.gallery.enabled == 1 && postData.gallery.items.length > 0 ? (
+                        <>
+                            {postData.gallery.items.map((item, key) => (
+                                <div key={`alternating-item-${key}`} className={`row align-items-center mil-mb-120 ${key % 2 === 0 ? '' : 'flex-row-reverse'}`}>
+                                    <div className="col-lg-6">
+                                        <div className="mil-up" style={{position: 'relative'}}>
+                                            <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
+                                            <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
+                                                <img src="/img/icons/zoom.svg" alt="zoom" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        {key === 0 && (
+                                            <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[0] || postData.description.content}} />
+                                        )}
+                                        {key > 0 && postData.description.content.split('<!--SPLIT-->')[key] && (
+                                            <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[key]}} />
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Phần text còn lại nếu có */}
+                            {postData.description.content.split('<!--SPLIT-->').length > postData.gallery.items.length && (
+                                <div className="row justify-content-center mil-mt-60">
+                                    <div className="col-lg-10">
+                                        <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->').slice(postData.gallery.items.length).join('')}} />
+                                    </div>
+                                </div>
+                            )}
+                        </>
+                    ) : (
+                        <div className="row justify-content-center mil-p-90-120">
+                            <div className="col-lg-10">
+                                <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content}} />
+                            </div>
+                        </div>
+                    )}
+                </>
                 }
                 </>
                 }
@@ -65,8 +87,8 @@ const ProjectInner1 = ({ postData, prev, next }) => {
                     {postData.gallery2.items.map((item, key) => (
                     <div className="col-lg-6" key={`gallery2-item-${key}`}>
 
-                        <div className="mil-image-frame mil-vertical mil-up mil-mb-30">
-                            <img src={item.image} alt={item.alt} />
+                        <div className="mil-up mil-mb-30" style={{position: 'relative'}}>
+                            <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
                             <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
                                 <img src="/img/icons/zoom.svg" alt="zoom" />
                             </a>

@@ -1,24 +1,24 @@
 {
-    "title": "Customer <span class=\"mil-thin\">Voices:</span> <br>Hear What <span class=\"mil-thin\">They Say!</span>",
-    "subtitle": "Customer reviews are a valuable source <br>of information for both businesses and consumers.",
+    "title": "Năng lực <span class=\"mil-thin\">Thực hiện Dự án</span> <br>Của <span class=\"mil-thin\">Chúng tôi</span>",
+    "subtitle": "",
     "items": [
         {
-            "name": "Paul Trueman",
-            "image": "/img/customers/1.jpg",
-            "role": "Eqanta app",
-            "text": "Working with Courtney Davis as our UI designer was an absolute pleasure. Her attention to detail and creative approach brought our vision to life. The user interface she designed exceeded our expectations, and we received positive feedback from our clients. Highly recommended!"
+            "name": "Năng lực Cốt lõi",
+            "image": "/img/G-logo.png",
+            "role": "",
+            "text": "Chúng tôi không chỉ thực hiện các dự án; chúng tôi kiến tạo kết quả. Khả năng của chúng tôi thu hẹp khoảng cách giữa tham vọng cấp cao và thực tế cấp cơ sở, kết hợp Kế hoạch Chiến lược với Trí tuệ Nhân tạo Cấp độ Sản xuất, Cơ sở hạ tầng Độc lập và Hoạt động Tập trung vào Doanh thu."
         },
         {
-            "name": "Olivia Oldman",
-            "image": "/img/customers/2.jpg",
-            "role": "Eqanta app",
-            "text": "I had the opportunity to collaborate with Courtney, and I must say she is incredibly talented. Her ability to understand our brand and translate it into a interface was impressive. Courtney's designs were intuitive, and enhanced the overall user experience. I look forward to working with her again!"
+            "name": "Chuyên môn Kỹ thuật",
+            "image": "/img/G-logo.png",
+            "role": "",
+            "text": "Bằng cách kết hợp chuyên môn kỹ thuật sâu rộng với kỷ luật vận hành nghiêm ngặt, chúng tôi không chỉ cung cấp phần mềm mà còn xây dựng các tài sản chiến lược được thiết kế an toàn, mặc định thông minh và tối ưu hóa cho sự tăng trưởng bền vững của doanh nghiệp ngay từ ngày đầu tiên."
         },
         {
-            "name": "Oscar Newman",
-            "image": "/img/customers/3.jpg",
-            "role": "Eqanta app",
-            "text": "Courtney Davis is an exceptional UI designer. She has a keen eye for aesthetics and understands how to create interfaces. Courtney's designs greatly improved the usability of our application, and we couldn't be happier with the results. Highly skilled and reliable!"
+            "name": "Số liệu & Thông tin liên hệ",
+            "image": "/img/G-logo.png",
+            "role": "",
+            "text": "<strong>Quy mô:</strong> Đội ngũ trẻ và tài năng<br><br><strong>Mạng lưới:</strong> Văn phòng tại TP. Hồ Chí Minh<br><br><strong>Tầm nhìn:</strong> Thúc đẩy tăng trưởng bền vững và mang lại giá trị vượt trội đến năm 2030 và xa hơn nữa."
         }
     ]
 }

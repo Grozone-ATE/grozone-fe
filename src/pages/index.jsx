@@ -21,8 +21,8 @@ const Home1 = (props) => {
       <ServicesSection />
       <TeamSection />
       <TestimonialSlider />
-      <PartnersSlider />
-      <LatestPostsSection posts={props.posts} />
+      {false && <PartnersSlider />}
+      {false && <LatestPostsSection posts={props.posts} />}
     </Layouts>
   );
 };
