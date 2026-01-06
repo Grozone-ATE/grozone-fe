@@ -17,15 +17,9 @@ const ServicesSection = () => {
                         <Pentagon />
                     </div>
                 </div>
-                <div className="container mil-p-120-0">
+                <div className="container" style={{paddingTop: '60px', paddingBottom: '0'}}>
 
-                    <div className="mil-mb-120">
-                        <div className="row">
-                            <div className="col-lg-10">
-                                <span className="mil-suptitle mil-light-soft mil-suptitle-right mil-up" dangerouslySetInnerHTML={{__html : Data.subtitle}} />
-                            </div>
-                        </div>
-
+                    <div className="mil-mb-60">
                         <div className="mil-complex-text justify-content-center mil-up mil-mb-15">
                             <span className="mil-text-image"><img src="img/photo/2.jpg" alt="team" /></span>
                             <h2 className="mil-h1 mil-muted mil-center" dangerouslySetInnerHTML={{__html : Data.title1}} />
@@ -47,9 +41,6 @@ const ServicesSection = () => {
                             <Link href={item.link} className="mil-service-card-sm mil-up">
                                 <h5 className="mil-muted mil-mb-30" dangerouslySetInnerHTML={{__html : item.title}} />
                                 <p className="mil-light-soft mil-mb-30">{item.text}</p>
-                                <div className="mil-button mil-icon-button-sm mil-arrow-place">
-                                    <ArrowIcon />
-                                </div>
                             </Link>
 
                         </div>

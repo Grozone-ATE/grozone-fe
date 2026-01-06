@@ -11,14 +11,14 @@ const AboutSection = () => {
                         <div className="col-lg-6 col-xl-5">
 
                             <div className="mil-mb-90">
-                                <h2 className="mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : Data.title}} />
-                                <div className="mil-text mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : Data.description}} />
+                                <h2 className="mil-up mil-mb-15" dangerouslySetInnerHTML={{__html : Data.title}} />
+                                <div className="mil-text mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : Data.description}} />
                                 
-                                <div className="mil-about-quote">
-                                    <div className="mil-avatar mil-up">
+                                <div className="mil-about-quote mil-up">
+                                    <div className="mil-avatar">
                                         <img src={Data.avatar.image} alt={Data.avatar.alt} style={{objectFit: "contain", objectPosition: "center", padding: "12px", backgroundColor: "#fff"}} />
                                     </div>
-                                    <h6 className="mil-quote mil-up" dangerouslySetInnerHTML={{__html : Data.subtitle}} />
+                                    <h6 className="mil-quote" dangerouslySetInnerHTML={{__html : Data.subtitle}} />
                                 </div>
                             </div>
 

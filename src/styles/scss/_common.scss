@@ -868,6 +868,16 @@ spaces
     }
 }
 
+.mil-p-120-40 {
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+}
+
 .mil-adaptive-right {
     width: 100%;
     display: flex;

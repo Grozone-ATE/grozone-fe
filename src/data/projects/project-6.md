@@ -49,45 +49,54 @@ description:
         <li><strong>Phân tích Lợi nhuận:</strong> Hệ thống liên tục theo dõi giá vốn (lúc nhập kho) và giá bán (lúc xuất kho) để tự động tính toán biên lợi nhuận gộp.</li>
       </ul>
       
-      <h4 style=\"margin-top: 40px; margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính và Thiết bị Liên quan</h4>
-      
-      <p style=\"margin-top: 20px;\"><strong>1. Phần mềm kiểm kê bằng RFID (Grozone RMS)</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Ứng dụng Di động:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm hàng hóa dựa trên công nghệ RFID.</li>
-        <li><strong>Quản lý Danh mục:</strong> Quản lý danh sách và thông tin chi tiết của hàng hóa (chất liệu, trọng lượng, giá trị, vị trí, trạng thái).</li>
-        <li><strong>Báo cáo & Thống kê:</strong> Kết xuất các báo cáo thống kê quan trọng về kiểm kê – tồn kho – danh mục tài sản theo thời gian thực.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>2. Máy in tem/mã vạch (CP20 Barcode Printer)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Máy in mã vạch Chainway CP20 có hiệu suất in vượt trội, cung cấp kết quả in xuất sắc, hiệu quả và dễ vận hành.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Chức năng In ấn:</strong> Hỗ trợ cả hai phương pháp in là truyền nhiệt (thermal transfer) và in nhiệt trực tiếp (direct thermal).</li>
-        <li><strong>Hiệu năng:</strong> Độ phân giải 203dpi hoặc 300dpi, tốc độ in tối đa lên đến 152mm/s, độ rộng in tối đa 104mm.</li>
-        <li><strong>Tính năng Kết nối:</strong> Cung cấp nhiều giao diện giao tiếp (Serial/LAN/Wi-Fi/Bluetooth), hỗ trợ các ngôn ngữ in (TSPL, ZPL, EPL, DPL Emulation).</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway CP20.</li>
-        <li><strong>Ứng dụng:</strong> Đáp ứng đầy đủ nhu cầu in chất lượng cao trong bán lẻ, kho bãi, sản xuất và các ngành công nghiệp khác.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>3. Thiết bị Di động POS (Chainway C66 - Mobile Computer)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Thiết bị PDA/máy tính di động công nghiệp tích hợp khả năng đọc UHF RFID hàng đầu.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Hệ điều hành:</strong> Android 11/13.</li>
-        <li><strong>Cấu hình mạnh mẽ:</strong> Bộ vi xử lý Octa-Core 2.3 GHz và pin dung lượng lớn 8000mAh, đảm bảo hoạt động liên tục.</li>
-        <li><strong>Công nghệ RFID:</strong> Dựa trên chip Impinj E Series và hỗ trợ Impinj Gen2X để nâng cao hiệu suất UHF.</li>
-        <li><strong>Tốc độ đọc:</strong> Hơn 1300 tags/giây (tăng cường hiệu suất kiểm kê gấp nhiều lần).</li>
-        <li><strong>Phạm vi đọc:</strong> Có thể đạt tới 30m (trong điều kiện tối ưu).</li>
-        <li><strong>Chức năng:</strong> Hỗ trợ Định vị thẻ RFID chính xác (Precise RFID Tag Positioning).</li>
-        <li><strong>Tính năng khác:</strong> Quét mã vạch, NFC, Camera 13MP.</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway C72.</li>
-      </ul>
-      
-      <p><em>Grozone cam kết đưa ra lựa chọn thiết bị tối ưu nhất. Tùy theo nhu cầu vận hành cụ thể, quy mô cửa hàng, và ngân sách đầu tư của Quý khách.</em></p>
     "
 
 rightContent:
     enabled: 1
     content: "
-      <h4 style=\"margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại (Tài chính & Bán hàng)</h4>
+      <h4 style=\"margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính và Thiết bị</h4>
+      <p style=\"margin-bottom: 20px; color: #666;\"><em>Nhấn vào từng mục để xem chi tiết</em></p>
+      
+      <details class=\"mil-details-item\" open>
+        <summary>1. Phần mềm kiểm kê bằng RFID (Grozone RMS)</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Ứng dụng Di động:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm hàng hóa dựa trên công nghệ RFID.</li>
+            <li><strong>Quản lý Danh mục:</strong> Quản lý danh sách và thông tin chi tiết của hàng hóa (chất liệu, trọng lượng, giá trị, vị trí, trạng thái).</li>
+            <li><strong>Báo cáo & Thống kê:</strong> Kết xuất các báo cáo thống kê quan trọng về kiểm kê – tồn kho – danh mục tài sản theo thời gian thực.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>2. Máy in tem/mã vạch (CP20 Barcode Printer)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Máy in mã vạch Chainway CP20 có hiệu suất in vượt trội, cung cấp kết quả in xuất sắc, hiệu quả và dễ vận hành.</em></p>
+          <ul>
+            <li><strong>Chức năng In ấn:</strong> Hỗ trợ truyền nhiệt và in nhiệt trực tiếp.</li>
+            <li><strong>Hiệu năng:</strong> 203/300dpi, tốc độ 152mm/s, rộng 104mm.</li>
+            <li><strong>Kết nối:</strong> Serial/LAN/Wi-Fi/Bluetooth, hỗ trợ TSPL, ZPL, EPL, DPL.</li>
+            <li><strong>Model:</strong> Chainway CP20.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>3. Thiết bị Di động POS (Chainway C66)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Thiết bị PDA công nghiệp tích hợp UHF RFID hàng đầu.</em></p>
+          <ul>
+            <li><strong>Hệ điều hành:</strong> Android 11/13.</li>
+            <li><strong>Cấu hình:</strong> Octa-Core 2.3GHz, pin 8000mAh.</li>
+            <li><strong>RFID:</strong> Chip Impinj E Series, đọc 1300+ tags/giây, phạm vi 30m.</li>
+            <li><strong>Tính năng:</strong> Định vị thẻ RFID, quét mã vạch, NFC, Camera 13MP.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <p style=\"margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 14px;\"><em>💡 Grozone cam kết đưa ra lựa chọn thiết bị tối ưu theo nhu cầu vận hành và ngân sách của Quý khách.</em></p>
+      
+      <h4 style=\"margin-top: 30px; margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại (Tài chính & Bán hàng)</h4>
       <p style=\"margin-bottom: 15px;\"><em>Hệ thống Quản lý Tài chính tích hợp mang lại hiệu suất đầu tư vượt trội với các số liệu cam kết:</em></p>
       <ul style=\"margin-left: 20px; margin-bottom: 30px;\">
         <li><strong>Tăng Tốc độ Thanh toán:</strong> Giảm tới 80% thời gian xử lý giao dịch tại quầy.</li>
@@ -95,11 +104,14 @@ rightContent:
         <li><strong>Quản lý Vốn (COGS):</strong> Cung cấp dữ liệu chính xác để kiểm soát và tối ưu hóa biên lợi nhuận gộp một cách hiệu quả.</li>
         <li><strong>Tăng Hiệu suất Bán hàng:</strong> Nâng cao năng suất và tốc độ phục vụ của nhân viên bán hàng, góp phần làm tăng doanh số.</li>
       </ul>
-      
-      <h3 style=\"margin-bottom: 20px;\">Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone</h3>
-      <p style=\"margin-bottom: 20px;\">Hãy liên hệ ngay hôm nay để nhận Báo cáo Phân tích Rủi ro Tài chính và Bán hàng của cửa hàng bạn và thực hiện Thiết kế Hệ thống Tài chính Tích hợp RFID theo nhu cầu riêng.</p>
-      <a href=\"/contact\" class=\"mil-button mil-border mil-fw\"><span>Liên hệ ngay</span></a>
     "
+
+ctaSection:
+    enabled: 1
+    title: "Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone"
+    description: "Hãy liên hệ ngay hôm nay để nhận Báo cáo Phân tích Rủi ro Tài chính và Bán hàng của cửa hàng bạn và thực hiện Thiết kế Hệ thống Tài chính Tích hợp RFID theo nhu cầu riêng."
+    buttonText: "Liên hệ ngay"
+    buttonLink: "/contact"
 
 gallery: 
     enabled: 1

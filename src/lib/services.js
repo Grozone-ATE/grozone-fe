@@ -75,13 +75,15 @@ export function getRelatedServices(current_id) {
 
 export function getAllServicesIds() {
   const fileNames = fs.readdirSync(servicesDirectory)
-  return fileNames.map(fileName => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, '')
+  return fileNames
+    .filter(fileName => fileName.endsWith('.md'))
+    .map(fileName => {
+      return {
+        params: {
+          id: fileName.replace(/\.md$/, '')
+        }
       }
-    }
-  })
+    })
 }
 
 export async function getServiceData(id) {

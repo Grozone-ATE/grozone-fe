@@ -55,36 +55,50 @@ description:
         <li><strong>Báo cáo trực quan:</strong> Xây dựng các báo cáo trực quan về các số liệu và tình trạng vận hành kho.</li>
       </ul>
       
-      <h4 style=\"margin-top: 40px; margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính</h4>
-      
-      <p style=\"margin-top: 20px;\"><strong>Nhóm Chức năng nhập hàng vào kho:</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Nhập hàng:</strong> Kiểm soát và xác minh số lượng, chất lượng hàng hóa đến, sử dụng RFID để kiểm đếm nhanh chóng.</li>
-        <li><strong>Xếp hàng:</strong> Tối ưu hóa vị trí lưu trữ (Lô, vị trí kệ) để đảm bảo an toàn và tận dụng không gian.</li>
-        <li><strong>Trả hàng:</strong> Quy trình xử lý hàng trả lại (phân loại, sửa chữa, tái nhập) được theo dõi chi tiết.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>Nhóm Chức năng xuất kho:</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Lấy hàng:</strong> Giảm thiểu lỗi và thời gian tìm kiếm bằng thiết bị quét di động và chỉ dẫn tối ưu.</li>
-        <li><strong>Đóng gói:</strong> Kiểm tra chất lượng và số lượng lần cuối theo đơn hàng; sử dụng thiết bị kiểm đếm tự động.</li>
-        <li><strong>Giao hàng:</strong> Lập lịch trình và theo dõi đơn hàng để đảm bảo giao hàng an toàn, đúng thời gian.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>Nhóm Chức năng Tồn kho:</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Kiểm soát Tồn kho:</strong> Theo dõi lượng sản phẩm theo thời gian thực. Tích hợp RFID cho phép Kiểm kê nhanh chóng và chính xác.</li>
-        <li><strong>Hiển thị Tồn kho:</strong> Dữ liệu được cung cấp thời gian thực qua mã vạch, số seri, và thẻ RFID.</li>
-        <li><strong>Kiểm soát Chất lượng:</strong> Ghi nhận kết quả kiểm tra chất lượng ngay trên mọi công đoạn (nhập/lưu kho/xuất hàng).</li>
-      </ul>
-      
-      <p><em>Chúng tôi cam kết đưa ra lựa chọn thiết bị tối ưu nhất. Tùy theo nhu cầu vận hành cụ thể, quy mô cửa hàng, và ngân sách đầu tư của Quý khách, Grozone sẽ đề xuất và triển khai những dòng máy/thương hiệu thiết bị (PDA, máy in, đầu đọc) có hiệu suất và chi phí phù hợp nhất.</em></p>
     "
 
 rightContent:
     enabled: 1
     content: "
-      <h4 style=\"margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
+      <h4 style=\"margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính</h4>
+      <p style=\"margin-bottom: 20px; color: #666;\"><em>Nhấn vào từng mục để xem chi tiết</em></p>
+      
+      <details class=\"mil-details-item\" open>
+        <summary>Nhập hàng vào kho</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Nhập hàng:</strong> Kiểm soát và xác minh số lượng, chất lượng hàng hóa đến, sử dụng RFID kiểm đếm nhanh chóng.</li>
+            <li><strong>Xếp hàng:</strong> Tối ưu vị trí lưu trữ (Lô, vị trí kệ) để đảm bảo an toàn và tận dụng không gian.</li>
+            <li><strong>Trả hàng:</strong> Quy trình xử lý hàng trả lại (phân loại, sửa chữa, tái nhập) được theo dõi chi tiết.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>Xuất kho</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Lấy hàng:</strong> Giảm thiểu lỗi và thời gian tìm kiếm bằng thiết bị quét di động và chỉ dẫn tối ưu.</li>
+            <li><strong>Đóng gói:</strong> Kiểm tra chất lượng và số lượng lần cuối theo đơn hàng.</li>
+            <li><strong>Giao hàng:</strong> Lập lịch trình và theo dõi đơn hàng để đảm bảo giao hàng đúng thời gian.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>Quản lý Tồn kho</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Kiểm soát:</strong> Theo dõi lượng sản phẩm theo thời gian thực. Kiểm kê nhanh chóng với RFID.</li>
+            <li><strong>Hiển thị:</strong> Dữ liệu thời gian thực qua mã vạch, số seri, và thẻ RFID.</li>
+            <li><strong>Chất lượng:</strong> Ghi nhận kết quả kiểm tra ngay trên mọi công đoạn (nhập/lưu kho/xuất hàng).</li>
+          </ul>
+        </div>
+      </details>
+      
+      <p style=\"margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 14px;\"><em>💡 Grozone cam kết đưa ra lựa chọn thiết bị tối ưu theo nhu cầu vận hành và ngân sách của Quý khách.</em></p>
+      
+      <h4 style=\"margin-top: 30px; margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
       <p style=\"margin-bottom: 15px;\"><em>Hiệu suất đầu tư từ Hệ thống Kho Thông minh</em></p>
       <ul style=\"margin-left: 20px; margin-bottom: 30px;\">
         <li><strong>Tăng Tốc độ Kiểm kê:</strong> Giảm 90% thời gian kiểm kê (từ ngày xuống giờ).</li>
@@ -92,11 +106,14 @@ rightContent:
         <li><strong>Tăng Độ chính xác:</strong> Giảm 99% tỷ lệ thất lạc, đảm bảo an ninh kho.</li>
         <li><strong>Tối ưu Tồn kho:</strong> Giảm 10% - 30% lượng hàng tồn kho (giảm chi phí lưu kho).</li>
       </ul>
-      
-      <h3 style=\"margin-bottom: 20px;\">Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone</h3>
-      <p style=\"margin-bottom: 20px;\">Liên hệ để thực hiện Khảo sát Hiện trạng và Thiết kế Hệ thống theo nhu cầu riêng.</p>
-      <a href=\"/contact\" class=\"mil-button mil-border mil-fw\"><span>Liên hệ ngay</span></a>
     "
+
+ctaSection:
+    enabled: 1
+    title: "Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone"
+    description: "Liên hệ để thực hiện Khảo sát Hiện trạng và Thiết kế Hệ thống theo nhu cầu riêng."
+    buttonText: "Liên hệ ngay"
+    buttonLink: "/contact"
 
 gallery: 
     enabled: 1

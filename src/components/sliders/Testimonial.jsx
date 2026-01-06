@@ -9,7 +9,7 @@ const TestimonialSlider = () => {
     <>
       {/* reviews */}
       <section className="mil-soft-bg">
-          <div className="container mil-p-120-120">
+          <div className="container mil-p-90-90">
 
               <div className="row">
                   <div className="col-lg-10">
@@ -17,9 +17,9 @@ const TestimonialSlider = () => {
                   </div>
               </div>
 
-              <h2 className="mil-center mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : Data.title}} />
+              <h2 className="mil-center mil-up mil-mb-40" dangerouslySetInnerHTML={{__html : Data.title}} />
 
-              <div className="mil-revi-pagination mil-up mil-mb-60" />
+              <div className="mil-revi-pagination mil-up mil-mb-40" />
 
               <div className="row mil-relative justify-content-center">
                   <div className="col-lg-8">
@@ -44,9 +44,9 @@ const TestimonialSlider = () => {
                         {Data.items.map((item, key) => (
                         <SwiperSlide className="swiper-slide" key={`testimonial-slider-item-${key}`}>
                           <div className="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
-                              <h5 className="mil-up mil-mb-10">{item.name}</h5>
-                              <p className="mil-mb-5 mil-upper mil-up mil-mb-30">{item.role}</p>
-                              <p className="mil-text-xl mil-up" dangerouslySetInnerHTML={{__html: item.text}} />
+                              <h5 className="mil-up mil-mb-5">{item.name}</h5>
+                              <p className="mil-mb-5 mil-upper mil-up mil-mb-15">{item.role}</p>
+                              <p className="mil-text-xl mil-up mil-testimonial-text" dangerouslySetInnerHTML={{__html: item.text}} />
                           </div>
                         </SwiperSlide>
                         ))}

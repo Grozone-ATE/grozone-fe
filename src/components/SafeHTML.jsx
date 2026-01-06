@@ -26,3 +26,6 @@ const SafeHTML = ({ html, className, tag = 'div', ...props }) => {
 
 export default SafeHTML;
 
+
+
+

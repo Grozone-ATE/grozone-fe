@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import AppData from "@data/app.json";
 
@@ -7,14 +8,24 @@ import ArrowIcon from "@layouts/svg-icons/Arrow";
 import Pentagon from "@layouts/pentagon/Index";
 
 const PageBanner = ({ pageTitle, breadTitle, anchorLabel, anchorLink = 0, paddingBottom, align, headingSize = 1 }) => {
-  const { asPath } = useRouter();
+  const [asPath, setAsPath] = useState('');
+  const router = useRouter();
+
+  // Only set path after component mounts to avoid hydration mismatch
+  useEffect(() => {
+    if (router.isReady) {
+      setAsPath(router.asPath);
+    }
+  }, [router.isReady, router.asPath]);
   let clearBreadTitle;
 
   if ( breadTitle != undefined ) {
     clearBreadTitle = breadTitle;
-  } else {
+  } else if ( pageTitle != undefined ) {
     const regex = /(<([^>]+)>)/gi;
     clearBreadTitle = pageTitle.replace(regex, "");
+  } else {
+    clearBreadTitle = "";
   }
 
   const headTitle = `${AppData.settings.siteName} - ${clearBreadTitle}`;
@@ -34,17 +45,17 @@ const PageBanner = ({ pageTitle, breadTitle, anchorLabel, anchorLink = 0, paddin
           <div className="container">
             <ul className={align == "center" ? "mil-breadcrumbs mil-center mil-mb-60" : "mil-breadcrumbs mil-mb-60"}>
               <li><Link href="/">Trang chủ</Link></li>
-              {asPath.indexOf('/blog/') != -1 &&
+              {asPath && asPath.indexOf('/blog/') != -1 &&
               <li>
                 <Link href="/blog">Blog</Link>
               </li>
               }
-              {asPath.indexOf('/projects/') != -1 &&
+              {asPath && asPath.indexOf('/projects/') != -1 &&
               <li>
-                <Link href="/projects">Dự án</Link>
+                <Link href="/projects">Sản phẩm</Link>
               </li>
               }
-              {asPath.indexOf('/services/') != -1 &&
+              {asPath && asPath.indexOf('/services/') != -1 &&
               <li>
                 <Link href="/services">Dịch vụ</Link>
               </li>

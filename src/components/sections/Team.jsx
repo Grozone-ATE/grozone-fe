@@ -8,7 +8,7 @@ const TeamSection = () => {
     <>
         {/* team */}
         <section>
-            <div className="container mil-p-120-30">
+            <div className="container mil-p-90-30">
                 <div className="row justify-content-between align-items-center">
                     <div className="col-lg-5 col-xl-4">
 
@@ -16,7 +16,7 @@ const TeamSection = () => {
                             <h2 className="mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : Data.title}} />
                             <div className="mil-text mil-up mil-mb-60" dangerouslySetInnerHTML={{__html : Data.description}} />
                             
-                            <div className="mil-up"><Link href={Data.button.link} className="mil-button mil-arrow-place mil-mb-60"><span>{Data.button.label}</span><ArrowIcon /></Link></div>
+                            <div className="mil-up mil-mb-60"><Link href={Data.button.link} className="mil-button mil-arrow-place"><span>{Data.button.label}</span><ArrowIcon /></Link></div>
 
                             <h4 className="mil-up" dangerouslySetInnerHTML={{__html : Data.subtitle}} />
                         </div>

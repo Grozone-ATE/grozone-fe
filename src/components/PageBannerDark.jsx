@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import AppData from "@data/app.json";
 
@@ -7,7 +8,15 @@ import ArrowIcon from "@layouts/svg-icons/Arrow";
 import Pentagon from "@layouts/pentagon/Index";
 
 const PageBannerDark = ({ pageTitle, breadTitle, anchorLabel, anchorLink }) => {
-  const { asPath } = useRouter();
+  const [asPath, setAsPath] = useState('');
+  const router = useRouter();
+
+  // Only set path after component mounts to avoid hydration mismatch
+  useEffect(() => {
+    if (router.isReady) {
+      setAsPath(router.asPath);
+    }
+  }, [router.isReady, router.asPath]);
   let clearBreadTitle;
 
   if ( breadTitle != undefined ) {
@@ -34,20 +43,20 @@ const PageBannerDark = ({ pageTitle, breadTitle, anchorLabel, anchorLink }) => {
             </div>
             <div className="container">
               <ul className="mil-breadcrumbs mil-light mil-mb-60">
-                <li><Link href="/">Homepage</Link></li>
-                {asPath.indexOf('/blog/') != -1 &&
+                <li><Link href="/">Trang chủ</Link></li>
+                {asPath && asPath.indexOf('/blog/') != -1 &&
                 <li>
                   <Link href="/blog">Blog</Link>
                 </li>
                 }
-                {asPath.indexOf('/projects/') != -1 &&
+                {asPath && asPath.indexOf('/projects/') != -1 &&
                 <li>
-                  <Link href="/projects">Projects</Link>
+                  <Link href="/projects">Sản phẩm</Link>
                 </li>
                 }
-                {asPath.indexOf('/services/') != -1 &&
+                {asPath && asPath.indexOf('/services/') != -1 &&
                 <li>
-                  <Link href="/services">Services</Link>
+                  <Link href="/services">Dịch vụ</Link>
                 </li>
                 }
                 <li><a dangerouslySetInnerHTML={{__html : clearBreadTitle}} /></li>

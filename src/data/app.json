@@ -19,30 +19,37 @@
                 "children": 0
             },
             {
-                "label": "Dự án",
+                "label": "Sản phẩm",
                 "link": "/projects",
-                "children": [
-                    {
-                        "label": "Dạng lưới",
-                        "link": "/projects"
-                    },
-                    {
-                        "label": "Slider",
-                        "link": "/projects-3"
-                    }
-                ]
+                "children": 0
             },
             {
                 "label": "Dịch vụ",
                 "link": "/services",
                 "children": [
                     {
-                        "label": "Danh sách dịch vụ",
-                        "link": "/services"
+                        "label": "Phân tích thị trường & Chiến lược thực hiện",
+                        "link": "/services/service-1"
                     },
                     {
-                        "label": "Chi tiết dịch vụ",
-                        "link": "/services/service-1"
+                        "label": "Kiến trúc sư & Quản trị Sản phẩm",
+                        "link": "/services/service-2"
+                    },
+                    {
+                        "label": "Triển khai Trí tuệ Nhân tạo (AI) & Học máy",
+                        "link": "/services/service-3"
+                    },
+                    {
+                        "label": "Khoa học Dữ liệu & Quản trị",
+                        "link": "/services/service-4"
+                    },
+                    {
+                        "label": "Hạ tầng IT & Bảo mật",
+                        "link": "/services/service-5"
+                    },
+                    {
+                        "label": "Vận hành Sản phẩm & Thành công Khách hàng",
+                        "link": "/services/service-6"
                     }
                 ]
             },
@@ -64,7 +71,7 @@
                 "link": "/"
             },
             {
-                "label": "Dự án",
+                "label": "Sản phẩm",
                 "link": "/projects"
             },
             {
@@ -79,14 +86,14 @@
     },
     "social": [
         {
-            "link": "https://behance.net",
-            "icon": "fab fa-behance",
-            "title": "Behance"
+            "link": "https://facebook.com",
+            "icon": "fab fa-facebook",
+            "title": "Facebook"
         },
         {
-            "link": "https://dribbble.com",
-            "icon": "fab fa-dribbble",
-            "title": "Dribbble"
+            "link": "https://www.youtube.com/@GrozoneCreative",
+            "icon": "fab fa-youtube",
+            "title": "YouTube"
         },
         {
             "link": "https://twitter.com",

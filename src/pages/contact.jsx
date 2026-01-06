@@ -8,7 +8,7 @@ import ArrowIcon from "@layouts/svg-icons/Arrow";
 const Contact = () => {
   return (
     <Layouts>
-        <PageBanner pageTitle={"Liên hệ với <span class=\"mil-thin\">chúng tôi</span>"} breadTitle={"Liên hệ"} anchorLabel={"Gửi tin nhắn"} anchorLink={"#contact"} paddingBottom={1} align={"center"} />
+        <PageBanner pageTitle={"<strong>Liên hệ với chúng tôi</strong>"} breadTitle={"Liên hệ"} anchorLabel={"Gửi tin nhắn"} anchorLink={"#contact"} paddingBottom={1} align={"center"} />
 
         {/* map */}
         <div className="mil-map-frame mil-up">
@@ -27,7 +27,7 @@ const Contact = () => {
         {/* contact form */}
         <section id="contact">
             <div className="container mil-p-120-90">
-                <h3 className="mil-center mil-up mil-mb-120">Hãy <span className="mil-thin">liên hệ</span></h3>
+                <h3 className="mil-center mil-up mil-mb-120">Liên hệ <span className="mil-thin">với Grozone!</span></h3>
 
                 <Formik
                 initialValues = {{ email: '', name: '', message: '' }}
@@ -79,36 +79,45 @@ const Contact = () => {
                 }) => (
                 <form onSubmit={handleSubmit} id="contactForm" action="#" className="row align-items-center">
                     <div className="col-lg-6 mil-up">
-                        <input 
-                            type="text" 
-                            placeholder="Tên của bạn"
-                            name="name" 
-                            required="required" 
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.name} 
-                        />
+                        <div className={`mil-floating-label ${values.name ? 'mil-has-value' : ''}`}>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                required="required" 
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.name}
+                                id="contact-name"
+                            />
+                            <label htmlFor="contact-name">Tên của bạn</label>
+                        </div>
                     </div>
                     <div className="col-lg-6 mil-up">
-                        <input 
-                            type="email" 
-                            placeholder="Email của bạn"
-                            name="email"
-                            required="required"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.email} 
-                        />
+                        <div className={`mil-floating-label ${values.email ? 'mil-has-value' : ''}`}>
+                            <input 
+                                type="email" 
+                                name="email"
+                                required="required"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.email}
+                                id="contact-email"
+                            />
+                            <label htmlFor="contact-email">Email của bạn</label>
+                        </div>
                     </div>
                     <div className="col-lg-12 mil-up">
-                        <textarea 
-                            placeholder="Nội dung tin nhắn của bạn"
-                            name="message" 
-                            required="required"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.message} 
-                        />
+                        <div className={`mil-floating-label ${values.message ? 'mil-has-value' : ''}`}>
+                            <textarea 
+                                name="message" 
+                                required="required"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.message}
+                                id="contact-message"
+                            />
+                            <label htmlFor="contact-message">Nội dung tin nhắn của bạn</label>
+                        </div>
                     </div>
                     <div className="col-lg-8">
                         <p className="mil-up mil-mb-30"><span className="mil-accent">*</span> Chúng tôi cam kết không tiết lộ thông tin cá nhân của bạn cho bên thứ ba.</p>

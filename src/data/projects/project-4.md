@@ -55,53 +55,68 @@ description:
         <li><strong>Kiểm soát an ninh:</strong> Lắp đặt đầu đọc cố định ở lối ra vào kèm chuông cảnh báo đối với những thẻ RFID còn hoạt động.</li>
       </ul>
       
-      <h4 style=\"margin-top: 40px; margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính</h4>
-      
-      <p style=\"margin-top: 20px;\"><strong>1. Phần mềm kiểm kê bằng RFID (Grozone RMS)</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Ứng dụng Di động:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm hàng hóa dựa trên công nghệ RFID.</li>
-        <li><strong>Quản lý Danh mục:</strong> Quản lý danh sách và thông tin chi tiết của hàng hóa (chất liệu, trọng lượng, giá trị, vị trí, trạng thái).</li>
-        <li><strong>Báo cáo & Thống kê:</strong> Kết xuất các báo cáo thống kê quan trọng về kiểm kê – tồn kho – danh mục tài sản theo thời gian thực.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>2. Máy in tem/mã vạch (CP20 Barcode Printer)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Máy in mã vạch Chainway CP20 có hiệu suất in vượt trội, cung cấp kết quả in xuất sắc, hiệu quả và dễ vận hành.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Chức năng In ấn:</strong> Hỗ trợ cả hai phương pháp in là truyền nhiệt (thermal transfer) và in nhiệt trực tiếp (direct thermal).</li>
-        <li><strong>Hiệu năng:</strong> Độ phân giải 203dpi hoặc 300dpi, tốc độ in tối đa lên đến 152mm/s, độ rộng in tối đa 104mm.</li>
-        <li><strong>Tính năng Kết nối:</strong> Cung cấp nhiều giao diện giao tiếp (Serial/LAN/Wi-Fi/Bluetooth), hỗ trợ các ngôn ngữ in (TSPL, ZPL, EPL, DPL Emulation).</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway CP20.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>3. Đầu đọc cầm tay RFID (Chainway C72 - UHF RFID Reader)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Thiết bị PDA/máy tính di động công nghiệp tích hợp khả năng đọc UHF RFID hàng đầu.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Hệ điều hành:</strong> Android 11/13.</li>
-        <li><strong>Công nghệ:</strong> Dựa trên chip Impinj E Series và hỗ trợ Impinj Gen2X để nâng cao hiệu suất UHF.</li>
-        <li><strong>Tốc độ đọc:</strong> Hơn 1300 tags/giây (tăng cường hiệu suất kiểm kê gấp nhiều lần).</li>
-        <li><strong>Phạm vi đọc:</strong> Có thể đạt tới 30m (trong điều kiện tối ưu).</li>
-        <li><strong>Chức năng:</strong> Hỗ trợ Định vị thẻ RFID chính xác – rất quan trọng cho việc tìm kiếm trang sức thất lạc.</li>
-        <li><strong>Cấu hình:</strong> Bộ vi xử lý Octa-Core 2.3GHz và pin dung lượng lớn 8000mAh.</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway C72.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>4. Tem RFID cho hàng trang sức</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Tem RFID chuyên dụng để định danh và theo dõi hàng trang sức, có khả năng in thông tin lên bề mặt và ghi dữ liệu vào chip RFID.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Số lượng tem:</strong> 1000 tem/cuộn.</li>
-        <li><strong>Tần số:</strong> 860 – 960MHz.</li>
-        <li><strong>Bộ nhớ EPC:</strong> 48 – 256 bits.</li>
-        <li><strong>Chuẩn quốc tế:</strong> ISO 18000-6C; EPC Class 1 Gen 2.</li>
-        <li><strong>Ứng dụng:</strong> Quản lý và theo dõi hàng hóa (trang sức).</li>
-      </ul>
-      
-      <p><em>Grozone cam kết đưa ra lựa chọn thiết bị tối ưu nhất. Tùy theo nhu cầu vận hành cụ thể, quy mô cửa hàng, và ngân sách đầu tư của Quý khách.</em></p>
     "
 
 rightContent:
     enabled: 1
     content: "
-      <h4 style=\"margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
+      <h4 style=\"margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính và Thiết bị</h4>
+      <p style=\"margin-bottom: 20px; color: #666;\"><em>Nhấn vào từng mục để xem chi tiết</em></p>
+      
+      <details class=\"mil-details-item\" open>
+        <summary>1. Phần mềm kiểm kê bằng RFID (Grozone RMS)</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Ứng dụng Di động:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm hàng hóa dựa trên công nghệ RFID.</li>
+            <li><strong>Quản lý Danh mục:</strong> Quản lý danh sách và thông tin chi tiết của hàng hóa (chất liệu, trọng lượng, giá trị, vị trí, trạng thái).</li>
+            <li><strong>Báo cáo & Thống kê:</strong> Kết xuất các báo cáo thống kê quan trọng về kiểm kê – tồn kho – danh mục tài sản theo thời gian thực.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>2. Máy in tem/mã vạch (CP20 Barcode Printer)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Máy in mã vạch Chainway CP20 có hiệu suất in vượt trội, hiệu quả và dễ vận hành.</em></p>
+          <ul>
+            <li><strong>Chức năng In ấn:</strong> Hỗ trợ truyền nhiệt và in nhiệt trực tiếp.</li>
+            <li><strong>Hiệu năng:</strong> 203/300dpi, tốc độ 152mm/s, rộng 104mm.</li>
+            <li><strong>Kết nối:</strong> Serial/LAN/Wi-Fi/Bluetooth, hỗ trợ TSPL, ZPL, EPL, DPL.</li>
+            <li><strong>Model:</strong> Chainway CP20.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>3. Đầu đọc cầm tay RFID (Chainway C72)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Thiết bị PDA công nghiệp tích hợp UHF RFID hàng đầu.</em></p>
+          <ul>
+            <li><strong>Hệ điều hành:</strong> Android 11/13.</li>
+            <li><strong>Công nghệ:</strong> Chip Impinj E Series, hỗ trợ Gen2X.</li>
+            <li><strong>Hiệu suất:</strong> Đọc 1300+ tags/giây, phạm vi 30m.</li>
+            <li><strong>Chức năng:</strong> Định vị thẻ RFID chính xác.</li>
+            <li><strong>Cấu hình:</strong> Octa-Core 2.3GHz, pin 8000mAh.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>4. Tem RFID cho hàng trang sức</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Tem RFID chuyên dụng để định danh và theo dõi hàng trang sức.</em></p>
+          <ul>
+            <li><strong>Số lượng:</strong> 1000 tem/cuộn.</li>
+            <li><strong>Tần số:</strong> 860 – 960MHz.</li>
+            <li><strong>Bộ nhớ EPC:</strong> 48 – 256 bits.</li>
+            <li><strong>Chuẩn:</strong> ISO 18000-6C; EPC Class 1 Gen 2.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <p style=\"margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 14px;\"><em>💡 Grozone cam kết đưa ra lựa chọn thiết bị tối ưu theo nhu cầu vận hành và ngân sách của Quý khách.</em></p>
+      
+      <h4 style=\"margin-top: 30px; margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
       <p style=\"margin-bottom: 15px;\"><em>Hiệu suất đầu tư vượt trội từ Hệ thống Quản lý Bán lẻ Trang sức Thông minh</em></p>
       <ul style=\"margin-left: 20px; margin-bottom: 30px;\">
         <li><strong>Tăng Tốc độ Kiểm kê:</strong> Giảm 95% thời gian kiểm kê (từ ngày xuống giờ/phút).</li>
@@ -110,11 +125,14 @@ rightContent:
         <li><strong>Tối ưu Tồn kho:</strong> Giảm 10% - 20% lượng hàng tồn đọng (giảm chi phí vốn).</li>
         <li><strong>Tăng Hiệu suất Bán hàng:</strong> Tăng tốc độ giao dịch tại quầy và nâng cao trải nghiệm khách hàng.</li>
       </ul>
-      
-      <h3 style=\"margin-bottom: 20px;\">Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone</h3>
-      <p style=\"margin-bottom: 20px;\">Liên hệ để thực hiện Khảo sát Hiện trạng và Thiết kế Hệ thống theo nhu cầu riêng.</p>
-      <a href=\"/contact\" class=\"mil-button mil-border mil-fw\"><span>Liên hệ ngay</span></a>
     "
+
+ctaSection:
+    enabled: 1
+    title: "Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone"
+    description: "Liên hệ để thực hiện Khảo sát Hiện trạng và Thiết kế Hệ thống theo nhu cầu riêng."
+    buttonText: "Liên hệ ngay"
+    buttonLink: "/contact"
 
 gallery: 
     enabled: 1

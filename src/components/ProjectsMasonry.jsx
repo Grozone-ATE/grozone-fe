@@ -15,7 +15,7 @@ const ProjectsMasonry = ({ projects }) => {
       <>
         {/* portfolio */}
         <section id="portfolio">
-            <div className="container mil-portfolio mil-p-120-60">
+            <div className="container mil-portfolio" style={{paddingTop: '0', paddingBottom: '60px'}}>
 
                 <div className="mil-lines-place"><LinesIcon /></div>
                 <div className="mil-lines-place mil-lines-long"><LinesIcon /></div>

@@ -15,7 +15,7 @@ const Services = (props) => {
     <Layouts>
       {/* banner */}
       <div className="mil-dark-bg">
-          <PageBannerDark pageTitle={"This is <span className=\"mil-thin\">what</span><br> we do <span className=\"mil-thin\">best</span>"} breadTitle={"Services"} anchorLabel={"Our services"} anchorLink={"#services"} />
+          <PageBannerDark pageTitle={"Đây là <span className=\"mil-thin\">điều</span><br> chúng tôi <span className=\"mil-thin\">làm tốt nhất</span>"} breadTitle={"Dịch vụ"} anchorLabel={"Dịch vụ của chúng tôi"} anchorLink={"#services"} />
 
           {/* services */}
           <section id="services">
@@ -37,12 +37,12 @@ const Services = (props) => {
                                           <h4 className="mil-muted mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : item.preview_title}} />
                                           <p className="mil-descr mil-light-soft mil-up mil-mb-30">{item.short}</p>
                                           <ul className="mil-service-list mil-light mil-mb-30">
-                                            {item.list.items.slice(0, 4).map((list_item, list_key) => (
+                                            {item.list.items.slice(0, 2).map((list_item, list_key) => (
                                             <li className="mil-up" key={`services-item-${key}-list-${list_key}`}>{list_item.label}</li>
                                             ))}
                                           </ul>
                                           <div className="mil-link mil-accent mil-arrow-place mil-up">
-                                              <span>Read more</span>
+                                              <span>Xem thêm</span>
                                               <ArrowIcon />
                                           </div>
                                       </Link>

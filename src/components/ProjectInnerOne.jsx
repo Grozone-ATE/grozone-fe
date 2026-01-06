@@ -8,10 +8,9 @@ const ProjectInner1 = ({ postData, prev, next }) => {
     <section className="mil-p-120-0">
         <div className="container mil-p-0-120" id="project">
             {typeof postData.fullImage != "undefined" &&
-            <div className="mil-up mil-mb-60" style={{position: 'relative'}}>
-                <img src={postData.fullImage} alt={postData.title} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
-                <a data-fancybox="gallery" data-no-swup href={postData.fullImage} className="mil-zoom-btn">
-                    <img src="/img/icons/zoom.svg" alt="zoom" />
+            <div className="mil-up mil-mb-60">
+                <a data-fancybox="gallery" data-no-swup href={postData.fullImage} style={{display: 'block', cursor: 'pointer'}}>
+                    <img src={postData.fullImage} alt={postData.title} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
                 </a>
             </div>
             }
@@ -40,21 +39,20 @@ const ProjectInner1 = ({ postData, prev, next }) => {
                     {typeof postData.gallery != "undefined" && postData.gallery.enabled == 1 && postData.gallery.items.length > 0 ? (
                         <>
                             {postData.gallery.items.map((item, key) => (
-                                <div key={`alternating-item-${key}`} className={`row align-items-center mil-mb-120 ${key % 2 === 0 ? '' : 'flex-row-reverse'}`}>
+                                <div key={`alternating-item-${key}`} className={`row align-items-start ${key > 0 ? 'mil-mt-90' : ''} mil-mb-90 ${key % 2 === 0 ? '' : 'flex-row-reverse'}`}>
                                     <div className="col-lg-6">
-                                        <div className="mil-up" style={{position: 'relative'}}>
-                                            <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
-                                            <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
-                                                <img src="/img/icons/zoom.svg" alt="zoom" />
+                                        <div className="mil-up" style={{display: 'flex', alignItems: 'flex-start', height: '100%'}}>
+                                            <a data-fancybox="gallery" data-no-swup href={item.image} style={{display: 'block', cursor: 'pointer', width: '100%'}}>
+                                                <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px', objectFit: 'contain'}} />
                                             </a>
                                         </div>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6" style={{display: 'flex', alignItems: 'flex-start'}}>
                                         {key === 0 && (
-                                            <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[0] || postData.description.content}} />
+                                            <div className="mil-text mil-up mil-content-spacing" style={{width: '100%'}} dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[0] || postData.description.content}} />
                                         )}
                                         {key > 0 && postData.description.content.split('<!--SPLIT-->')[key] && (
-                                            <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[key]}} />
+                                            <div className="mil-text mil-up mil-content-spacing" style={{width: '100%'}} dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->')[key]}} />
                                         )}
                                     </div>
                                 </div>
@@ -63,7 +61,7 @@ const ProjectInner1 = ({ postData, prev, next }) => {
                             {postData.description.content.split('<!--SPLIT-->').length > postData.gallery.items.length && (
                                 <div className="row justify-content-center mil-mt-60">
                                     <div className="col-lg-10">
-                                        <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->').slice(postData.gallery.items.length).join('')}} />
+                                        <div className="mil-text mil-up mil-content-spacing" dangerouslySetInnerHTML={{__html : postData.description.content.split('<!--SPLIT-->').slice(postData.gallery.items.length).join('')}} />
                                     </div>
                                 </div>
                             )}
@@ -71,7 +69,7 @@ const ProjectInner1 = ({ postData, prev, next }) => {
                     ) : (
                         <div className="row justify-content-center mil-p-90-120">
                             <div className="col-lg-10">
-                                <div className="mil-text mil-up" dangerouslySetInnerHTML={{__html : postData.description.content}} />
+                                <div className="mil-text mil-up mil-content-spacing" dangerouslySetInnerHTML={{__html : postData.description.content}} />
                             </div>
                         </div>
                     )}
@@ -87,10 +85,9 @@ const ProjectInner1 = ({ postData, prev, next }) => {
                     {postData.gallery2.items.map((item, key) => (
                     <div className="col-lg-6" key={`gallery2-item-${key}`}>
 
-                        <div className="mil-up mil-mb-30" style={{position: 'relative'}}>
-                            <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
-                            <a data-fancybox="gallery" data-no-swup href={item.image} className="mil-zoom-btn">
-                                <img src="/img/icons/zoom.svg" alt="zoom" />
+                        <div className="mil-up mil-mb-30">
+                            <a data-fancybox="gallery" data-no-swup href={item.image} style={{display: 'block', cursor: 'pointer'}}>
+                                <img src={item.image} alt={item.alt} style={{width: '100%', height: 'auto', display: 'block', borderRadius: '8px'}} />
                             </a>
                         </div>
 

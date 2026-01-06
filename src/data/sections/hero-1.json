@@ -1,9 +1,9 @@
 {
     "title": "Grozone<br><span class=\"mil-thin\" style=\"white-space: nowrap;\">Kiến tạo công nghệ</span><br><span class=\"mil-thin\">Kết quả bền vững</span>",
-    "description": "Chúng tôi thu hẹp khoảng cách giữa tham vọng chiến lược và thực tế vận hành bằng cách kết hợp Bản thiết kế chiến lược với AI cấp độ sản xuất và Hạ tầng chủ quyền.",
+    "description": "Hạ tầng cho Tăng trưởng Hệ thống Grozone không chỉ cung cấp giải pháp công nghệ đơn lẻ, chúng tôi là nền tảng hạ tầng nơi các ý tưởng được cấp vốn, tài nguyên và nhân lực để phát triển thành các mô hình kinh doanh độc lập. Chúng tôi chịu trách nhiệm toàn diện từ khâu thiết kế, triển khai đến vận hành và tối ưu hóa năng suất.",
     "button1": {
-        "link": "/services",
-        "label": "Dịch vụ"
+        "link": "/contact",
+        "label": "Liên hệ ngay"
     },
     "button2": {
         "link": "/projects",

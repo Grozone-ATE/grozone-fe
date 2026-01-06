@@ -1,47 +1,28 @@
 import Link from "next/link";
-import { useState } from "react";
-import AppData from "@data/app.json";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import AppData from "@data/app.json";
 
 import BackToTop from "../back-to-top/Index";
 import Pentagon from "@layouts/pentagon/Index";
+import ClientNavigation from "@components/ClientNavigation";
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
+  const router = useRouter();
 
-  const navItems = [];
+  // Close menu when route changes
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setToggle(false);
+    };
 
-  const { asPath } = useRouter();
+    router.events.on('routeChangeStart', handleRouteChange);
 
-  AppData.header.menu.forEach((item, index) => {
-    let s_class1 = '';
-
-    if ( item.children != 0 ) {
-      s_class1 = 'mil-has-children';
-    }
-    if ( ( asPath.indexOf( item.link ) != -1 && item.link != '/' ) || asPath == item.link ) {
-      s_class1 += ' mil-active';
-    }
-    let newobj = Object.assign({}, item, { "classes" :  s_class1 });
-    navItems.push(newobj);
-  });
-
-  const clickedMobileMenuItemParent = (e) => {
-    e.preventDefault();
-
-    const lists = document.querySelectorAll('.mil-has-children ul');
-    lists.forEach((list) => {
-        list.classList.remove('mil-active');
-    });
-
-    const links = document.querySelectorAll('.mil-has-children a');
-    links.forEach((link) => {
-        link.classList.remove('mil-active');
-    });
-
-    e.target.classList.toggle('mil-active');
-    e.target.parentNode.querySelector('ul').classList.toggle('mil-active');
-  }
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -50,7 +31,9 @@ const DefaultHeader = ({ extraClass }) => {
     <div className={`mil-menu-frame ${toggle ? "mil-active" : ""}`}>
         {/* frame clone */}
         <div className="mil-frame-top">
-            <Link href={AppData.header.logo.link} className="mil-logo">{AppData.header.logo.symbol}</Link>
+            <Link href={AppData.header.logo.link} className="mil-logo">
+                <img src="/img/G-logo.png" alt="Grozone Logo" style={{height: 'auto', maxWidth: '60px'}} />
+            </Link>
             <div className={`mil-menu-btn ${toggle ? "mil-active" : ""}`} onClick={() => setToggle(!toggle)}>
                 <span />
             </div>
@@ -60,26 +43,7 @@ const DefaultHeader = ({ extraClass }) => {
           <div className="mil-menu-content">
               <div className="row">
                   <div className="col-xl-5">
-
-                      <nav className="mil-main-menu" id="swupMenu">
-                        <ul>
-                            {navItems.map((item, key) => (
-                            <li className={item.classes} key={`header-menu-item-${key}`}>
-                                <Link href={item.link} onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}>{item.label}</Link>
-                                {item.children != 0 &&
-                                <ul>
-                                    {item.children.map((subitem, key2) => (
-                                    <li key={`header-submenu${key}-item-${key2}`} className={ ( ( asPath.indexOf( subitem.link ) != -1 && subitem.link != '/' ) || asPath == subitem.link ) ? "mil-active" : "" }>
-                                        <Link href={subitem.link}>{subitem.label}</Link>
-                                    </li>
-                                    ))}
-                                </ul>
-                                }
-                            </li>
-                            ))}
-                        </ul>
-                      </nav>
-
+                      <ClientNavigation />
                   </div>
                   <div className="col-xl-7">
 
@@ -91,25 +55,27 @@ const DefaultHeader = ({ extraClass }) => {
                                   </div>
                               </div>
                           </div>
-                          <div className="mil-menu-right" style={{display: 'flex', alignItems: 'center', minHeight: '100%'}}>
-                              <div className="row" style={{width: '100%'}}>
-                                  <div className="col-lg-8 mil-mb-60">
+                          <div className="mil-menu-right" style={{display: 'flex', alignItems: 'center', paddingTop: '0'}}>
+                              <div className="row" style={{width: '100%', display: 'flex', alignItems: 'flex-start'}}>
+                                  <div className="col-lg-6 mil-mb-60" style={{display: 'flex', flexDirection: 'column'}}>
 
-                                      <h6 className="mil-muted mil-mb-30">Dự án</h6>
+                                      <h6 className="mil-muted mil-mb-30" style={{fontSize: '22px', fontWeight: '600'}}>Sản phẩm</h6>
 
-                                      <ul className="mil-menu-list">
+                                      <ul className="mil-menu-list" style={{fontSize: '18px'}}>
                                           <li><Link href="/projects/project-1" className="mil-light-soft">GroTimetable - Sắp xếp thời khóa biểu</Link></li>
                                           <li><Link href="/projects/project-2" className="mil-light-soft">Giải pháp RFID Toàn diện</Link></li>
                                       </ul>
 
                                   </div>
-                                  <div className="col-lg-4 mil-mb-60">
+                                  <div className="col-lg-6 mil-mb-60" style={{display: 'flex', flexDirection: 'column'}}>
 
-                                      <h6 className="mil-muted mil-mb-30">Liên kết</h6>
+                                      <h6 className="mil-muted mil-mb-30" style={{fontSize: '22px', fontWeight: '600'}}>Liên hệ</h6>
 
-                                      <ul className="mil-menu-list">
-                                          <li><Link href="/contact" className="mil-light-soft">Liên hệ</Link></li>
-                                          <li><Link href="/services" className="mil-light-soft">Dịch vụ</Link></li>
+                                      <ul className="mil-menu-list" style={{fontSize: '18px'}}>
+                                          <li className="mil-light-soft"><strong style={{fontWeight: '600', fontSize: '20px'}}>Grozone</strong></li>
+                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft">business@grozone.vn</a></li>
+                                          <li><a href="tel:+84915011395" className="mil-light-soft">+84 915 011 395</a></li>
+                                          <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '16px'}}>TP. Hồ Chí Minh</li>
                                       </ul>
 
                                   </div>
@@ -131,7 +97,9 @@ const DefaultHeader = ({ extraClass }) => {
       {/* frame */}
       <div className="mil-frame">
         <div className="mil-frame-top">
-          <Link href={AppData.header.logo.link} className="mil-logo">{AppData.header.logo.symbol}</Link>
+          <Link href={AppData.header.logo.link} className="mil-logo">
+              <img src="/img/G-logo.png" alt="Grozone Logo" style={{height: 'auto', maxWidth: '60px'}} />
+          </Link>
           <div className={`mil-menu-btn ${toggle ? "mil-active" : ""}`} onClick={() => setToggle(!toggle)}>
               <span />
           </div>

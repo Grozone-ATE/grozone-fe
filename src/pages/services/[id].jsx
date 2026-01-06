@@ -22,7 +22,7 @@ const ServiceDetail = ( { data, related } ) => {
 
   return (
     <Layouts>
-      <PageBanner pageTitle={postData.introTitle} breadTitle={postData.title} anchorLabel={"About service"} anchorLink={"#service"} />
+      <PageBanner pageTitle={postData.introTitle} breadTitle={postData.title} anchorLabel={"Về dịch vụ"} anchorLink={"#service"} />
 
       {/* service */}
       <section id="service">
@@ -34,10 +34,10 @@ const ServiceDetail = ( { data, related } ) => {
                         <SafeHTML html={postData.description.title} tag="h4" className="mil-up mil-mb-30" />
                       )}
                       {postData.description?.content && (
-                        <SafeHTML html={postData.description.content} tag="p" className="mil-up mil-mb-30" />
+                        <SafeHTML html={postData.description.content} tag="div" className="mil-up mil-mb-60" />
                       )}
                       {postData.description?.button && (
-                        <div className="mil-up">
+                        <div className="mil-up mil-mt-30">
                             <Link href={postData.description.button.link} className="mil-link mil-dark mil-arrow-place">
                                 <span>{postData.description.button.label}</span>
                             </Link>
@@ -49,7 +49,7 @@ const ServiceDetail = ( { data, related } ) => {
                   {postData.list != undefined && postData.list.items && postData.list.items.length > 0 &&
                   <>
                       {postData.list.items.map((item, key) => (
-                      <div className="mil-accordion-group mil-up" key={`service-list-${key}`}>
+                      <div className={`mil-accordion-group mil-up ${key > 0 ? 'mil-mt-30' : ''}`} key={`service-list-${key}`}>
                           <div className="mil-accordion-menu">
 
                               <p className="mil-accordion-head">{item.label || ''}</p>
@@ -61,7 +61,7 @@ const ServiceDetail = ( { data, related } ) => {
 
                           </div>
                           {item.value && (
-                            <SafeHTML html={item.value} className="mil-accordion-content mil-text" />
+                            <SafeHTML html={item.value} className="mil-accordion-content mil-text mil-content-spacing" />
                           )}
                       </div>
                       ))}
@@ -87,7 +87,7 @@ export async function getStaticPaths() {
 
     return {
       paths,
-      fallback: false
+      fallback: 'blocking'
     }
 }
 

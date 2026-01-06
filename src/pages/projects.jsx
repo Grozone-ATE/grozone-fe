@@ -10,7 +10,7 @@ import { getSortedProjectsData } from "@library/projects";
 const Projects = (props) => {
   return (
     <Layouts>
-      <PageBanner pageTitle={"Dự án của <span className=\"mil-thin\">chúng tôi</span>"} breadTitle={"Dự án"} anchorLabel={"Dự án của chúng tôi"} anchorLink={"#portfolio"} />
+      <PageBanner pageTitle={"Sản phẩm của <span className=\"mil-thin\">chúng tôi</span>"} breadTitle={"Sản phẩm"} anchorLabel={"Sản phẩm của chúng tôi"} anchorLink={"#portfolio"} />
 
       <ProjectsMasonry projects={props.projects} />
       

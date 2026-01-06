@@ -20,20 +20,20 @@ const RelatedServicesSection = ( { services } ) => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" style={{display: 'flex'}}>
                         {services.slice(0, Data.numOfItems).map((item, key) => (
-                        <div className="col-lg-4" key={`services-${key}`}>
+                        <div className="col-lg-4" key={`services-${key}`} style={{display: 'flex'}}>
 
-                            <Link href={`/services/${item.id}`} className="mil-service-card-lg mil-other-card mil-more mil-mb-30">
+                            <Link href={`/services/${item.id}`} className="mil-service-card-lg mil-other-card mil-more mil-mb-30" style={{width: '100%'}}>
                                 <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : item.preview_title}} />
                                 <p className="mil-descr mil-up mil-mb-30">{item.short}</p>
                                 <ul className="mil-service-list mil-dark mil-mb-30">
-                                    {item.list.items.map((list_item, list_key) => (
+                                    {item.list.items.slice(0, 2).map((list_item, list_key) => (
                                     <li className="mil-up" key={`services-${key}-list-${list_key}`}>{list_item.label}</li>
                                     ))}
                                 </ul>
                                 <div className="mil-link mil-dark mil-arrow-place mil-up">
-                                    <span>Read more</span>
+                                    <span>Xem thêm</span>
                                 </div>
                             </Link>
 

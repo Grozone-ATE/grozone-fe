@@ -54,52 +54,67 @@ description:
         <li><strong>Kiểm soát an ninh:</strong> Lắp đặt đầu đọc cố định ở lối ra vào kho/khu vực cấm kèm chuông cảnh báo đối với các thiết bị y tế quan trọng.</li>
       </ul>
       
-      <h4 style=\"margin-top: 40px; margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính</h4>
-      
-      <p style=\"margin-top: 20px;\"><strong>1. Phần mềm Quản lý Y tế (Grozone HIMS)</strong></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Ứng dụng Di động/Web:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm tài sản/vật tư dựa trên công nghệ RFID và Mã vạch.</li>
-        <li><strong>Quản lý Danh mục:</strong> Quản lý danh sách và thông tin chi tiết của tài sản (thiết bị, lịch sử bảo trì, vị trí) và vật tư y tế (lô, hạn sử dụng, vị trí).</li>
-        <li><strong>Báo cáo & Thống kê:</strong> Kết xuất các báo cáo thống kê quan trọng về kiểm kê – tồn kho – danh mục tài sản theo thời gian thực và lịch sử sử dụng.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>2. Máy in tem/mã vạch (CP20 Barcode Printer)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Máy in mã vạch Chainway CP20 có hiệu suất in vượt trội, cung cấp kết quả in xuất sắc cho tem tài sản, tem vật tư/dược phẩm, và tem mẫu xét nghiệm.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Chức năng In ấn:</strong> Hỗ trợ in truyền nhiệt và in nhiệt trực tiếp.</li>
-        <li><strong>Hiệu năng:</strong> Độ phân giải 203dpi hoặc 300dpi, tốc độ in tối đa lên đến 152mm/s, độ rộng in tối đa 104mm.</li>
-        <li><strong>Tính năng Kết nối:</strong> Cung cấp nhiều giao diện giao tiếp (Serial/LAN/Wi-Fi/Bluetooth).</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway CP20.</li>
-        <li><strong>Ứng dụng:</strong> Đáp ứng đầy đủ nhu cầu in chất lượng cao trong quản lý bệnh viện, phòng thí nghiệm, và kho dược.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>3. Đầu đọc cầm tay (Chainway C63 - Mobile Computer)</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Thiết bị PDA/máy tính di động công nghiệp bền bỉ, tích hợp bàn phím vật lý và màn hình 4-inch, được thiết kế tối ưu cho các tác vụ thu thập và nhập liệu dữ liệu y tế chính xác trong môi trường bệnh viện, kho dược, hoặc phòng thí nghiệm.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Hệ điều hành:</strong> Android 13, hỗ trợ SDK cho việc tích hợp sâu với các hệ thống HIMS của bệnh viện.</li>
-        <li><strong>Pin và Nguồn điện:</strong> Pin chính dung lượng lớn 6700 mAh và tùy chọn pin báng súng 5000 mAh. Hỗ trợ thay pin nóng (hot swap) và hoạt động liên tục trên 12 giờ.</li>
-        <li><strong>Tích hợp Dữ liệu An toàn:</strong> Hỗ trợ module UHF RFID (tùy chọn), quét mã vạch 1D/2D tốc độ cao, NFC và Camera 13MP.</li>
-        <li><strong>Độ bền và Vệ sinh:</strong> Đạt chuẩn bảo vệ IP67 (chống bụi và chống nước), dễ dàng khử trùng theo các tiêu chuẩn vệ sinh nghiêm ngặt của bệnh viện.</li>
-        <li><strong>Thương hiệu/Model:</strong> Chainway C63.</li>
-        <li><strong>Ứng dụng trong Y tế:</strong> Quét nhanh Mã vật tư tại Kho Dược, Định danh Bệnh nhân và Xác nhận Thuốc trước khi cấp phát (đảm bảo 5 đúng), và Nhập liệu số liệu kiểm kê tài sản chính xác.</li>
-      </ul>
-      
-      <p style=\"margin-top: 20px;\"><strong>4. Tem RFID/Mã vạch Chuyên dụng cho Y tế</strong></p>
-      <p style=\"margin-bottom: 10px;\"><em>Tem RFID chuyên dụng để định danh và theo dõi thiết bị y tế (dạng dán), vật tư (dạng tag/sticker), và vòng tay bệnh nhân.</em></p>
-      <ul style=\"margin-left: 20px; margin-bottom: 20px;\">
-        <li><strong>Chức năng:</strong> Định danh tài sản/vật tư và khả năng ghi/in thông tin.</li>
-        <li><strong>Hiệu năng RFID:</strong> Tần số 860 – 960MHz.</li>
-        <li><strong>Chuẩn quốc tế:</strong> ISO 18000-6C; EPC Class 1 Gen 2.</li>
-        <li><strong>Ứng dụng:</strong> Quản lý vòng đời thiết bị, theo dõi tồn kho vật tư, và định danh an toàn cho bệnh nhân.</li>
-      </ul>
-      
-      <p><em>Grozone cam kết đưa ra lựa chọn thiết bị tối ưu nhất. Tùy theo nhu cầu vận hành cụ thể, quy mô bệnh viện, và ngân sách đầu tư của Quý khách.</em></p>
     "
 
 rightContent:
     enabled: 1
     content: "
-      <h4 style=\"margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
+      <h4 style=\"margin-bottom: 20px;\">4. Các Nhóm Chức năng Chính và Thiết bị</h4>
+      <p style=\"margin-bottom: 20px; color: #666;\"><em>Nhấn vào từng mục để xem chi tiết</em></p>
+      
+      <details class=\"mil-details-item\" open>
+        <summary>1. Phần mềm Quản lý Y tế (Grozone HIMS)</summary>
+        <div class=\"mil-details-content\">
+          <ul>
+            <li><strong>Ứng dụng Di động/Web:</strong> Cung cấp ứng dụng chuyên dụng phục vụ các nghiệp vụ kiểm kê – kiểm đếm – tìm kiếm tài sản/vật tư dựa trên RFID và Mã vạch.</li>
+            <li><strong>Quản lý Danh mục:</strong> Quản lý thông tin tài sản (thiết bị, lịch sử bảo trì, vị trí) và vật tư y tế (lô, hạn sử dụng, vị trí).</li>
+            <li><strong>Báo cáo & Thống kê:</strong> Kết xuất báo cáo kiểm kê – tồn kho – danh mục tài sản theo thời gian thực.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>2. Máy in tem/mã vạch (CP20 Barcode Printer)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Máy in mã vạch Chainway CP20 - kết quả in xuất sắc cho tem tài sản, vật tư/dược phẩm, và mẫu xét nghiệm.</em></p>
+          <ul>
+            <li><strong>Chức năng In ấn:</strong> Hỗ trợ truyền nhiệt và in nhiệt trực tiếp.</li>
+            <li><strong>Hiệu năng:</strong> 203/300dpi, tốc độ 152mm/s, rộng 104mm.</li>
+            <li><strong>Kết nối:</strong> Serial/LAN/Wi-Fi/Bluetooth.</li>
+            <li><strong>Model:</strong> Chainway CP20.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>3. Đầu đọc cầm tay (Chainway C63)</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Thiết bị PDA công nghiệp bền bỉ, thiết kế tối ưu cho môi trường y tế.</em></p>
+          <ul>
+            <li><strong>Hệ điều hành:</strong> Android 13, hỗ trợ SDK tích hợp HIMS.</li>
+            <li><strong>Pin:</strong> 6700mAh (chính) + 5000mAh (báng súng), hỗ trợ hot swap, hoạt động 12+ giờ.</li>
+            <li><strong>Tính năng:</strong> UHF RFID (tùy chọn), quét mã vạch 1D/2D, NFC, Camera 13MP.</li>
+            <li><strong>Độ bền:</strong> Chuẩn IP67, dễ khử trùng.</li>
+            <li><strong>Ứng dụng Y tế:</strong> Quét mã vật tư, định danh bệnh nhân, xác nhận thuốc (đảm bảo 5 đúng).</li>
+          </ul>
+        </div>
+      </details>
+      
+      <details class=\"mil-details-item\">
+        <summary>4. Tem RFID/Mã vạch Y tế Chuyên dụng</summary>
+        <div class=\"mil-details-content\">
+          <p><em>Tem RFID chuyên dụng cho thiết bị y tế, vật tư, và vòng tay bệnh nhân.</em></p>
+          <ul>
+            <li><strong>Chức năng:</strong> Định danh tài sản/vật tư, ghi/in thông tin.</li>
+            <li><strong>Tần số:</strong> 860 – 960MHz.</li>
+            <li><strong>Chuẩn:</strong> ISO 18000-6C; EPC Class 1 Gen 2.</li>
+          </ul>
+        </div>
+      </details>
+      
+      <p style=\"margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; font-size: 14px;\"><em>💡 Grozone cam kết đưa ra lựa chọn thiết bị tối ưu theo nhu cầu vận hành và ngân sách của Quý khách.</em></p>
+      
+      <h4 style=\"margin-top: 30px; margin-bottom: 20px;\">5. Lợi ích mà hệ thống mang lại</h4>
       <p style=\"margin-bottom: 15px;\"><em>Hiệu suất đầu tư vượt trội từ Hệ thống Quản lý Thông tin Y tế Thông minh (HIMS)</em></p>
       <ul style=\"margin-left: 20px; margin-bottom: 30px;\">
         <li><strong>Tăng Tốc độ Kiểm kê Tài sản:</strong> Giảm 95% thời gian kiểm kê (từ ngày xuống giờ/phút).</li>
@@ -108,11 +123,14 @@ rightContent:
         <li><strong>Tối ưu Sử dụng Tài sản:</strong> Tăng 10% - 20% hiệu suất sử dụng thiết bị (giảm thời gian chết và tìm kiếm).</li>
         <li><strong>Tăng Hiệu suất Vận hành:</strong> Tăng tốc độ phục vụ bệnh nhân, giảm sai sót y khoa và nâng cao trải nghiệm dịch vụ.</li>
       </ul>
-      
-      <h3 style=\"margin-bottom: 20px;\">Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone</h3>
-      <p style=\"margin-bottom: 20px;\">Liên hệ để thực hiện Khảo sát Hiện trạng Bệnh viện và Thiết kế Hệ thống Quản lý Thông tin Y tế (HIMS) theo nhu cầu riêng.</p>
-      <a href=\"/contact\" class=\"mil-button mil-border mil-fw\"><span>Liên hệ ngay</span></a>
     "
+
+ctaSection:
+    enabled: 1
+    title: "Liên hệ tư vấn và triển khai giải pháp RFID cùng Grozone"
+    description: "Liên hệ để thực hiện Khảo sát Hiện trạng Bệnh viện và Thiết kế Hệ thống Quản lý Thông tin Y tế (HIMS) theo nhu cầu riêng."
+    buttonText: "Liên hệ ngay"
+    buttonLink: "/contact"
 
 gallery: 
     enabled: 1

@@ -8,6 +8,8 @@ class MyDocument extends Document {
           {/* meta begin */}
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+          {/* favicon */}
+          <link rel="icon" href="/img/grozone_favicon.ico" />
           {/* meta end */}
 
           {/* Google Fonts preconnect for better performance */}

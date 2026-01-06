@@ -86,4 +86,379 @@ img.mfp-img {
 
 .mil-button.mil-border {
     justify-content: center !important;
+    padding: 0 50px !important; /* Đối xứng padding trái phải */
+    text-align: center !important;
+}
+
+.mil-button.mil-border span {
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Content spacing improvements for better readability */
+.mil-content-spacing {
+    /* Consistent paragraph spacing */
+    p {
+        margin-bottom: 1.5em;
+        line-height: 1.7;
+    }
+    
+    /* Remove top margin from first paragraph */
+    > p:first-child {
+        margin-top: 0;
+    }
+    
+    /* Consistent heading spacing */
+    h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.4;
+    }
+    
+    /* First heading doesn't need extra top margin */
+    > h3:first-child,
+    > h4:first-child,
+    > h5:first-child,
+    > h6:first-child {
+        margin-top: 0;
+    }
+    
+    /* List spacing */
+    ul, ol {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        line-height: 1.7;
+    }
+    
+    li {
+        margin-bottom: 0.75em;
+    }
+    
+    /* Div spacing - remove arbitrary inline margins */
+    > div {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    > div:first-child {
+        margin-top: 0;
+    }
+    
+    /* Consistent spacing for nested content */
+    div > p:first-child {
+        margin-top: 0;
+    }
+    
+    /* Better spacing for emphasized content boxes */
+    div[style*="background"] {
+        padding: 1.5em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 1.5em !important;
+    }
+}
+
+/* Improve text readability in project descriptions */
+.mil-text {
+    p {
+        margin-bottom: 1.5em;
+        line-height: 1.7;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.4;
+    }
+    
+    h3:first-child,
+    h4:first-child,
+    h5:first-child,
+    h6:first-child {
+        margin-top: 0;
+    }
+    
+    ul, ol {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        line-height: 1.7;
+    }
+    
+    li {
+        margin-bottom: 0.75em;
+    }
+}
+
+/* Reduce paragraph spacing in About section */
+#about .mil-text p {
+    margin-bottom: 0.75em;
+}
+
+/* Accordion content spacing */
+.mil-accordion-content {
+    p {
+        margin-bottom: 1.25em;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Content box styling for service pages */
+.mil-content-box {
+    padding: 1.5em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mil-content-box p {
+    margin-bottom: 0.75em;
+}
+
+.mil-content-box p:last-child {
+    margin-bottom: 0;
+}
+
+.mil-result {
+    margin-left: 1.25em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+.mil-highlight-box {
+    padding: 2em;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-radius: 12px;
+    color: white;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.mil-highlight-box p {
+    font-size: 1.125em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mil-highlight-box strong {
+    font-weight: 700;
+}
+
+/* Project box styling */
+.mil-project-box {
+    padding: 1.5em;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mil-project-box p {
+    margin-bottom: 1em;
+}
+
+.mil-project-box p:last-of-type {
+    margin-bottom: 1.25em;
+}
+
+/* Ensure spacing between all sections */
+section#about {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+/* Fix spacing after dark-bg section */
+.mil-dark-bg {
+    margin-bottom: 0 !important;
+}
+
+/* Add space before About section */
+section#about > .container {
+    padding-top: 120px !important;
+}
+
+/* Prevent lines decoration from overlapping previous section */
+.mil-about-photo .mil-lines-place {
+    top: 0 !important;
+}
+
+/* Add margin-top to Team section (after Services) */
+section#about + section.mil-dark-bg + section {
+    padding-top: 120px !important;
+}
+
+/* Add margin-top to Team section (after Services) */
+section#about + section.mil-dark-bg + section {
+    padding-top: 120px !important;
+}
+
+/* Reduce spacing in testimonial slider text */
+.mil-testimonial-text {
+    line-height: 1.5 !important;
+}
+
+.mil-testimonial-text br {
+    line-height: 1.2;
+    display: block;
+    margin: 0.25em 0;
+}
+
+.mil-review-frame h5 {
+    margin-bottom: 0.5em !important;
+}
+
+/* Make entire image clickable for fancybox gallery */
+.mil-zoom-btn {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Hide the zoom icon but keep the clickable area */
+.mil-zoom-btn img {
+    display: none !important;
+}
+
+/* Collapsible Details/Summary Styling - Progressive Disclosure Pattern */
+.mil-details-item {
+    margin-bottom: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.mil-details-item:hover {
+    border-color: #f59e0b;
+}
+
+.mil-details-item summary {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1a1a2e;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.mil-details-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.mil-details-item summary::after {
+    content: '▼';
+    font-size: 12px;
+    color: #f59e0b;
+    transition: transform 0.3s ease;
+}
+
+.mil-details-item[open] summary {
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.mil-details-item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.mil-details-item .mil-details-content {
+    padding: 15px 20px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.mil-details-item .mil-details-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.mil-details-item .mil-details-content li {
+    margin-bottom: 8px;
+}
+
+.mil-details-item .mil-details-content p {
+    margin-bottom: 10px;
+}
+
+.mil-details-item .mil-details-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Floating Label Pattern for Contact Form */
+.mil-floating-label {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mil-floating-label input,
+.mil-floating-label textarea {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.mil-floating-label label {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.mil-floating-label input:focus + label,
+.mil-floating-label textarea:focus + label,
+.mil-floating-label.mil-has-value label {
+    top: 5px;
+    font-size: 11px;
+    color: #f59e0b;
+}
+
+.mil-floating-label input::placeholder,
+.mil-floating-label textarea::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mil-floating-label input:focus::placeholder,
+.mil-floating-label textarea:focus::placeholder {
+    opacity: 0;
+}
+
+/* Project gallery image height limit */
+#project .row.align-items-start .col-lg-6 img {
+    max-height: 500px;
+    object-fit: contain;
 }

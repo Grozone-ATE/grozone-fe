@@ -1,8 +1,37 @@
 {
-    "subtitle": "Thu hẹp khoảng cách giữa tham vọng chiến lược <br> và thực tế vận hành",
-    "title": "Sẵn sàng chuyển đổi <span class=\"mil-thin\">doanh nghiệp của bạn?</span> <br> Hãy <span class=\"mil-thin\">liên hệ ngay!</span>",
-    "button": {
-        "label": "Liên hệ ngay",
-        "link": "/contact"
+    "headline": "NĂNG LỰC THỰC HIỆN <span class=\"mil-thin\">DỰ ÁN CỦA CHÚNG TÔI</span>",
+    "description": "Chúng tôi không chỉ thực hiện các dự án; chúng tôi kiến tạo kết quả. Khả năng của chúng tôi thu hẹp khoảng cách giữa tham vọng cấp cao và thực tế cấp cơ sở, kết hợp Kế hoạch Chiến lược với Trí tuệ Nhân tạo Cấp độ Sản xuất, Cơ sở hạ tầng Độc lập và Hoạt động Tập trung vào Doanh thu.",
+    "capabilities": {
+        "title": "Chuyên môn kỹ thuật",
+        "items": [
+            "Kế hoạch Chiến lược với AI cấp độ sản xuất",
+            "Cơ sở hạ tầng Độc lập",
+            "Hoạt động Tập trung vào Doanh thu",
+            "Kỷ luật vận hành nghiêm ngặt"
+        ]
+    },
+    "differentiators": {
+        "title": "Giá trị mang lại",
+        "items": [
+            {
+                "label": "Tài sản chiến lược",
+                "value": "Thiết kế an toàn, mặc định thông minh"
+            },
+            {
+                "label": "Tăng trưởng bền vững",
+                "value": "Tối ưu hóa từ ngày đầu tiên"
+            },
+            {
+                "label": "Trách nhiệm toàn diện",
+                "value": "Từ thiết kế, triển khai đến vận hành"
+            }
+        ]
+    },
+    "cta": {
+        "text": "Bằng cách kết hợp chuyên môn kỹ thuật sâu rộng với kỷ luật vận hành nghiêm ngặt, chúng tôi không chỉ cung cấp phần mềm mà còn xây dựng các tài sản chiến lược được thiết kế an toàn, mặc định thông minh và tối ưu hóa cho sự tăng trưởng bền vững của doanh nghiệp ngay từ ngày đầu tiên.",
+        "button": {
+            "label": "Liên hệ ngay",
+            "link": "/contact"
+        }
     }
 }
