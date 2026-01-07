@@ -703,13 +703,16 @@ backgrounds
     }
 
     & .mi-invert-fix {
+        min-height: 100%;
         height: 100%;
         position: relative;
         pointer-events: none;
         z-index: 3;
+        overflow: hidden;
 
         & .container {
             pointer-events: all;
+            min-height: 100%;
         }
     }
 }
