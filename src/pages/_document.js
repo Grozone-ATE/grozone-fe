@@ -8,8 +8,27 @@ class MyDocument extends Document {
           {/* meta begin */}
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          {/* favicon */}
-          <link rel="icon" href="/img/grozone_favicon.ico" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+          
+          {/* Favicon - Multiple sizes for better compatibility */}
+          <link rel="icon" type="image/x-icon" href="/img/grozone_favicon.ico" />
+          <link rel="shortcut icon" type="image/x-icon" href="/img/grozone_favicon.ico" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/img/grozone_favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/img/grozone_favicon.ico" />
+          <link rel="icon" type="image/png" sizes="96x96" href="/img/grozone_favicon.ico" />
+          
+          {/* Apple Touch Icon for iOS devices */}
+          <link rel="apple-touch-icon" sizes="180x180" href="/img/grozone_favicon.ico" />
+          
+          {/* Android Chrome Icons */}
+          <link rel="icon" type="image/png" sizes="192x192" href="/img/grozone_favicon.ico" />
+          <link rel="icon" type="image/png" sizes="512x512" href="/img/grozone_favicon.ico" />
+          
+          {/* Meta tags for SEO and Social Sharing */}
+          <meta name="theme-color" content="#1a1a2e" />
+          <meta name="msapplication-TileColor" content="#1a1a2e" />
+          <meta name="msapplication-TileImage" content="/img/grozone_favicon.ico" />
+          
           {/* meta end */}
 
           {/* Google Fonts preconnect for better performance */}
