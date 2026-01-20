@@ -60,7 +60,7 @@ const DefaultFooter = ( { extraClass } ) => {
                                     ))}
                                 </ul>
                             </div>
-                            <p className="mil-light-soft mil-up" style={{whiteSpace: 'nowrap', flexShrink: 0}}>{AppData.footer.copy}</p>
+                            <p className="mil-light-soft mil-up mil-footer-copy-desktop" style={{whiteSpace: 'nowrap', flexShrink: 0}}>{AppData.footer.copy}</p>
                         </div>
 
                     </div>
@@ -91,6 +91,11 @@ const DefaultFooter = ( { extraClass } ) => {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Copyright section - separate for mobile */}
+                <div className="mil-footer-copyright-mobile">
+                    <p className="mil-light-soft mil-up">{AppData.footer.copy}</p>
                 </div>
 
             </div>
