@@ -86,24 +86,9 @@
     },
     "social": [
         {
-            "link": "https://facebook.com",
-            "icon": "fab fa-facebook",
-            "title": "Facebook"
-        },
-        {
             "link": "https://www.youtube.com/@GrozoneCreative",
             "icon": "fab fa-youtube",
             "title": "YouTube"
-        },
-        {
-            "link": "https://twitter.com",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
-        },
-        {
-            "link": "https://github.com",
-            "icon": "fab fa-github",
-            "title": "Github"
         }
     ]
 }

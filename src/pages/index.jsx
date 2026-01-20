@@ -3,6 +3,7 @@ import Layouts from "@layouts/Layouts";
 import dynamic from "next/dynamic";
 
 import { getSortedPostsData } from "@library/posts";
+import { getSortedProjectsData } from "@library/projects";
 
 import HeroOneSection from "@components/sections/HeroOne"
 import AboutSection from "@components/sections/About";
@@ -18,7 +19,7 @@ const Home1 = (props) => {
     <Layouts>
       <HeroOneSection />
       <AboutSection />
-      <ServicesSection />
+      <ServicesSection projects={props.projects} allProjects={props.allProjects} />
       <TeamSection />
       <TestimonialSlider />
       {false && <PartnersSlider />}
@@ -30,10 +31,17 @@ export default Home1;
 
 export async function getStaticProps() {
   const allPosts = getSortedPostsData();
+  const allProjects = getSortedProjectsData();
+  // Get only project-1 and project-2 for featured banners
+  const featuredProjects = allProjects.filter(p => p.id === 'project-1' || p.id === 'project-2');
+  // Get all projects for the 6 cards
+  const allProjectsForCards = allProjects;
 
   return {
     props: {
-      posts: allPosts
+      posts: allPosts,
+      projects: featuredProjects,
+      allProjects: allProjectsForCards
     }
   }
 }

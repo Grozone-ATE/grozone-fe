@@ -1,0 +1,44 @@
+{
+    "title1": "Năng lực <span class=\"mil-thin\">Cốt lõi</span>",
+    "title2": "Của <span class=\"mil-thin\">Grozone</span>",
+    "subtitle": "Chuyển đổi tham vọng chiến lược thành<br/> thực tế vận hành hiệu quả<br/><br/><strong>Lĩnh vực của Grozone:</strong><br/>Công nghệ giáo dục (EdTech): Hệ thống LMS, SIS, Xếp lịch thông minh và AI trong tuyển sinh.<br/>Đại lý vận hành (AI/ML): Tích hợp AI Agent vào các hệ thống CRM, HRM, CLM và tài liệu pháp lý.<br/>Giải pháp ERP tùy biến: Hệ thống quản lý kho (WMS với RFID), mua hàng, quản lý khách hàng và tích hợp đa kênh.",
+    "button": {
+        "link": "/contact",
+        "label": "Liên hệ ngay"
+    },
+    "items": [
+        {
+            "title": "GroTimetable <br>Sắp xếp thời khóa biểu",
+            "text": "Giải pháp tự động hóa quy trình lập thời khóa biểu với thuật toán AI, giảm 95% thời gian và loại bỏ hoàn toàn sai sót.",
+            "link": "/projects/project-1"
+        },
+        {
+            "title": "GroZone RFID <br>Giải pháp Toàn diện",
+            "text": "Hệ thống RFID tích hợp phần cứng và phần mềm, cung cấp hiển thị real-time và tự động hóa quy trình cho chuỗi cung ứng.",
+            "link": "/projects/project-2"
+        },
+        {
+            "title": "Grozone WMS <br>Quản lý Kho thông minh",
+            "text": "Hệ thống quản lý kho tiêu chuẩn công nghiệp với RFID, tối ưu hóa vận hành và đảm bảo độ chính xác dữ liệu tồn kho tuyệt đối.",
+            "link": "/projects/project-3"
+        },
+        {
+            "title": "Grozone RMS <br>Quản lý Cửa hàng Trang sức",
+            "text": "Giải pháp quản lý bán lẻ trang sức thông minh với RFID, kiểm soát an ninh và tối ưu hóa trải nghiệm khách hàng.",
+            "link": "/projects/project-4"
+        },
+        {
+            "title": "Grozone HIMS <br>Quản lý Thông tin Y tế",
+            "text": "Hệ thống quản lý thông tin y tế toàn diện, ứng dụng RFID để tự động hóa quản lý tài sản, vật tư và bệnh nhân.",
+            "link": "/projects/project-5"
+        },
+        {
+            "title": "Grozone Finance <br>Tài chính & Bán hàng",
+            "text": "Giải pháp tự động hóa quy trình bán hàng, thanh toán và kế toán thông qua tích hợp dữ liệu giao dịch từ RFID/Mã vạch.",
+            "link": "/projects/project-6"
+        }
+    ]
+}
+
+
+

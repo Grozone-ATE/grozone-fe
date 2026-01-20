@@ -3,7 +3,7 @@ import Link from "next/link";
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import Pentagon from "@layouts/pentagon/Index";
 
-const ServicesSection = () => {
+const ServicesSection = ({ projects = [], allProjects = [] }) => {
   return (
     <>
         {/* services */}
@@ -34,13 +34,52 @@ const ServicesSection = () => {
                         </div>
                     </div>
 
-                    <div className="row mil-services-grid m-0">
-                        {Data.items.map((item, key) => (
-                        <div key={`services-item-${key}`} className="col-md-6 col-lg-4 mil-services-grid-item p-0">
+                    {/* Featured Projects - 2 project banners */}
+                    {projects && projects.length > 0 && (
+                        <div className="mil-featured-projects mil-up mil-mb-60" style={{display: 'flex', flexDirection: 'row', gap: '30px', flexWrap: 'wrap'}}>
+                            {projects.slice(0, 2).map((project, key) => (
+                                <Link 
+                                    key={`featured-project-${key}`} 
+                                    href={`/projects/${project.id}`}
+                                    className="mil-project-banner"
+                                    style={{flex: 1, minWidth: 'calc(50% - 15px)', display: 'flex', flexDirection: 'row', gap: '20px'}}
+                                >
+                                    <div className="mil-project-banner-image" style={{width: '40%', paddingBottom: '30%', position: 'relative', overflow: 'hidden', flexShrink: 0}}>
+                                        <img 
+                                            src={project.image || project.sliderImage} 
+                                            alt={project.title}
+                                            style={{width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0}}
+                                        />
+                                    </div>
+                                    <div className="mil-project-banner-content" style={{flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                                        <span className="mil-label" style={{marginBottom: '10px', fontSize: '14px'}}>{project.date || project.category}</span>
+                                        <h4 className="mil-muted mil-mb-15" style={{fontSize: '20px', fontWeight: 600}}>{project.title}</h4>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    )}
 
-                            <Link href={item.link} className="mil-service-card-sm mil-up">
-                                <h5 className="mil-muted mil-mb-30" dangerouslySetInnerHTML={{__html : item.title}} />
-                                <p className="mil-light-soft mil-mb-30">{item.text}</p>
+                    <div className="row mil-services-grid m-0">
+                        {allProjects && allProjects.length > 0 && allProjects.slice(0, 6).map((project, key) => (
+                        <div key={`project-card-${key}`} className="col-md-6 col-lg-4 mil-services-grid-item p-0">
+
+                            <Link href={`/projects/${project.id}`} className="mil-service-card-sm mil-project-card mil-up" style={{position: 'relative'}}>
+                                <div className="mil-project-card-arrow" style={{position: 'absolute', top: '15px', right: '15px', zIndex: 10}}>
+                                    <ArrowIcon />
+                                </div>
+                                <div className="mil-labels mil-mb-10" style={{fontSize: '11px'}}>
+                                    <span className="mil-label mil-upper mil-accent" style={{marginRight: '10px'}}>{project.category}</span>
+                                    <span className="mil-label mil-upper">{project.date}</span>
+                                </div>
+                                <h5 className="mil-muted mil-mb-15" style={{fontSize: '16px', fontWeight: 600, lineHeight: '1.4'}}>{project.title}</h5>
+                                {project.description && project.description.title && (
+                                    <p className="mil-light-soft" style={{fontSize: '13px', lineHeight: '1.6', marginBottom: 0, opacity: 0.8}}>
+                                        {project.description.title.length > 100 
+                                            ? project.description.title.substring(0, 100) + '...' 
+                                            : project.description.title}
+                                    </p>
+                                )}
                             </Link>
 
                         </div>

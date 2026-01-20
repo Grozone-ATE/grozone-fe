@@ -30,15 +30,24 @@ const Contact = () => {
                 <h3 className="mil-center mil-up mil-mb-120">Liên hệ <span className="mil-thin">với Grozone!</span></h3>
 
                 <Formik
-                initialValues = {{ email: '', name: '', message: '' }}
+                initialValues = {{ email: '', name: '', phone: '', message: '' }}
                 validate = { values => {
                     const errors = {};
+                    if (!values.name) {
+                        errors.name = 'Bắt buộc';
+                    }
                     if (!values.email) {
                         errors.email = 'Bắt buộc';
                     } else if (
                         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                     ) {
                         errors.email = 'Địa chỉ email không hợp lệ';
+                    }
+                    if (!values.phone) {
+                        errors.phone = 'Bắt buộc';
+                    }
+                    if (!values.message) {
+                        errors.message = 'Bắt buộc';
                     }
                     return errors;
                 }}
@@ -48,7 +57,7 @@ const Contact = () => {
                     
                     // Gửi email trực tiếp bằng mailto
                     const subject = encodeURIComponent(`Liên hệ từ ${values.name}`);
-                    const body = encodeURIComponent(`Tên: ${values.name}\nEmail: ${values.email}\n\nNội dung:\n${values.message}`);
+                    const body = encodeURIComponent(`Tên: ${values.name}\nEmail: ${values.email}\nSố điện thoại: ${values.phone}\n\nNội dung:\n${values.message}`);
                     const mailtoLink = `mailto:business@grozone.vn?subject=${subject}&body=${body}`;
                     
                     // Mở mailto link
@@ -83,13 +92,14 @@ const Contact = () => {
                             <input 
                                 type="text" 
                                 name="name" 
-                                required="required" 
+                                required
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 value={values.name}
                                 id="contact-name"
                             />
                             <label htmlFor="contact-name">Tên của bạn</label>
+                            {errors.name && touched.name && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.name}</div>}
                         </div>
                     </div>
                     <div className="col-lg-6 mil-up">
@@ -97,26 +107,43 @@ const Contact = () => {
                             <input 
                                 type="email" 
                                 name="email"
-                                required="required"
+                                required
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 value={values.email}
                                 id="contact-email"
                             />
                             <label htmlFor="contact-email">Email của bạn</label>
+                            {errors.email && touched.email && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.email}</div>}
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mil-up">
+                        <div className={`mil-floating-label ${values.phone ? 'mil-has-value' : ''}`}>
+                            <input 
+                                type="tel" 
+                                name="phone"
+                                required
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.phone}
+                                id="contact-phone"
+                            />
+                            <label htmlFor="contact-phone">Số điện thoại của bạn</label>
+                            {errors.phone && touched.phone && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.phone}</div>}
                         </div>
                     </div>
                     <div className="col-lg-12 mil-up">
                         <div className={`mil-floating-label ${values.message ? 'mil-has-value' : ''}`}>
                             <textarea 
                                 name="message" 
-                                required="required"
+                                required
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 value={values.message}
                                 id="contact-message"
                             />
                             <label htmlFor="contact-message">Nội dung tin nhắn của bạn</label>
+                            {errors.message && touched.message && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.message}</div>}
                         </div>
                     </div>
                     <div className="col-lg-8">

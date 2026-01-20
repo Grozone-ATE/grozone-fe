@@ -55,29 +55,31 @@ const DefaultHeader = ({ extraClass }) => {
                                   </div>
                               </div>
                           </div>
-                          <div className="mil-menu-right" style={{display: 'flex', alignItems: 'center', paddingTop: '0'}}>
-                              <div className="row" style={{width: '100%', display: 'flex', alignItems: 'flex-start'}}>
-                                  <div className="col-lg-6 mil-mb-60" style={{display: 'flex', flexDirection: 'column'}}>
-
-                                      <h6 className="mil-muted mil-mb-30 mil-menu-section-title">Sản phẩm</h6>
-
-                                      <ul className="mil-menu-list mil-menu-list-responsive">
-                                          <li><Link href="/projects/project-1" className="mil-light-soft">GroTimetable - Sắp xếp thời khóa biểu</Link></li>
-                                          <li><Link href="/projects/project-2" className="mil-light-soft">Giải pháp RFID Toàn diện</Link></li>
-                                      </ul>
-
-                                  </div>
-                                  <div className="col-lg-6 mil-mb-60" style={{display: 'flex', flexDirection: 'column'}}>
-
-                                      <h6 className="mil-muted mil-mb-30 mil-menu-section-title">Liên hệ</h6>
-
+                          <div className="mil-menu-right" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingTop: '0'}}>
+                              <h6 className="mil-muted mil-menu-section-title" style={{paddingTop: '0', marginTop: '0', marginBottom: '50px', fontSize: '28px', width: '100%', textAlign: 'center'}}>Liên hệ</h6>
+                              <div style={{display: 'flex', gap: '40px', width: '100%', flexWrap: 'wrap'}}>
+                                  <div style={{flex: 1, minWidth: '200px'}}>
                                       <ul className="mil-menu-list mil-menu-list-responsive">
                                           <li className="mil-light-soft"><strong className="mil-menu-company-name">Grozone</strong></li>
-                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft">business@grozone.vn</a></li>
-                                          <li><a href="tel:+84915011395" className="mil-light-soft">+84 915 011 395</a></li>
-                                          <li className="mil-light-soft mil-menu-address">TP. Hồ Chí Minh</li>
+                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
+                                          <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '14px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
                                       </ul>
-
+                                  </div>
+                                  <div style={{flex: 1, minWidth: '200px'}}>
+                                      <ul className="mil-menu-list mil-menu-list-responsive">
+                                          <li className="mil-light-soft">
+                                              <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0967882713</a>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
+                                                  (Thuan Dinh: Founder/Project Strategist)
+                                              </span>
+                                          </li>
+                                          <li className="mil-light-soft" style={{marginTop: '15px'}}>
+                                              <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0838673344</a>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
+                                                  (Thanh Liem: Project Manager/Advisor)
+                                              </span>
+                                          </li>
+                                      </ul>
                                   </div>
                               </div>
                           </div>
