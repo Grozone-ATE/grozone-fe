@@ -359,6 +359,8 @@ menu
     opacity: 0;
     pointer-events: none;
     transition: $t-md;
+    /* CRITICAL: Don't block body scroll when menu is closed */
+    touch-action: none;
 
     &.mil-active ~ .mil-frame {
         & .mil-frame-top {

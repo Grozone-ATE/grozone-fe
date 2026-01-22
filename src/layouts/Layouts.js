@@ -27,10 +27,10 @@ const Layouts = ({
     AnchorSscroll();
     CurrentPageLabel();
     
-    // Debug scroll issues (remove in production)
-    if (process.env.NODE_ENV === 'development') {
-      CheckScrollOnLoad();
-    }
+    // Debug scroll issues (disabled - all console.log are commented)
+    // if (process.env.NODE_ENV === 'development') {
+    //   CheckScrollOnLoad();
+    // }
   }, []);
 
   return (
