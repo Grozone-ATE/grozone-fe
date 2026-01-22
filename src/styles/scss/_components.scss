@@ -791,12 +791,16 @@ menu
 
             &.mil-has-children {
                 & > a {
+                    &:before {
+                        display: none !important;
+                    }
+
                     &:hover {
                         color: $light;
                         padding-left: 25px;
 
                         &:before {
-                            transform: scale(1);
+                            display: none !important;
                         }
                     }
                 }

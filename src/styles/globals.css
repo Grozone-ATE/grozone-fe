@@ -619,14 +619,16 @@ html, body {
 .mil-menu-right-frame {
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
     box-sizing: border-box !important;
 }
 
 .mil-menu-right {
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
     box-sizing: border-box !important;
 }
 
@@ -649,7 +651,23 @@ html, body {
 .mil-menu-list {
     width: 100% !important;
     max-width: 100% !important;
+    overflow: visible !important;
     box-sizing: border-box !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive {
+    overflow: visible !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive li {
+    overflow: visible !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive li span {
+    overflow: visible !important;
+    text-overflow: clip !important;
 }
 
 .mil-menu-list li {
@@ -888,6 +906,13 @@ html, body {
         gap: 15px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
+        flex-wrap: nowrap !important;
+        overflow: visible !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"] > div {
+        flex: 0 0 auto !important;
+        max-width: none !important;
     }
     
     /* Center align contact info on tablet */
@@ -1083,6 +1108,45 @@ html, body {
     
     .mil-menu-content .row > .col-lg-6:last-child {
         margin-bottom: 0 !important;
+    }
+}
+
+/* ============================================
+   FOOTER DESKTOP LAYOUT FIXES
+   Ensure equal spacing between 3 main columns
+   ============================================ */
+
+/* Desktop - ensure equal spacing between footer columns */
+@media screen and (min-width: 769px) {
+    footer .container .row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    footer .container .row > .col-md-4,
+    footer .container .row > .col-lg-4 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Fix contact info section - align left and prevent overlap */
+    footer .col-md-4:last-child,
+    footer .col-lg-4:last-child {
+        padding-left: 0 !important;
+    }
+    
+    /* Ensure grid layout for contact info doesn't overlap */
+    footer [style*="gridTemplateColumns"] {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    footer [style*="gridTemplateColumns"] > div {
+        min-width: 0 !important;
+        overflow: hidden !important;
     }
 }
 

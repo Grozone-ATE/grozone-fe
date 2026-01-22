@@ -64,28 +64,34 @@ const DefaultFooter = ( { extraClass } ) => {
                         </div>
 
                     </div>
-                    <div className="col-md-4 col-lg-4 mil-mb-40">
-                        <div className="row">
-                            <div className="col-6">
-                                <ul className="mil-menu-list mil-up mil-mb-40">
-                                    <li className="mil-light-soft"><strong>Grozone</strong></li>
-                                    <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
-                                    <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '14px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
+                    <div className="col-md-4 col-lg-4 mil-mb-40" style={{paddingLeft: '0', paddingRight: '15px', marginLeft: '-15px'}}>
+                        <div style={{display: 'flex', gap: '30px', alignItems: 'flex-start'}}>
+                            <div style={{flex: '0 0 auto'}}>
+                                <ul className="mil-menu-list mil-up" style={{marginBottom: '0'}}>
+                                    <li className="mil-light-soft" style={{fontSize: '16px', fontWeight: 500}}><strong>Grozone</strong></li>
+                                    <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
+                                    <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '16px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
                                 </ul>
                             </div>
-                            <div className="col-6">
-                                <ul className="mil-menu-list mil-up mil-mb-40">
-                                    <li className="mil-light-soft">
-                                        <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0967882713</a>
-                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
-                                            (Thuan Dinh: Founder/Project Strategist)
+                            <div style={{flex: '1', minWidth: '0'}}>
+                                <ul className="mil-menu-list mil-up" style={{marginBottom: '0'}}>
+                                    <li className="mil-light-soft" style={{marginBottom: '20px'}}>
+                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
+                                            Founder / Strategist
                                         </span>
+                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                            Dinh Thanh Thuan (Uruz)
+                                        </span>
+                                        <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>096.788.2713</a>
                                     </li>
-                                    <li className="mil-light-soft" style={{marginTop: '15px'}}>
-                                        <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0838673344</a>
-                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
-                                            (Thanh Liem: Project Manager/Advisor)
+                                    <li className="mil-light-soft" style={{marginBottom: '0'}}>
+                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
+                                            Business Development Manager
                                         </span>
+                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                            Tran Thanh Liem
+                                        </span>
+                                        <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>083.867.3344</a>
                                     </li>
                                 </ul>
                             </div>

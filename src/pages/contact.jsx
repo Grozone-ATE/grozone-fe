@@ -30,7 +30,7 @@ const Contact = () => {
                 <h3 className="mil-center mil-up mil-mb-120">Liên hệ <span className="mil-thin">với Grozone!</span></h3>
 
                 <Formik
-                initialValues = {{ email: '', name: '', phone: '', message: '' }}
+                initialValues = {{ email: '', name: '', phone: '', company: '', message: '' }}
                 validate = { values => {
                     const errors = {};
                     if (!values.name) {
@@ -57,7 +57,12 @@ const Contact = () => {
                     
                     // Gửi email trực tiếp bằng mailto
                     const subject = encodeURIComponent(`Liên hệ từ ${values.name}`);
-                    const body = encodeURIComponent(`Tên: ${values.name}\nEmail: ${values.email}\nSố điện thoại: ${values.phone}\n\nNội dung:\n${values.message}`);
+                    let bodyText = `Tên: ${values.name}\nEmail: ${values.email}\nSố điện thoại: ${values.phone}`;
+                    if (values.company) {
+                        bodyText += `\nTên công ty / tổ chức: ${values.company}`;
+                    }
+                    bodyText += `\n\nNội dung:\n${values.message}`;
+                    const body = encodeURIComponent(bodyText);
                     const mailtoLink = `mailto:business@grozone.vn?subject=${subject}&body=${body}`;
                     
                     // Mở mailto link
@@ -98,8 +103,8 @@ const Contact = () => {
                                 value={values.name}
                                 id="contact-name"
                             />
-                            <label htmlFor="contact-name">Tên của bạn</label>
-                            {errors.name && touched.name && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.name}</div>}
+                            <label htmlFor="contact-name">Tên của bạn <span style={{color: '#f59e0b'}}>*</span></label>
+                            {errors.name && touched.name && errors.name !== 'Bắt buộc' && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.name}</div>}
                         </div>
                     </div>
                     <div className="col-lg-6 mil-up">
@@ -113,8 +118,8 @@ const Contact = () => {
                                 value={values.email}
                                 id="contact-email"
                             />
-                            <label htmlFor="contact-email">Email của bạn</label>
-                            {errors.email && touched.email && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.email}</div>}
+                            <label htmlFor="contact-email">Email của bạn <span style={{color: '#f59e0b'}}>*</span></label>
+                            {errors.email && touched.email && errors.email !== 'Bắt buộc' && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.email}</div>}
                         </div>
                     </div>
                     <div className="col-lg-6 mil-up">
@@ -128,8 +133,21 @@ const Contact = () => {
                                 value={values.phone}
                                 id="contact-phone"
                             />
-                            <label htmlFor="contact-phone">Số điện thoại của bạn</label>
-                            {errors.phone && touched.phone && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.phone}</div>}
+                            <label htmlFor="contact-phone">Số điện thoại của bạn <span style={{color: '#f59e0b'}}>*</span></label>
+                            {errors.phone && touched.phone && errors.phone !== 'Bắt buộc' && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.phone}</div>}
+                        </div>
+                    </div>
+                    <div className="col-lg-6 mil-up">
+                        <div className={`mil-floating-label ${values.company ? 'mil-has-value' : ''}`}>
+                            <input 
+                                type="text" 
+                                name="company"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.company}
+                                id="contact-company"
+                            />
+                            <label htmlFor="contact-company">Tên công ty / tổ chức</label>
                         </div>
                     </div>
                     <div className="col-lg-12 mil-up">
@@ -142,8 +160,8 @@ const Contact = () => {
                                 value={values.message}
                                 id="contact-message"
                             />
-                            <label htmlFor="contact-message">Nội dung tin nhắn của bạn</label>
-                            {errors.message && touched.message && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.message}</div>}
+                            <label htmlFor="contact-message">Nội dung tin nhắn của bạn <span style={{color: '#f59e0b'}}>*</span></label>
+                            {errors.message && touched.message && errors.message !== 'Bắt buộc' && <div className="mil-error-message" style={{fontSize: '12px', color: '#f59e0b', marginTop: '4px'}}>{errors.message}</div>}
                         </div>
                     </div>
                     <div className="col-lg-8">

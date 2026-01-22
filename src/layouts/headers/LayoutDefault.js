@@ -55,29 +55,35 @@ const DefaultHeader = ({ extraClass }) => {
                                   </div>
                               </div>
                           </div>
-                          <div className="mil-menu-right" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingTop: '0'}}>
-                              <h6 className="mil-muted mil-menu-section-title" style={{paddingTop: '0', marginTop: '0', marginBottom: '50px', fontSize: '28px', width: '100%', textAlign: 'center'}}>Liên hệ</h6>
-                              <div style={{display: 'flex', gap: '40px', width: '100%', flexWrap: 'wrap'}}>
-                                  <div style={{flex: 1, minWidth: '200px'}}>
-                                      <ul className="mil-menu-list mil-menu-list-responsive">
-                                          <li className="mil-light-soft"><strong className="mil-menu-company-name">Grozone</strong></li>
-                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
-                                          <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '14px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
+                          <div className="mil-menu-right" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingTop: '0', marginTop: '0'}}>
+                              <h6 className="mil-muted mil-menu-section-title" style={{paddingTop: '0', marginTop: '0', marginBottom: '50px', fontSize: '28px', width: '100%', textAlign: 'left'}}>Liên hệ</h6>
+                              <div style={{display: 'flex', gap: '40px', width: '100%', flexWrap: 'nowrap', marginTop: '0', paddingTop: '0', overflow: 'visible'}}>
+                                  <div style={{flex: '0 0 auto', minWidth: '200px', maxWidth: 'none'}}>
+                                      <ul className="mil-menu-list mil-menu-list-responsive" style={{overflow: 'visible', width: 'auto'}}>
+                                          <li className="mil-light-soft" style={{fontSize: '16px', fontWeight: 500}}><strong className="mil-menu-company-name">Grozone</strong></li>
+                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
+                                          <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '16px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
                                       </ul>
                                   </div>
-                                  <div style={{flex: 1, minWidth: '200px'}}>
-                                      <ul className="mil-menu-list mil-menu-list-responsive">
+                                  <div style={{flex: '0 0 auto', minWidth: '280px', maxWidth: 'none'}}>
+                                      <ul className="mil-menu-list mil-menu-list-responsive" style={{overflow: 'visible', width: 'auto'}}>
                                           <li className="mil-light-soft">
-                                              <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0967882713</a>
-                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
-                                                  (Thuan Dinh: Founder/Project Strategist)
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
+                                                  Founder / Strategist
                                               </span>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                                  Dinh Thanh Thuan (Uruz)
+                                              </span>
+                                              <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>096.788.2713</a>
                                           </li>
                                           <li className="mil-light-soft" style={{marginTop: '15px'}}>
-                                              <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '14px', fontFamily: "'SVN-Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif", whiteSpace: 'nowrap', display: 'block'}}>0838673344</a>
-                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '13px', marginTop: '4px', whiteSpace: 'nowrap'}}>
-                                                  (Thanh Liem: Project Manager/Advisor)
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500, overflow: 'visible'}}>
+                                                  Business Development Manager
                                               </span>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                                  Tran Thanh Liem
+                                              </span>
+                                              <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>083.867.3344</a>
                                           </li>
                                       </ul>
                                   </div>
