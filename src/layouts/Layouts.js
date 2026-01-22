@@ -4,6 +4,7 @@ import { ScrollAnimation } from "../common/scrollAnims";
 import { CursorAnimation } from "../common/cursor";
 import { AnchorSscroll } from "../common/utilits";
 import { CurrentPageLabel } from "../common/utilits";
+import { CheckScrollOnLoad } from "../common/debugScroll";
 
 import Footer from "./footers/Index";
 import Header from "./headers/Index";
@@ -25,6 +26,11 @@ const Layouts = ({
     CursorAnimation();
     AnchorSscroll();
     CurrentPageLabel();
+    
+    // Debug scroll issues (remove in production)
+    if (process.env.NODE_ENV === 'development') {
+      CheckScrollOnLoad();
+    }
   }, []);
 
   return (

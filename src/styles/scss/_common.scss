@@ -34,7 +34,8 @@ body {
 
 .mil-wrapper {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     max-width: 100%;
 }
 

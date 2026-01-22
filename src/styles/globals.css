@@ -471,12 +471,32 @@ section#about + section.mil-dark-bg + section {
 /* Prevent horizontal overflow on all devices */
 html, body {
     overflow-x: hidden !important;
+    overflow-y: auto !important;
     max-width: 100vw !important;
 }
 
 .mil-wrapper {
     overflow-x: hidden !important;
+    overflow-y: visible !important;
     max-width: 100% !important;
+}
+
+/* Ensure scrolling works on desktop (MacBook and PC) */
+@media screen and (min-width: 1025px) {
+    html, body {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+    
+    .mil-wrapper {
+        overflow-y: visible !important;
+        height: auto !important;
+    }
+    
+    .mil-content {
+        overflow-y: visible !important;
+        height: auto !important;
+    }
 }
 
 /* Menu Frame Responsive */
@@ -821,6 +841,27 @@ html, body {
         font-size: 13px !important;
         text-align: center !important;
     }
+    
+    /* Make contact info vertical (single column) on mobile - menu */
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"] > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
 
 /* Large Devices (tablets, 992px and below) */
@@ -846,13 +887,20 @@ html, body {
 
 /* Tablet - portrait and landscape (769px - 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Minimize menu content padding on tablet */
+    /* Minimize menu content padding on tablet - reduce vertical padding to minimum */
     .mil-menu-content {
-        padding-top: 30px !important;
-        padding-bottom: 20px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
-    /* Minimize spacing for menu items on tablet */
+    /* Override any padding from SCSS - reduce vertical padding significantly */
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
+    }
+    
+    /* Keep original spacing for menu items - don't change */
     .mil-main-menu ul li {
         margin-bottom: 12px !important;
     }
@@ -869,24 +917,36 @@ html, body {
         padding-left: 0 !important;
         border-left: none !important;
         min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
     
-    /* Fix "Liên hệ" title spacing and alignment on tablet - minimize */
+    /* Enlarge "Liên hệ" title on tablet */
     .mil-menu-section-title,
     .mil-menu-right .mil-menu-section-title,
     h6.mil-menu-section-title {
-        margin-bottom: 12px !important;
+        margin-bottom: 15px !important;
         margin-top: 0 !important;
         padding-top: 0 !important;
-        font-size: 18px !important;
+        font-size: 32px !important;
         text-align: center !important;
         line-height: 1.2 !important;
+        width: 100% !important;
+        font-weight: 500 !important;
     }
     
-    /* Override inline style for margin-bottom */
+    /* Override inline style for margin-bottom and text-align */
     .mil-menu-section-title[style*="margin-bottom"],
-    h6[style*="margin-bottom"].mil-menu-section-title {
-        margin-bottom: 12px !important;
+    h6[style*="margin-bottom"].mil-menu-section-title,
+    .mil-menu-section-title[style*="textAlign"],
+    h6[style*="textAlign"].mil-menu-section-title {
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 32px !important;
     }
     
     /* Fix menu right content alignment on tablet - override inline styles */
@@ -898,16 +958,21 @@ html, body {
         display: flex !important;
         flex-direction: column !important;
         gap: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
-    /* Minimize gap between contact info columns on tablet - override inline styles */
+    /* Enlarge gap between contact info columns on tablet - override inline styles */
     .mil-menu-right > div[style*="display: flex"],
     .mil-menu-right > div[style*="gap"] {
-        gap: 15px !important;
+        gap: 50px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         flex-wrap: nowrap !important;
         overflow: visible !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
     }
     
     .mil-menu-right > div[style*="display: flex"] > div {
@@ -915,7 +980,7 @@ html, body {
         max-width: none !important;
     }
     
-    /* Center align contact info on tablet */
+    /* Enlarge and center align contact info on tablet */
     .mil-menu-list-responsive {
         text-align: center !important;
         margin-top: 0 !important;
@@ -925,7 +990,8 @@ html, body {
     .mil-menu-list-responsive li {
         text-align: center !important;
         justify-content: center !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 12px !important;
+        font-size: 18px !important;
     }
     
     .mil-menu-list-responsive li:last-child {
@@ -935,7 +1001,21 @@ html, body {
     .mil-menu-list-responsive li a {
         justify-content: center !important;
         text-align: center !important;
-        padding: 2px 0 !important;
+        padding: 4px 0 !important;
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge contact info text on tablet */
+    .mil-menu-list-responsive li span,
+    .mil-menu-list-responsive li strong,
+    .mil-menu-list-responsive li a {
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge company name */
+    .mil-menu-company-name {
+        font-size: 20px !important;
+        font-weight: 600 !important;
     }
     
     /* Minimize animation frame spacing */
@@ -949,6 +1029,8 @@ html, body {
     .mil-menu-content .row {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     
     .mil-menu-content .row > [class*="col-"] {
@@ -958,52 +1040,72 @@ html, body {
     
     .mil-menu-content .row > [class*="col-"]:last-child {
         margin-bottom: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Center the contact section column on tablet */
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Override inline font sizes for contact info on tablet */
+    .mil-menu-right [style*="fontSize"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right [style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge specific contact info elements */
+    .mil-menu-right .mil-menu-list-responsive li[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li[style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive li a[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li a[style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive li span[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li span[style*="font-size"] {
+        font-size: 18px !important;
     }
 }
 
 /* Tablet portrait specific (769px - 992px) */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    /* Further minimize spacing for tablet portrait */
+    /* Minimize menu content padding for tablet portrait */
     .mil-menu-content {
-        padding-top: 25px !important;
-        padding-bottom: 15px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
     }
     
-    .mil-menu-right-frame {
-        padding-top: 8px !important;
-        margin-top: 8px !important;
-    }
-    
-    .mil-menu-section-title {
-        margin-bottom: 10px !important;
-        font-size: 17px !important;
-    }
-    
-    .mil-main-menu ul li {
-        margin-bottom: 10px !important;
-    }
-    
-    .mil-menu-content .row > [class*="col-"] {
-        margin-bottom: 12px !important;
-    }
-}
-
-/* Tablet landscape specific (993px - 1024px) */
-@media screen and (min-width: 993px) and (max-width: 1024px) {
-    /* Minimize spacing for tablet landscape */
-    .mil-menu-content {
-        padding-top: 28px !important;
-        padding-bottom: 18px !important;
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
     }
     
     .mil-menu-right-frame {
         padding-top: 10px !important;
         margin-top: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
     
     .mil-menu-section-title {
-        margin-bottom: 12px !important;
-        font-size: 18px !important;
+        margin-bottom: 15px !important;
+        font-size: 32px !important;
+        text-align: center !important;
+        width: 100% !important;
     }
     
     .mil-main-menu ul li {
@@ -1012,6 +1114,90 @@ html, body {
     
     .mil-menu-content .row > [class*="col-"] {
         margin-bottom: 15px !important;
+    }
+    
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Enlarge contact info on tablet portrait */
+    .mil-menu-list-responsive li,
+    .mil-menu-list-responsive li a,
+    .mil-menu-list-responsive li span {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-list-responsive li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        gap: 50px !important;
+    }
+}
+
+/* Tablet landscape specific (993px - 1024px) */
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+    /* Minimize menu content padding for tablet landscape */
+    .mil-menu-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 10px !important;
+        margin-top: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-section-title {
+        margin-bottom: 15px !important;
+        font-size: 32px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        margin-bottom: 15px !important;
+    }
+    
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Enlarge contact info on tablet landscape */
+    .mil-menu-list-responsive li,
+    .mil-menu-list-responsive li a,
+    .mil-menu-list-responsive li span {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-list-responsive li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        gap: 50px !important;
     }
 }
 
@@ -1205,6 +1391,49 @@ html, body {
     /* Fix footer bottom info spacing */
     .mil-footer-bottom-info {
         margin-top: 20px !important;
+    }
+    
+    /* Make contact info vertical (single column) on mobile - footer */
+    /* Target the flex container - use more specific selectors */
+    footer .container .row .col-md-4:last-child > div,
+    footer .container .row .col-lg-4:last-child > div,
+    footer .mi-invert-fix .container .row .col-md-4:last-child > div,
+    footer .mi-invert-fix .container .row .col-lg-4:last-child > div {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+        width: 100% !important;
+        display: flex !important;
+    }
+    
+    /* Target all direct children divs inside the flex container */
+    footer .container .row .col-md-4:last-child > div > div,
+    footer .container .row .col-lg-4:last-child > div > div,
+    footer .mi-invert-fix .container .row .col-md-4:last-child > div > div,
+    footer .mi-invert-fix .container .row .col-lg-4:last-child > div > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        flex-basis: 100% !important;
+        flex-grow: 1 !important;
+        flex-shrink: 1 !important;
+    }
+    
+    /* Override inline flex styles */
+    footer .col-md-4:last-child > div > div[style*="flex: 0 0 auto"],
+    footer .col-md-4:last-child > div > div[style*="flex: 1"],
+    footer .col-lg-4:last-child > div > div[style*="flex: 0 0 auto"],
+    footer .col-lg-4:last-child > div > div[style*="flex: 1"] {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    footer .col-md-4:last-child .mil-menu-list,
+    footer .col-lg-4:last-child .mil-menu-list {
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     /* Fix contact info columns on mobile */

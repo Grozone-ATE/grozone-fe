@@ -4,7 +4,7 @@ export const AnchorSscroll = () => {
 
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
-        event.preventDefault();
+        e.preventDefault();
 
         var target = document.querySelector(link.getAttribute('href'));
         var offset = 0;
