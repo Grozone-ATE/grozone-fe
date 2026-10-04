@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  grozone-fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_STRAPI_API_URL: ${NEXT_PUBLIC_STRAPI_API_URL:-https://cms.grozone.vn/api}
+        NEXT_PUBLIC_STRAPI_URL: ${NEXT_PUBLIC_STRAPI_URL:-https://cms.grozone.vn}
+    container_name: grozone-fe
+    restart: unless-stopped
+    environment:
+      - STRAPI_API_TOKEN=${STRAPI_API_TOKEN}
+      - NEXT_PUBLIC_STRAPI_API_URL=${NEXT_PUBLIC_STRAPI_API_URL:-https://cms.grozone.vn/api}
+      - NEXT_PUBLIC_STRAPI_URL=${NEXT_PUBLIC_STRAPI_URL:-https://cms.grozone.vn}
+    networks:
+      - bookforge-internal
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/api/hello || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+networks:
+  bookforge-internal:
+    external: true
