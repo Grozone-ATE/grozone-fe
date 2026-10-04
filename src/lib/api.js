@@ -1,7 +1,7 @@
 export const fetchData = async (endpoint) => {
   try {
     const token = process.env.STRAPI_API_TOKEN;
-    const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://cms.grozone.vn/api';
+    const apiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://cms.grozone.co/api';
 
     const res = await fetch(`${apiUrl}${endpoint}`, {
       headers: {

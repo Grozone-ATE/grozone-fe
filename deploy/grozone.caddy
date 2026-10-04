@@ -1,9 +1,9 @@
-# Grozone Landing Page (Next.js SSR standalone) — grozone.vn & www.grozone.vn
-# DNS points to 157.66.101.217 (grey-cloud)
+# Grozone Production Site — grozone.co & www.grozone.co (and legacy grozone.vn)
 # Upstream grozone-fe is on bookforge-internal network.
-# Automatic HTTPS via HTTP-01 ACME for grozone.vn and www.grozone.vn.
+# Automatic HTTPS via HTTP-01 ACME.
+# Point DNS A records (@ and www) to 157.66.101.217.
 
-grozone.vn, www.grozone.vn {
+grozone.co, www.grozone.co, grozone.vn, www.grozone.vn {
 	encode zstd gzip
 
 	header {
