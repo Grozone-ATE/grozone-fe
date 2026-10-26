@@ -76,15 +76,6 @@ const DefaultHeader = ({ extraClass }) => {
                                               </span>
                                               <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>096.788.2713</a>
                                           </li>
-                                          <li className="mil-light-soft" style={{marginTop: '15px'}}>
-                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500, overflow: 'visible'}}>
-                                                  Business Development Manager
-                                              </span>
-                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
-                                                  Tran Thanh Liem
-                                              </span>
-                                              <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>083.867.3344</a>
-                                          </li>
                                       </ul>
                                   </div>
                               </div>
