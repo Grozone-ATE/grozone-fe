@@ -1,42 +1,27 @@
 ---
 #preview details
-title: "Branding and Identity Design"
-preview_title: "Branding and <br>Identity Design"
-short: "Our creative agency is a team of professionals focused on helping your brand grow."
+title: "Phân tích thị trường & Chiến lược triển khai"
+preview_title: "Phân tích thị trường & <br>Chiến lược triển khai"
+short: "Chuyển hóa dữ liệu thị trường thành lợi thế cạnh tranh động."
 
 #full details
-introTitle: Branding<br> and <span class="mil-thin">Identity Design</span>
+introTitle: Phân tích thị trường<br> và <span class="mil-thin">Chiến lược triển khai</span>
 
 description:
-  title: Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span>
-  content: At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.
+  title: Mô tả <span class="mil-thin">ngắn</span>
+  content: "<p>Thông tin chuyên sâu nếu thiếu thực thi thì chỉ là sự quan sát đơn thuần. Chúng tôi xóa bỏ khoảng cách giữa Nghiên cứu thị trường và Hành động chiến lược, chuyển hóa các phân tích tĩnh thành lợi thế cạnh tranh động. Bằng cách kết hợp giữa thấu hiểu dữ liệu chuyên sâu và tinh thần thực thi quyết liệt, chúng tôi biến những xu hướng thị trường trừu tượng thành những thắng lợi kinh doanh cụ thể — không chỉ dừng lại ở việc đọc bản đồ, mà thực sự chinh phục địa hình.</p>"
   button:
-    link: /projects
-    label: View works
+    link: /contact
+    label: Liên hệ ngay
 
 list:
   items:
-    - label: "UX Audits"
-      value: "
-        <p>A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the website's design, functionality, and content to identify areas of improvement that can enhance the user's overall experience.</p>
-        <p>During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the website's usability, accessibility, and overall user experience.</p>
-        <p>The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness. The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.</p>
-        <p>In summary, a UX audit can help website owners identify areas of improvement that can enhance their website's user experience and increase user engagement and satisfaction.</p>
-      "
+    - label: "1. Năng lực cốt lõi"
+      value: "<div><p><strong>Nghiên cứu thị trường & Xác định cơ hội:</strong> Khai thác thông tin dựa trên dữ liệu để giải mã xu hướng, đánh giá bối cảnh cạnh tranh và thẩm định các cơ hội sản phẩm tiềm năng.</p><p><strong>Định vị sản phẩm & Xác lập giá trị:</strong> Xây dựng tuyên ngôn giá trị khác biệt và các lợi thế kỹ thuật đặc thù, đảm bảo sản phẩm đạt mức độ phù hợp thị trường (Product-Market Fit) và lợi thế cạnh tranh bền vững.</p><p><strong>Lộ trình chiến lược & Ưu tiên nguồn lực:</strong> Chuyển hóa chiến lược thị trường thành lộ trình kỹ thuật khả thi, ưu tiên hóa các hạng mục mục tiêu phù hợp với nguồn lực và bài toán kinh doanh.</p><p><strong>Thực thi thâm nhập thị trường:</strong> Điều phối các hoạt động ra mắt và chiến lược ứng dụng sản phẩm thông qua việc kết nối chặt chẽ giữa đội ngũ kỹ thuật và các kênh thương mại.</p></div>"
 
-    - label: "Design thinking"
-      value: "
-      <p>Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback.</p>
-      <p>Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.</p>
-      "
+    - label: "2. Quy trình Thực hiện Hệ thống"
+      value: "<div><h4>Thấu hiểu & Thẩm định</h4><p><strong>Mục tiêu:</strong> Thẩm định cơ hội và giảm thiểu rủi ro thị trường.</p><p><strong>Kết quả:</strong> Xác thực cơ hội và xác nhận mức độ phù hợp Vấn đề - Giải pháp.</p></div><div><h4>Định nghĩa & Chiến lược</h4><p><strong>Mục tiêu:</strong> Chuyển hóa thông tin chuyên sâu thành kế hoạch cụ thể.</p><p><strong>Kết quả:</strong> Định hình sản phẩm và chốt lộ trình phát triển.</p></div><div><h4>Xây dựng & Thử nghiệm Beta</h4><p><strong>Mục tiêu:</strong> Thực thi xây dựng kỹ thuật và kiểm thử với nhóm người dùng sớm.</p><p><strong>Kết quả:</strong> Phát hành MVP (Bản Beta) và kích hoạt vòng lặp phản hồi kỹ thuật đầu tiên.</p></div><div><h4>Ra mắt & Tăng trưởng</h4><p><strong>Mục tiêu:</strong> Tối đa hóa tỷ lệ chấp nhận và thị phần.</p><p><strong>Kết quả:</strong> Thâm nhập thị trường thành công và đạt các chỉ số tăng trưởng bền vững (MRR/Retention)</p></div>"
 
-    - label: "Wireframing"
-      value: "
-      <p>Wireframing is a vital step in web design where a visual representation of a website's structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the website's architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development.</p>
-      "
-
-    - label: "Methodologies"
-      value: "
-      <p>Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae.</p>
-      "
+    - label: "3. Chỉ số Hiệu quả Thực thi"
+      value: "<div><h4 class=\"mil-accent\">Tối ưu chi phí</h4><p><strong>Đạt được thông qua Nghiên cứu thị trường và Định vị chính xác.</strong></p></div><div><h4 class=\"mil-accent\">Tăng trưởng doanh thu</h4><p><strong>Đạt được thông qua Lộ trình thông minh và Thực thi GTM quyết liệt.</strong></p></div><div><h4 class=\"mil-accent\">Cam kết giá trị:</h4><div class=\"mil-content-box\"><p><strong>Chính xác về chiến lược:</strong> Chúng tôi thẩm định trước khi xây dựng.</p><p class=\"mil-result\"><em>Kết quả: Không có \"tính năng thừa\", giảm thiểu việc làm lại.</em></p></div><div class=\"mil-content-box\"><p><strong>Vận hành xuất sắc:</strong> Chúng tôi xây dựng các hệ thống có khả năng mở rộng.</p><p class=\"mil-result\"><em>Kết quả: Nợ kỹ thuật thấp, tối ưu chi phí bảo trì.</em></p></div><div class=\"mil-content-box\"><p><strong>Tốc độ thị trường:</strong> Chúng tôi tăng tốc tiến độ bàn giao.</p><p class=\"mil-result\"><em>Kết quả: Rút ngắn 20% thời gian đưa sản phẩm ra thị trường để sớm hiện thực hóa doanh thu.</em></p></div><div class=\"mil-content-box\"><p><strong>Phù hợp Thị trường:</strong> Chúng tôi đảm bảo tỷ lệ sử dụng.</p><p class=\"mil-result\"><em>Kết quả: Tỷ lệ giữ chân người dùng cao và tối đa hóa Giá trị vòng đời khách hàng.</em></p></div></div></div>"
 ---

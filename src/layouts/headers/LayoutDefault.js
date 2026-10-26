@@ -1,47 +1,28 @@
 import Link from "next/link";
-import { useState } from "react";
-import AppData from "@data/app.json";
+import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import AppData from "@data/app.json";
 
 import BackToTop from "../back-to-top/Index";
 import Pentagon from "@layouts/pentagon/Index";
+import ClientNavigation from "@components/ClientNavigation";
 
 const DefaultHeader = ({ extraClass }) => {
   const [toggle, setToggle] = useState(false);
+  const router = useRouter();
 
-  const navItems = [];
+  // Close menu when route changes
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setToggle(false);
+    };
 
-  const { asPath } = useRouter();
+    router.events.on('routeChangeStart', handleRouteChange);
 
-  AppData.header.menu.forEach((item, index) => {
-    let s_class1 = '';
-
-    if ( item.children != 0 ) {
-      s_class1 = 'mil-has-children';
-    }
-    if ( ( asPath.indexOf( item.link ) != -1 && item.link != '/' ) || asPath == item.link ) {
-      s_class1 += ' mil-active';
-    }
-    let newobj = Object.assign({}, item, { "classes" :  s_class1 });
-    navItems.push(newobj);
-  });
-
-  const clickedMobileMenuItemParent = (e) => {
-    e.preventDefault();
-
-    const lists = document.querySelectorAll('.mil-has-children ul');
-    lists.forEach((list) => {
-        list.classList.remove('mil-active');
-    });
-
-    const links = document.querySelectorAll('.mil-has-children a');
-    links.forEach((link) => {
-        link.classList.remove('mil-active');
-    });
-
-    e.target.classList.toggle('mil-active');
-    e.target.parentNode.querySelector('ul').classList.toggle('mil-active');
-  }
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -50,7 +31,9 @@ const DefaultHeader = ({ extraClass }) => {
     <div className={`mil-menu-frame ${toggle ? "mil-active" : ""}`}>
         {/* frame clone */}
         <div className="mil-frame-top">
-            <Link href={AppData.header.logo.link} className="mil-logo">{AppData.header.logo.symbol}</Link>
+            <Link href={AppData.header.logo.link} className="mil-logo">
+                <img src="/img/G-logo.png" alt="Grozone Logo" style={{height: 'auto', maxWidth: '60px'}} />
+            </Link>
             <div className={`mil-menu-btn ${toggle ? "mil-active" : ""}`} onClick={() => setToggle(!toggle)}>
                 <span />
             </div>
@@ -60,26 +43,7 @@ const DefaultHeader = ({ extraClass }) => {
           <div className="mil-menu-content">
               <div className="row">
                   <div className="col-xl-5">
-
-                      <nav className="mil-main-menu" id="swupMenu">
-                        <ul>
-                            {navItems.map((item, key) => (
-                            <li className={item.classes} key={`header-menu-item-${key}`}>
-                                <Link href={item.link} onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""}>{item.label}</Link>
-                                {item.children != 0 &&
-                                <ul>
-                                    {item.children.map((subitem, key2) => (
-                                    <li key={`header-submenu${key}-item-${key2}`} className={ ( ( asPath.indexOf( subitem.link ) != -1 && subitem.link != '/' ) || asPath == subitem.link ) ? "mil-active" : "" }>
-                                        <Link href={subitem.link}>{subitem.label}</Link>
-                                    </li>
-                                    ))}
-                                </ul>
-                                }
-                            </li>
-                            ))}
-                        </ul>
-                      </nav>
-
+                      <ClientNavigation />
                   </div>
                   <div className="col-xl-7">
 
@@ -91,51 +55,37 @@ const DefaultHeader = ({ extraClass }) => {
                                   </div>
                               </div>
                           </div>
-                          <div className="mil-menu-right">
-                              <div className="row">
-                                  <div className="col-lg-8 mil-mb-60">
-
-                                      <h6 className="mil-muted mil-mb-30">Projects</h6>
-
-                                      <ul className="mil-menu-list">
-                                          <li><Link href="/projects/project-1" className="mil-light-soft">Interior design studio</Link></li>
-                                          <li><Link href="/projects/project-2" className="mil-light-soft">Home Security Camera</Link></li>
-                                          <li><Link href="/projects/project-3" className="mil-light-soft">Kemia Honest Skincare</Link></li>
-                                          <li><Link href="/projects/project-4" className="mil-light-soft">Cascade of Lava</Link></li>
-                                          <li><Link href="/projects/project-5" className="mil-light-soft">Air Pro by Molekule</Link></li>
-                                          <li><Link href="/projects/project-6" className="mil-light-soft">Tony's Chocolonely</Link></li>
+                          <div className="mil-menu-right" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingTop: '0', marginTop: '0'}}>
+                              <h6 className="mil-muted mil-menu-section-title" style={{paddingTop: '0', marginTop: '0', marginBottom: '50px', fontSize: '28px', width: '100%', textAlign: 'left'}}>Liên hệ</h6>
+                              <div style={{display: 'flex', gap: '40px', width: '100%', flexWrap: 'nowrap', marginTop: '0', paddingTop: '0', overflow: 'visible'}}>
+                                  <div style={{flex: '0 0 auto', minWidth: '200px', maxWidth: 'none'}}>
+                                      <ul className="mil-menu-list mil-menu-list-responsive" style={{overflow: 'visible', width: 'auto'}}>
+                                          <li className="mil-light-soft" style={{fontSize: '16px', fontWeight: 500}}><strong className="mil-menu-company-name">Grozone</strong></li>
+                                          <li><a href="mailto:business@grozone.vn" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap'}}>business@grozone.vn</a></li>
+                                          <li className="mil-light-soft" style={{marginTop: '8px', fontSize: '16px', whiteSpace: 'nowrap'}}>TP. Hồ Chí Minh</li>
                                       </ul>
-
                                   </div>
-                                  <div className="col-lg-4 mil-mb-60">
-
-                                      <h6 className="mil-muted mil-mb-30">Useful links</h6>
-
-                                      <ul className="mil-menu-list">
-                                          <li><a href="#." className="mil-light-soft">Privacy Policy</a></li>
-                                          <li><a href="#." className="mil-light-soft">Terms and conditions</a></li>
-                                          <li><a href="#." className="mil-light-soft">Cookie Policy</a></li>
-                                          <li><a href="#." className="mil-light-soft">Careers</a></li>
+                                  <div style={{flex: '0 0 auto', minWidth: '280px', maxWidth: 'none'}}>
+                                      <ul className="mil-menu-list mil-menu-list-responsive" style={{overflow: 'visible', width: 'auto'}}>
+                                          <li className="mil-light-soft">
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
+                                                  Founder / Strategist
+                                              </span>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                                  Dinh Thanh Thuan (Uruz)
+                                              </span>
+                                              <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>096.788.2713</a>
+                                          </li>
+                                          <li className="mil-light-soft" style={{marginTop: '15px'}}>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500, overflow: 'visible'}}>
+                                                  Business Development Manager
+                                              </span>
+                                              <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
+                                                  Tran Thanh Liem
+                                              </span>
+                                              <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>083.867.3344</a>
+                                          </li>
                                       </ul>
-
-                                  </div>
-                              </div>
-                              <div className="mil-divider mil-mb-60"></div>
-                              <div className="row justify-content-between">
-
-                                  <div className="col-lg-4 mil-mb-60">
-
-                                      <h6 className="mil-muted mil-mb-30">Canada</h6>
-
-                                      <p className="mil-light-soft mil-up">71 South Los Carneros Road, California <span className="mil-no-wrap">+51 174 705 812</span></p>
-
-                                  </div>
-                                  <div className="col-lg-4 mil-mb-60">
-
-                                      <h6 className="mil-muted mil-mb-30">Germany</h6>
-
-                                      <p className="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span className="mil-no-wrap">+31 174 705 811</span></p>
-
                                   </div>
                               </div>
                           </div>
@@ -155,7 +105,9 @@ const DefaultHeader = ({ extraClass }) => {
       {/* frame */}
       <div className="mil-frame">
         <div className="mil-frame-top">
-          <Link href={AppData.header.logo.link} className="mil-logo">{AppData.header.logo.symbol}</Link>
+          <Link href={AppData.header.logo.link} className="mil-logo">
+              <img src="/img/G-logo.png" alt="Grozone Logo" style={{height: 'auto', maxWidth: '60px'}} />
+          </Link>
           <div className={`mil-menu-btn ${toggle ? "mil-active" : ""}`} onClick={() => setToggle(!toggle)}>
               <span />
           </div>

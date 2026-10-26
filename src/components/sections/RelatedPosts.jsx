@@ -1,15 +1,9 @@
-import { removeHtmlTags } from "@/src/common/utilits";
 import Data from "@data/sections/related-posts.json";
 import Date from '@library/date';
 import Link from "next/link";
 
-// Helper function to construct full image URL
-function getFullImageUrl(image) {
-    const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://cms.grozone.co';
-    return `${baseUrl}${image}`;
-}
+const RelatedPostsSection = ( Content ) => {
 
-const RelatedPostsSection = ({ items }) => {
     return (
         <>
             {/* related posts */}
@@ -28,30 +22,27 @@ const RelatedPostsSection = ({ items }) => {
                         </div>
                     </div>
                     <div className="row">
-                        {items.slice(0, Data.numOfItems).map((item, key) => (
-                            <div className="col-lg-6" key={`related-posts-item-${key}`}>
-                                <Link href={`/blog/${item.documentId}`} className="mil-blog-card mil-mb-60">
-                                    <div className="mil-cover-frame mil-up">
-                                        <img
-                                            src={getFullImageUrl(item.image?.url || '')}
-                                            alt={removeHtmlTags(item.title)}
-                                        />
+                        {Content.items.slice(0, Data.numOfItems).map((item, key) => (
+                        <div className="col-lg-6" key={`related-posts-item-${key}`}>
+
+                            <Link href={`/blog/${item.id}`} className="mil-blog-card mil-mb-60">
+                                <div className="mil-cover-frame mil-up">
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                                <div className="mil-post-descr">
+                                    <div className="mil-labels mil-up mil-mb-30">
+                                        <div className="mil-label mil-upper mil-accent">{item.category}</div>
+                                        <div className="mil-label mil-upper"><Date dateString={item.date} /></div>
                                     </div>
-                                    <div className="mil-post-descr">
-                                        <div className="mil-labels mil-up mil-mb-30">
-                                            <div className="mil-label mil-upper mil-accent">{item.category?.name}</div>
-                                            <div className="mil-label mil-upper">
-                                                <Date dateString={item.createdAt} />
-                                            </div>
-                                        </div>
-                                        <h4 className="mil-up mil-mb-30" dangerouslySetInnerHTML={{ __html: item.title }}></h4>
-                                        <p className="mil-post-text mil-up mil-mb-30">{item.shortDescription}</p>
-                                        <div className="mil-link mil-dark mil-arrow-place mil-up">
-                                            <span>Read more</span>
-                                        </div>
+                                    <h4 className="mil-up mil-mb-30">{item.title}</h4>
+                                    <p className="mil-post-text mil-up mil-mb-30">{item.short}</p>
+                                    <div className="mil-link mil-dark mil-arrow-place mil-up">
+                                        <span>Read more</span>
                                     </div>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
+
+                        </div>
                         ))}
                     </div>
                 </div>

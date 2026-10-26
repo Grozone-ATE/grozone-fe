@@ -1,8 +1,8 @@
 {
-    "title": "Other services",
+    "title": "Dịch vụ khác",
     "numOfItems": 3,
     "button": {
         "link": "/services",
-        "label": "View all"
+        "label": "Xem tất cả"
     }
 }

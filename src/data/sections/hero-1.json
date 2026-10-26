@@ -1,12 +1,12 @@
 {
-    "title": "Designing <span class=\"mil-thin\">a Better</span><br> World <span class=\"mil-thin\">Today</span>",
-    "description": "Welcome to our world of endless imagination and boundless creativity. Together, let's embark on a remarkable journey where dreams become tangible realities.",
+    "title": "Grozone<br><span class=\"mil-thin\" style=\"white-space: nowrap;\">Kiến tạo công nghệ</span><br><span class=\"mil-thin\">Kết quả bền vững</span>",
+    "description": "Grozone không chỉ dừng lại ở việc cung cấp các giải pháp công nghệ. Chúng tôi đóng vai trò là hệ sinh thái hạ tầng chiến lược – nơi kết nối nguồn vốn, tài nguyên và nhân lực chuyên môn để hiện thực hóa các ý tưởng kinh doanh. Tại Grozone, chúng tôi cam kết đồng hành toàn diện: từ tư vấn thiết kế, triển khai hạ tầng đến vận hành và tối ưu hóa hiệu suất, giúp mô hình của bạn tự tin vận hành độc lập và bền vững.",
     "button1": {
-        "link": "/services",
-        "label": "What we do"
+        "link": "/contact",
+        "label": "Liên hệ ngay"
     },
     "button2": {
         "link": "/projects",
-        "label": "View works"
+        "label": "Dự án của chúng tôi"
     }
 }
