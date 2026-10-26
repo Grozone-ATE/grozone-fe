@@ -4,7 +4,7 @@ export const AnchorSscroll = () => {
 
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
-        event.preventDefault();
+        e.preventDefault();
 
         var target = document.querySelector(link.getAttribute('href'));
         var offset = 0;
@@ -49,13 +49,3 @@ export const CurrentPageLabel = () => {
 
   curLabel.innerHTML = curValue;
 };
-
-export const removeHtmlTags = (htmlString) => {
-  // Replace <br> tags with a space
-  let updatedString = htmlString.replace(/<br\s*\/?>/gi, ' ');
-
-  // Remove all other HTML tags
-  updatedString = updatedString.replace(/<[^>]*>/g, '');
-
-  return updatedString;
-}

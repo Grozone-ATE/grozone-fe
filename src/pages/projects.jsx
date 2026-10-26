@@ -10,7 +10,7 @@ import { getSortedProjectsData } from "@library/projects";
 const Projects = (props) => {
   return (
     <Layouts>
-      <PageBanner pageTitle={"Designing a <br> Better <span className=\"mil-thin\">World Today</span>"} breadTitle={"Portfolio"} anchorLabel={"Our works"} anchorLink={"#portfolio"} />
+      <PageBanner pageTitle={"Sản phẩm của <span className=\"mil-thin\">chúng tôi</span>"} breadTitle={"Sản phẩm"} anchorLabel={"Sản phẩm của chúng tôi"} anchorLink={"#portfolio"} />
 
       <ProjectsMasonry projects={props.projects} />
       
@@ -21,7 +21,7 @@ const Projects = (props) => {
 };
 export default Projects;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allProjects = getSortedProjectsData();
 
   return {

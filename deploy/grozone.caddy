@@ -14,13 +14,17 @@ grozone.co, www.grozone.co, grozone.vn, www.grozone.vn {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 	}
 
-	@static {
+	@immutable_static {
 		path /_next/static/*
+	}
+	header @immutable_static Cache-Control "public, max-age=31536000, immutable"
+
+	@public_assets {
 		path /favicon/*
 		path /css/*
 		path /img/*
 	}
-	header @static Cache-Control "public, max-age=31536000, immutable"
+	header @public_assets Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
 
 	reverse_proxy grozone-fe:3000 {
 		transport http {

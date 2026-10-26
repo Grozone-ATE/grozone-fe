@@ -17,3 +17,1834 @@ img.mfp-img {
 .mil-wrapper .swiper-container {
     overflow: visible;
 }
+
+/* Icon pagination dots */
+.mil-icon-dot {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    border-radius: 50% !important;
+    background: #f0f0f0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease;
+    aspect-ratio: 1 / 1 !important;
+    box-sizing: border-box !important;
+}
+
+.mil-icon-dot i {
+    font-size: 20px;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active .mil-icon-dot {
+    background: #f59e0b;
+}
+
+.swiper-pagination-bullet-active .mil-icon-dot i {
+    color: #fff;
+}
+
+.mil-revi-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.mil-revi-pagination .swiper-pagination-bullet {
+    width: 50px !important;
+    height: 50px !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+/* Fix button text alignment */
+.mil-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.mil-button span {
+    text-align: center !important;
+}
+
+.mil-button.mil-fw {
+    width: 100%;
+    justify-content: center !important;
+}
+
+.mil-button.mil-border {
+    justify-content: center !important;
+    padding: 0 50px !important; /* Đối xứng padding trái phải */
+    text-align: center !important;
+}
+
+.mil-button.mil-border span {
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Content spacing improvements for better readability */
+.mil-content-spacing {
+    /* Consistent paragraph spacing */
+    p {
+        margin-bottom: 1.5em;
+        line-height: 1.7;
+    }
+    
+    /* Remove top margin from first paragraph */
+    > p:first-child {
+        margin-top: 0;
+    }
+    
+    /* Consistent heading spacing */
+    h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.4;
+    }
+    
+    /* First heading doesn't need extra top margin */
+    > h3:first-child,
+    > h4:first-child,
+    > h5:first-child,
+    > h6:first-child {
+        margin-top: 0;
+    }
+    
+    /* List spacing */
+    ul, ol {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        line-height: 1.7;
+    }
+    
+    li {
+        margin-bottom: 0.75em;
+    }
+    
+    /* Div spacing - remove arbitrary inline margins */
+    > div {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    > div:first-child {
+        margin-top: 0;
+    }
+    
+    /* Consistent spacing for nested content */
+    div > p:first-child {
+        margin-top: 0;
+    }
+    
+    /* Better spacing for emphasized content boxes */
+    div[style*="background"] {
+        padding: 1.5em !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 1.5em !important;
+    }
+}
+
+/* Improve text readability in project descriptions */
+.mil-text {
+    p {
+        margin-bottom: 1.5em;
+        line-height: 1.7;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.4;
+    }
+    
+    h3:first-child,
+    h4:first-child,
+    h5:first-child,
+    h6:first-child {
+        margin-top: 0;
+    }
+    
+    ul, ol {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        line-height: 1.7;
+    }
+    
+    li {
+        margin-bottom: 0.75em;
+    }
+}
+
+/* Reduce paragraph spacing in About section */
+#about .mil-text p {
+    margin-bottom: 0.75em;
+}
+
+/* Accordion content spacing */
+.mil-accordion-content {
+    p {
+        margin-bottom: 1.25em;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Content box styling for service pages */
+.mil-content-box {
+    padding: 1.5em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mil-content-box p {
+    margin-bottom: 0.75em;
+}
+
+.mil-content-box p:last-child {
+    margin-bottom: 0;
+}
+
+.mil-result {
+    margin-left: 1.25em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+.mil-highlight-box {
+    padding: 2em;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-radius: 12px;
+    color: white;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.mil-highlight-box p {
+    font-size: 1.125em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mil-highlight-box strong {
+    font-weight: 700;
+}
+
+/* Project box styling */
+.mil-project-box {
+    padding: 1.5em;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mil-project-box p {
+    margin-bottom: 1em;
+}
+
+.mil-project-box p:last-of-type {
+    margin-bottom: 1.25em;
+}
+
+/* Ensure spacing between all sections */
+section#about {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+/* Fix spacing after dark-bg section */
+.mil-dark-bg {
+    margin-bottom: 0 !important;
+}
+
+/* Add space before About section */
+section#about > .container {
+    padding-top: 120px !important;
+}
+
+/* Prevent lines decoration from overlapping previous section */
+.mil-about-photo .mil-lines-place {
+    top: 0 !important;
+}
+
+/* Add margin-top to Team section (after Services) */
+section#about + section.mil-dark-bg + section {
+    padding-top: 120px !important;
+}
+
+/* Add margin-top to Team section (after Services) */
+section#about + section.mil-dark-bg + section {
+    padding-top: 120px !important;
+}
+
+/* Reduce spacing in testimonial slider text */
+.mil-testimonial-text {
+    line-height: 1.5 !important;
+}
+
+.mil-testimonial-text br {
+    line-height: 1.2;
+    display: block;
+    margin: 0.25em 0;
+}
+
+.mil-review-frame h5 {
+    margin-bottom: 0.5em !important;
+}
+
+/* Make entire image clickable for fancybox gallery */
+.mil-zoom-btn {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Hide the zoom icon but keep the clickable area */
+.mil-zoom-btn img {
+    display: none !important;
+}
+
+/* Collapsible Details/Summary Styling - Progressive Disclosure Pattern */
+.mil-details-item {
+    margin-bottom: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.mil-details-item:hover {
+    border-color: #f59e0b;
+}
+
+.mil-details-item summary {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1a1a2e;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.mil-details-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.mil-details-item summary::after {
+    content: '▼';
+    font-size: 12px;
+    color: #f59e0b;
+    transition: transform 0.3s ease;
+}
+
+.mil-details-item[open] summary {
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.mil-details-item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.mil-details-item .mil-details-content {
+    padding: 15px 20px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.mil-details-item .mil-details-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.mil-details-item .mil-details-content li {
+    margin-bottom: 8px;
+}
+
+.mil-details-item .mil-details-content p {
+    margin-bottom: 10px;
+}
+
+.mil-details-item .mil-details-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Floating Label Pattern for Contact Form */
+.mil-floating-label {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mil-floating-label input,
+.mil-floating-label textarea {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.mil-floating-label label {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.mil-floating-label input:focus + label,
+.mil-floating-label textarea:focus + label,
+.mil-floating-label.mil-has-value label {
+    top: 5px;
+    font-size: 11px;
+    color: #f59e0b;
+}
+
+.mil-floating-label input::placeholder,
+.mil-floating-label textarea::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mil-floating-label input:focus::placeholder,
+.mil-floating-label textarea:focus::placeholder {
+    opacity: 0;
+}
+
+/* Project gallery image height limit */
+#project .row.align-items-start .col-lg-6 img {
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* ============================================
+   RESPONSIVE NAVIGATION MENU FIXES
+   Đảm bảo menu hiển thị tốt trên mọi thiết bị
+   ============================================ */
+
+/* Prevent horizontal overflow on all devices - CRITICAL: Always allow body scroll */
+html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    position: relative !important;
+}
+
+/* CRITICAL FIX: Ensure body can always scroll even when menu is closed */
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    /* Force body to be scrollable */
+    overscroll-behavior-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* CRITICAL: Ensure html can always scroll */
+html {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.mil-wrapper {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* CRITICAL: Menu frame should NOT block body scroll when not active */
+.mil-menu-frame:not(.mil-active) {
+    pointer-events: none !important;
+    /* Ensure it doesn't capture scroll events - allow scroll to pass through */
+    touch-action: none !important;
+}
+
+/* When menu is active, restore z-index but body should still be scrollable if needed */
+.mil-menu-frame.mil-active {
+    pointer-events: all;
+    z-index: 9;
+    /* Menu has its own scroll */
+    overflow-y: auto;
+    /* But don't prevent body scroll if menu content is shorter than viewport */
+    max-height: 100vh;
+}
+
+/* When menu is active, it can have pointer-events but body should still be scrollable */
+.mil-menu-frame.mil-active {
+    pointer-events: all;
+    /* Menu has its own scroll */
+    overflow-y: auto;
+}
+
+/* Ensure scrolling works on desktop (MacBook and PC) */
+@media screen and (min-width: 1025px) {
+    html, body {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+    
+    .mil-wrapper {
+        overflow-y: visible !important;
+        height: auto !important;
+    }
+    
+    .mil-content {
+        overflow-y: visible !important;
+        height: auto !important;
+    }
+}
+
+/* Menu Frame Responsive */
+.mil-menu-frame {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Container cho menu - chỉ áp dụng responsive cho mobile/tablet */
+.mil-menu-frame .container {
+    overflow-x: hidden !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .mil-menu-frame .container {
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+/* Main Menu Responsive Improvements */
+.mil-main-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.mil-main-menu ul {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.mil-main-menu ul li {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+.mil-main-menu ul li a {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+    /* Đảm bảo touch target đủ lớn cho mobile (tối thiểu 44x44px) */
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+}
+
+/* Submenu Responsive */
+.mil-main-menu ul li.mil-has-children ul {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 15px !important;
+}
+
+.mil-main-menu ul li.mil-has-children ul li {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.mil-main-menu ul li.mil-has-children ul li a {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    min-height: 40px !important;
+    padding: 6px 0 !important;
+}
+
+/* Menu Content Responsive - chỉ áp dụng cho mobile/tablet */
+.mil-menu-content {
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .mil-menu-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Menu Content Responsive - chỉ áp dụng cho mobile/tablet */
+@media screen and (max-width: 1200px) {
+    .mil-menu-content .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .mil-menu-content .row > [class*="col-"] {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Fix menu content padding on mobile to prevent header from covering menu items */
+@media screen and (max-width: 768px) {
+    .mil-menu-content {
+        padding-top: 110px !important; /* 90px header + 20px spacing */
+        padding-bottom: 40px !important;
+    }
+    
+    /* Ensure first menu item is visible */
+    .mil-menu-content .mil-main-menu {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .mil-menu-content .mil-main-menu ul {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .mil-menu-content .mil-main-menu ul li:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+/* Menu Right Frame Responsive */
+.mil-menu-right-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    box-sizing: border-box !important;
+}
+
+.mil-menu-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    box-sizing: border-box !important;
+}
+
+.mil-menu-right .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.mil-menu-right .row > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+}
+
+/* Menu List Responsive */
+.mil-menu-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive {
+    overflow: visible !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive li {
+    overflow: visible !important;
+}
+
+.mil-menu-list.mil-menu-list-responsive li span {
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.mil-menu-list li {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+.mil-menu-list li a {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    line-height: 1.5 !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Responsive Breakpoints */
+
+/* Extra Small Devices (phones, 320px and up) */
+@media screen and (max-width: 374px) {
+    .mil-main-menu ul li {
+        margin-bottom: 25px !important;
+    }
+    
+    .mil-main-menu ul li a {
+        font-size: 20px !important;
+        padding: 10px 0 !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul li a {
+        font-size: 11px !important;
+        padding: 8px 0 !important;
+    }
+    
+    .mil-menu-section-title {
+        font-size: 16px !important;
+    }
+    
+    .mil-menu-list-responsive {
+        font-size: 14px !important;
+    }
+    
+    .mil-menu-company-name {
+        font-size: 15px !important;
+    }
+    
+    .mil-menu-address {
+        font-size: 13px !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .mil-menu-frame .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+/* Small Devices (phones, 375px and up) */
+@media screen and (min-width: 375px) and (max-width: 575px) {
+    .mil-main-menu ul li {
+        margin-bottom: 28px !important;
+    }
+    
+    .mil-main-menu ul li a {
+        font-size: 22px !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}
+
+/* Medium Devices (tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+    .mil-main-menu {
+        padding-bottom: 40px !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 25px !important;
+    }
+    
+    .mil-main-menu ul li a {
+        font-size: 24px !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul {
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul li {
+        margin-bottom: 8px !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul li:first-child {
+        margin-top: 20px !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul li a {
+        font-size: 11px !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 25px !important;
+        margin-top: 25px !important;
+    }
+    
+    .mil-menu-section-title {
+        font-size: 17px !important;
+        text-align: center !important;
+    }
+    
+    .mil-menu-list-responsive {
+        font-size: 14px !important;
+    }
+    
+    .mil-menu-list li {
+        text-align: center !important;
+    }
+    
+    .mil-menu-list li a {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .mil-menu-company-name {
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+    
+    .mil-menu-address {
+        font-size: 13px !important;
+        text-align: center !important;
+    }
+    
+    /* Make contact info vertical (single column) on mobile - menu */
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"] > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Large Devices (tablets, 992px and below) */
+@media screen and (max-width: 992px) {
+    .mil-main-menu ul li {
+        margin-bottom: 30px !important;
+    }
+    
+    .mil-main-menu ul li a {
+        font-size: 26px !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 30px !important;
+        margin-top: 30px !important;
+    }
+}
+
+/* ============================================
+   MENU TABLET RESPONSIVE FIXES
+   Minimize spacing for tablet (both portrait and landscape)
+   ============================================ */
+
+/* Tablet - portrait and landscape (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Minimize menu content padding on tablet - reduce vertical padding to minimum */
+    .mil-menu-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Override any padding from SCSS - reduce vertical padding significantly */
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
+    }
+    
+    /* Keep original spacing for menu items - don't change */
+    .mil-main-menu ul li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-main-menu ul li a {
+        padding: 4px 0 !important;
+        min-height: auto !important;
+    }
+    
+    /* Minimize spacing for menu right frame on tablet */
+    .mil-menu-right-frame {
+        padding-top: 10px !important;
+        margin-top: 10px !important;
+        padding-left: 0 !important;
+        border-left: none !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    /* Enlarge "Liên hệ" title on tablet */
+    .mil-menu-section-title,
+    .mil-menu-right .mil-menu-section-title,
+    h6.mil-menu-section-title {
+        margin-bottom: 15px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        font-size: 32px !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+        width: 100% !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Override inline style for margin-bottom and text-align */
+    .mil-menu-section-title[style*="margin-bottom"],
+    h6[style*="margin-bottom"].mil-menu-section-title,
+    .mil-menu-section-title[style*="textAlign"],
+    h6[style*="textAlign"].mil-menu-section-title {
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 32px !important;
+    }
+    
+    /* Fix menu right content alignment on tablet - override inline styles */
+    .mil-menu-right,
+    .mil-menu-right[style*="alignItems"],
+    .mil-menu-right[style*="align-items"] {
+        padding-top: 0 !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Enlarge gap between contact info columns on tablet - override inline styles */
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        gap: 50px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        flex-wrap: nowrap !important;
+        overflow: visible !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"] > div {
+        flex: 0 0 auto !important;
+        max-width: none !important;
+    }
+    
+    /* Enlarge and center align contact info on tablet */
+    .mil-menu-list-responsive {
+        text-align: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .mil-menu-list-responsive li {
+        text-align: center !important;
+        justify-content: center !important;
+        margin-bottom: 12px !important;
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-list-responsive li:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .mil-menu-list-responsive li a {
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 4px 0 !important;
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge contact info text on tablet */
+    .mil-menu-list-responsive li span,
+    .mil-menu-list-responsive li strong,
+    .mil-menu-list-responsive li a {
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge company name */
+    .mil-menu-company-name {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Minimize animation frame spacing */
+    .mil-animation-in,
+    .mil-animation-frame {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Reduce row spacing */
+    .mil-menu-content .row {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        margin-bottom: 15px !important;
+        padding-top: 0 !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"]:last-child {
+        margin-bottom: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Center the contact section column on tablet */
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Override inline font sizes for contact info on tablet */
+    .mil-menu-right [style*="fontSize"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right [style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    /* Enlarge specific contact info elements */
+    .mil-menu-right .mil-menu-list-responsive li[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li[style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive li a[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li a[style*="font-size"] {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-right .mil-menu-list-responsive li span[style*="fontSize"],
+    .mil-menu-right .mil-menu-list-responsive li span[style*="font-size"] {
+        font-size: 18px !important;
+    }
+}
+
+/* Tablet portrait specific (769px - 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Minimize menu content padding for tablet portrait */
+    .mil-menu-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 10px !important;
+        margin-top: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-section-title {
+        margin-bottom: 15px !important;
+        font-size: 32px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        margin-bottom: 15px !important;
+    }
+    
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Enlarge contact info on tablet portrait */
+    .mil-menu-list-responsive li,
+    .mil-menu-list-responsive li a,
+    .mil-menu-list-responsive li span {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-list-responsive li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        gap: 50px !important;
+    }
+}
+
+/* Tablet landscape specific (993px - 1024px) */
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+    /* Minimize menu content padding for tablet landscape */
+    .mil-menu-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    
+    .mil-menu-frame .container .mil-menu-content {
+        padding: 5px 0 !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 10px !important;
+        margin-top: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-menu-section-title {
+        margin-bottom: 15px !important;
+        font-size: 32px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-content .row > [class*="col-"] {
+        margin-bottom: 15px !important;
+    }
+    
+    .mil-menu-content .row > .col-xl-7 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Enlarge contact info on tablet landscape */
+    .mil-menu-list-responsive li,
+    .mil-menu-list-responsive li a,
+    .mil-menu-list-responsive li span {
+        font-size: 18px !important;
+    }
+    
+    .mil-menu-list-responsive li {
+        margin-bottom: 12px !important;
+    }
+    
+    .mil-menu-right > div[style*="display: flex"],
+    .mil-menu-right > div[style*="gap"] {
+        gap: 50px !important;
+    }
+}
+
+/* Extra Large Devices (desktops, 1200px and below) */
+@media screen and (max-width: 1200px) {
+    .mil-main-menu {
+        justify-content: center !important;
+    }
+    
+    .mil-main-menu ul {
+        align-items: center !important;
+    }
+    
+    .mil-main-menu ul li a {
+        justify-content: center !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul {
+        padding-left: 0 !important;
+    }
+}
+
+/* Landscape Orientation on Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mil-main-menu {
+        padding-bottom: 30px !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 20px !important;
+    }
+    
+    .mil-menu-right-frame {
+        padding-top: 20px !important;
+        margin-top: 20px !important;
+    }
+}
+
+/* Very Small Height Screens */
+@media screen and (max-height: 600px) {
+    .mil-main-menu {
+        padding-bottom: 20px !important;
+    }
+    
+    .mil-main-menu ul li {
+        margin-bottom: 15px !important;
+    }
+    
+    .mil-main-menu ul li.mil-has-children ul li:first-child {
+        margin-top: 15px !important;
+    }
+}
+
+/* Fix for menu items with long text */
+.mil-main-menu ul li a,
+.mil-menu-list li a {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* Ensure all text is visible and readable */
+.mil-main-menu,
+.mil-menu-right-frame,
+.mil-menu-list {
+    color: inherit !important;
+}
+
+/* Prevent text from being cut off */
+.mil-main-menu ul li a,
+.mil-menu-list li a {
+    text-overflow: ellipsis;
+    overflow: visible !important;
+    white-space: normal !important;
+}
+
+/* Fix for container max-width issues */
+@media screen and (max-width: 1200px) {
+    .mil-menu-content .row > .col-xl-5,
+    .mil-menu-content .row > .col-xl-7 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mil-menu-content .row > .col-lg-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .mil-menu-content .row > .col-lg-6:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* ============================================
+   FOOTER DESKTOP LAYOUT FIXES
+   Ensure equal spacing between 3 main columns
+   ============================================ */
+
+/* Desktop - ensure equal spacing between footer columns */
+@media screen and (min-width: 769px) {
+    footer .container .row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    footer .container .row > .col-md-4,
+    footer .container .row > .col-lg-4 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Fix contact info section - align left and prevent overlap */
+    footer .col-md-4:last-child,
+    footer .col-lg-4:last-child {
+        padding-left: 0 !important;
+    }
+    
+    /* Ensure grid layout for contact info doesn't overlap */
+    footer [style*="gridTemplateColumns"] {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    footer [style*="gridTemplateColumns"] > div {
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+}
+
+/* ============================================
+   FOOTER MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+/* Mobile only - fix footer layout and copyright position */
+@media screen and (max-width: 768px) {
+    /* Hide copyright in desktop location on mobile */
+    .mil-footer-copy-desktop {
+        display: none !important;
+    }
+    
+    /* Show copyright at bottom on mobile */
+    .mil-footer-copyright-mobile {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 40px !important;
+        padding-top: 30px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        text-align: center !important;
+    }
+    
+    .mil-footer-copyright-mobile p {
+        margin: 0 !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+    }
+    
+    /* Fix footer columns stacking on mobile */
+    footer .container .row {
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+    }
+    
+    footer .container .row > [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-bottom: 40px !important;
+    }
+    
+    footer .container .row > [class*="col-"]:last-of-type {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Fix footer menu spacing */
+    .mil-footer-menu {
+        margin-bottom: 40px !important;
+    }
+    
+    /* Fix footer bottom info spacing */
+    .mil-footer-bottom-info {
+        margin-top: 20px !important;
+    }
+    
+    /* Make contact info vertical (single column) on mobile - footer */
+    /* Target the flex container - use more specific selectors */
+    footer .container .row .col-md-4:last-child > div,
+    footer .container .row .col-lg-4:last-child > div,
+    footer .mi-invert-fix .container .row .col-md-4:last-child > div,
+    footer .mi-invert-fix .container .row .col-lg-4:last-child > div {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+        width: 100% !important;
+        display: flex !important;
+    }
+    
+    /* Target all direct children divs inside the flex container */
+    footer .container .row .col-md-4:last-child > div > div,
+    footer .container .row .col-lg-4:last-child > div > div,
+    footer .mi-invert-fix .container .row .col-md-4:last-child > div > div,
+    footer .mi-invert-fix .container .row .col-lg-4:last-child > div > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        flex-basis: 100% !important;
+        flex-grow: 1 !important;
+        flex-shrink: 1 !important;
+    }
+    
+    /* Override inline flex styles */
+    footer .col-md-4:last-child > div > div[style*="flex: 0 0 auto"],
+    footer .col-md-4:last-child > div > div[style*="flex: 1"],
+    footer .col-lg-4:last-child > div > div[style*="flex: 0 0 auto"],
+    footer .col-lg-4:last-child > div > div[style*="flex: 1"] {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    footer .col-md-4:last-child .mil-menu-list,
+    footer .col-lg-4:last-child .mil-menu-list {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Fix contact info columns on mobile */
+    footer .row .col-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 30px !important;
+    }
+    
+    footer .row .col-6:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Ensure no content overlap */
+    footer .mil-menu-list {
+        margin-bottom: 20px !important;
+    }
+    
+    footer .mil-menu-list li {
+        margin-bottom: 12px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Fix email and phone text wrapping - override inline styles */
+    footer .mil-menu-list li a,
+    footer .mil-menu-list li span {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        display: block !important;
+    }
+    
+    /* Override inline white-space: nowrap on mobile */
+    footer [style*="white-space: nowrap"] {
+        white-space: normal !important;
+    }
+    
+    /* Ensure footer container doesn't overflow */
+    footer .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Fix nested row columns on mobile */
+    footer .row .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    footer .row .row > [class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* ============================================
+   HERO TITLE MOBILE RESPONSIVE FIXES
+   Fix text wrapping for "Kiến tạo công nghệ" and "Kết quả bền vững"
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    /* Override white-space: nowrap in hero title on mobile */
+    .mil-banner-content h1 [style*="white-space: nowrap"] {
+        white-space: normal !important;
+        display: block !important;
+    }
+    
+    /* Ensure hero title spans can wrap and break lines */
+    .mil-banner-content h1 .mil-thin {
+        white-space: normal !important;
+        display: block !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Add spacing between lines in hero title */
+    .mil-banner-content h1 .mil-thin:first-of-type {
+        margin-bottom: 0.3em !important;
+    }
+    
+    /* Ensure br tags work on mobile for hero title */
+    .mil-banner-content h1 br {
+        display: block !important;
+        content: "" !important;
+        margin-bottom: 0.3em !important;
+    }
+}
+
+/* ============================================
+   FEATURED PROJECTS MOBILE RESPONSIVE FIXES
+   Change horizontal layout to vertical on mobile
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    /* Change featured projects container to vertical stack */
+    .mil-featured-projects {
+        flex-direction: column !important;
+        gap: 20px !important;
+        display: flex !important;
+    }
+    
+    /* Change each project banner to vertical layout (image on top, content below) */
+    .mil-project-banner {
+        flex-direction: column !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        display: flex !important;
+        gap: 0 !important;
+    }
+    
+    /* Make image full width on mobile */
+    .mil-project-banner-image {
+        width: 100% !important;
+        padding-bottom: 60% !important; /* Maintain aspect ratio */
+        height: auto !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Adjust content padding on mobile */
+    .mil-project-banner-content {
+        padding: 20px !important;
+        width: 100% !important;
+        flex: 1 !important;
+    }
+    
+    /* Override inline styles for mobile */
+    .mil-featured-projects[style*="flexDirection"],
+    .mil-featured-projects[style*="flex-direction"] {
+        flex-direction: column !important;
+    }
+    
+    .mil-project-banner[style*="flexDirection"],
+    .mil-project-banner[style*="flex-direction"] {
+        flex-direction: column !important;
+    }
+    
+    .mil-project-banner-image[style*="width"] {
+        width: 100% !important;
+    }
+}
+
+/* ============================================
+   FOOTER TABLET RESPONSIVE FIXES
+   Fix footer layout for tablet (both portrait and landscape)
+   ============================================ */
+
+/* Tablet portrait: stack columns vertically (769px - 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Fix footer columns layout on tablet portrait */
+    footer .container .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    footer .container .row > [class*="col-md-4"],
+    footer .container .row > [class*="col-lg-4"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-bottom: 40px !important;
+    }
+    
+    footer .container .row > [class*="col-"]:last-of-type {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Ensure copyright is visible at bottom */
+    .mil-footer-copyright-mobile {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 40px !important;
+        padding-top: 30px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        text-align: center !important;
+    }
+    
+    .mil-footer-copyright-mobile p {
+        margin: 0 !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+    }
+    
+    /* Hide desktop copyright on tablet portrait */
+    .mil-footer-copy-desktop {
+        display: none !important;
+    }
+    
+    /* Fix contact info columns on tablet portrait */
+    footer .row .col-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    footer .row .col-6:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Fix footer menu spacing on tablet */
+    .mil-footer-menu {
+        margin-bottom: 30px !important;
+    }
+    
+    /* Fix footer bottom info spacing */
+    .mil-footer-bottom-info {
+        margin-top: 20px !important;
+    }
+    
+    /* Ensure no content overlap on tablet */
+    footer .mil-menu-list {
+        margin-bottom: 15px !important;
+    }
+    
+    footer .mil-menu-list li {
+        margin-bottom: 10px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Fix text wrapping on tablet */
+    footer .mil-menu-list li a,
+    footer .mil-menu-list li span {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Override inline white-space: nowrap on tablet */
+    footer [style*="white-space: nowrap"] {
+        white-space: normal !important;
+    }
+    
+    /* Ensure footer container doesn't overflow */
+    footer .container {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+/* Tablet landscape: 2 columns layout (993px - 1024px) */
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+    /* Fix footer columns layout on tablet landscape */
+    footer .container .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    footer .container .row > [class*="col-md-4"],
+    footer .container .row > [class*="col-lg-4"] {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-bottom: 40px !important;
+    }
+    
+    /* Third column goes to new row */
+    footer .container .row > [class*="col-md-4"]:nth-child(3),
+    footer .container .row > [class*="col-lg-4"]:nth-child(3) {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Show copyright at bottom for tablet landscape - ensure it's visible with high specificity */
+    footer .container .mil-footer-copyright-mobile,
+    footer .mi-invert-fix .container .mil-footer-copyright-mobile,
+    .mil-footer-copyright-mobile {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 40px !important;
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        text-align: center !important;
+        clear: both !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    
+    footer .container .mil-footer-copyright-mobile p,
+    footer .mi-invert-fix .container .mil-footer-copyright-mobile p,
+    .mil-footer-copyright-mobile p {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+        color: inherit !important;
+    }
+    
+    /* Hide desktop copyright on tablet landscape */
+    footer .mil-footer-copy-desktop,
+    footer .mil-footer-bottom-info .mil-footer-copy-desktop {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* Fix footer menu spacing on tablet */
+    .mil-footer-menu {
+        margin-bottom: 30px !important;
+    }
+    
+    /* Fix footer bottom info spacing */
+    .mil-footer-bottom-info {
+        margin-top: 20px !important;
+    }
+    
+    /* Ensure no content overlap on tablet */
+    footer .mil-menu-list {
+        margin-bottom: 15px !important;
+    }
+    
+    footer .mil-menu-list li {
+        margin-bottom: 10px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Fix text wrapping on tablet */
+    footer .mil-menu-list li a,
+    footer .mil-menu-list li span {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Override inline white-space: nowrap on tablet */
+    footer [style*="white-space: nowrap"] {
+        white-space: normal !important;
+    }
+    
+    /* Ensure footer container doesn't overflow */
+    footer .container {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+/* Desktop - hide mobile copyright, show desktop copyright */
+/* Note: This only applies to screens wider than 1024px, not tablet landscape (993-1024px) */
+@media screen and (min-width: 1025px) {
+    .mil-footer-copyright-mobile {
+        display: none !important;
+    }
+    
+    .mil-footer-copy-desktop {
+        display: block !important;
+    }
+}

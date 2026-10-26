@@ -1,42 +1,24 @@
 ---
 #preview details
-title: "Creative Consulting Concept Development"
-preview_title: "Creative Consulting <br>Concept Development"
-short: "Our creative agency is a team of professionals focused on helping your brand grow."
+title: "Khoa học Dữ liệu & Quản trị"
+preview_title: "Khoa học Dữ liệu <br>& Quản trị"
+short: "Biến dữ liệu thô thành \"Nguồn sự thật duy nhất\" dẫn dắt mọi quyết định chiến lược."
 
 #full details
-introTitle: Creative <span class="mil-thin">Consulting</span><br> and <span class="mil-thin">Concept</span> Development
+introTitle: Khoa học Dữ liệu<br> và <span class="mil-thin">Quản trị</span>
 
 description:
-  title: Your <span class="mil-thin">Approach</span> <br>and <span class="mil-thin">Work Specifics</span>
-  content: At our agency, we have a unique approach to web design and development. We believe in creating websites that not only look great but also perform well in terms of user experience, functionality, and search engine optimization.
+  title: "Biến dữ liệu thô thành <span class=\"mil-thin\">\"Nguồn sự thật duy nhất\"</span>"
+  content: "<p>Dữ liệu thiếu quản trị là một gánh nặng; dữ liệu thiếu khoa học chỉ đơn thuần là việc lưu trữ.</p><p>Chúng tôi không coi dữ liệu là một kho lưu trữ tĩnh, mà là một sản phẩm sống — liên tục được tinh lọc, bảo mật và dân chủ hóa.</p><p>Bằng cách hài hòa giữa 'Nguồn sự thật duy nhất' (Single Source of Truth) với trí tuệ dự báo, chúng tôi biến những nhiễu loạn thô thành một chiếc kim chỉ nam đáng tin cậy, dẫn dắt mọi quyết định chiến lược với độ chính xác tuyệt đối.</p>"
   button:
-    link: /projects
-    label: View works
+    link: /contact
+    label: Liên hệ ngay
 
 list:
   items:
-    - label: "UX Audits"
-      value: "
-      <p>A UX audit is a service that evaluates the user experience (UX) of a website. It involves analyzing the website's design, functionality, and content to identify areas of improvement that can enhance the user's overall experience.</p>
-      <p>During a UX audit, a team of UX experts will conduct a thorough review of the website and provide a comprehensive report that outlines specific recommendations for improving the website's usability, accessibility, and overall user experience.</p>
-      <p>The audit may cover various aspects of the website, such as navigation, layout, visual design, content structure, and mobile responsiveness. The goal is to identify any pain points or obstacles that users may encounter while browsing the website and provide actionable recommendations to improve their experience.</p>
-      <p>In summary, a UX audit can help website owners identify areas of improvement that can enhance their website's user experience and increase user engagement and satisfaction.</p>
-      "
+    - label: "1. Năng lực chính"
+      value: "<div><h4>a. Nền tảng Dữ liệu Hiện đại</h4><p>Hợp nhất các ốc đảo dữ liệu rời rạc thành một \"Nguồn sự thật duy nhất\" thông qua kiến trúc Lakehouse có khả năng mở rộng và kỹ thuật chất lượng tự động.</p></div><div><h4>b. Phân tích Nâng cao & Trí tuệ</h4><p>Chuyển hóa các báo cáo tĩnh thành tầm nhìn dự báo và thông tin chuyên sâu tự phục vụ, thúc đẩy các quyết định dựa trên dữ liệu trong thời gian thực. (Chuyển dịch từ \"Điều gì đã xảy ra?\" sang \"Điều gì sẽ xảy ra tiếp theo?\").</p></div><div><h4>c. Quản trị & Bảo mật</h4><p>Dân chủ hóa quyền truy cập dữ liệu trong khi vẫn thực thi kiểm soát tuyệt đối, tuân thủ quyền riêng tư và khả năng kiểm toán tại mọi điểm chạm. (Đảm bảo dữ liệu dễ tìm kiếm nhưng không thể bị lạm dụng).</p></div>"
 
-    - label: "Design thinking"
-      value: "
-      <p>Design thinking is a problem-solving approach that emphasizes empathy, creativity, and collaboration. It involves understanding the needs and perspectives of users, identifying and defining the problem, generating multiple possible solutions, prototyping and testing those solutions, and iterating based on feedback.</p>
-      <p>Design thinking encourages a human-centered approach to innovation and is often used in fields such as product design, user experience (UX) design, and business strategy to create user-centric and innovative solutions. It promotes a mindset that embraces experimentation, iteration, and continuous learning throughout the design process.</p>
-      "
-
-    - label: "Wireframing"
-      value: "
-      <p>Wireframing is a vital step in web design where a visual representation of a website's structure is created. It focuses on layout and user experience, using basic shapes and lines to outline elements like headers, menus, and content sections. Wireframes establish the website's architecture and functionality, facilitating communication between designers, developers, and clients. They serve as a blueprint for user-friendly websites, setting the foundation for design and development.</p>
-      "
-
-    - label: "Methodologies"
-      value: "
-      <p>Libero quam alias tempora facilis necessitatibus quis officiis voluptatem architecto harum exercitationem quidem illum eligendi. Veniam non vitae, nemo dolor tempora, necessitatibus enim sapiente quam voluptas architecto minima omnis sequi aperiam aliquam vel quo reprehenderit, tempore tenetur. Architecto dolorem assumenda voluptas, odio nemo vero illo praesentium pariatur, ut perspiciatis, est itaque minus ratione vitae laboriosam molestiae.</p>
-      "
+    - label: "2. Case Study: Từ Ngôn ngữ Tự nhiên đến Trí tuệ Chiến lược"
+      value: "<div><p><em>\"Chuyển đổi các dòng dữ liệu thô thành thông tin điều hành ngay lập tức — không cần lập trình.\"</em></p></div><div><h4>1. ĐẦU VÀO</h4><p><strong>Truy vấn của người dùng:</strong> \"Tóm tắt hiệu quả kinh doanh trong 14 ngày qua.\"</p><p><strong>Giải mã ngữ cảnh:</strong> Tự động xác định khung thời gian và ý đồ kinh doanh (Doanh thu + Pipeline + Đội ngũ) mà không cần nhắc nhở thêm.</p></div><div><h4>2. ĐỘNG CƠ</h4><p><strong>Học hỏi sơ đồ:</strong> Ngay lập tức ánh xạ ngôn ngữ tự nhiên vào các bảng cơ sở dữ liệu phức tạp để thực thi các truy vấn chính xác mà không cần SQL.</p><p><strong>Phát hiện bất thường:</strong> Chủ động quét rủi ro, nhận diện 3 giao dịch giá trị cao đang bị đình trệ mà các báo cáo tiêu chuẩn thường bỏ sót.</p></div><div><h4>3. KẾT QUẢ</h4><p><strong>Bức tranh tức thời:</strong> Cung cấp Doanh thu, Tăng trưởng theo tháng và Tỷ lệ chuyển đổi chỉ trong vài giây.</p><p><strong>Hướng dẫn chủ động:</strong> Gợi ý các bước tiếp theo cụ thể.</p></div>"
 ---
