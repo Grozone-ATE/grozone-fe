@@ -75,7 +75,7 @@ const DefaultFooter = ( { extraClass } ) => {
                             </div>
                             <div style={{flex: '1', minWidth: '0'}}>
                                 <ul className="mil-menu-list mil-up" style={{marginBottom: '0'}}>
-                                    <li className="mil-light-soft" style={{marginBottom: '20px'}}>
+                                    <li className="mil-light-soft" style={{marginBottom: '0'}}>
                                         <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
                                             Founder / Strategist
                                         </span>
@@ -83,15 +83,6 @@ const DefaultFooter = ( { extraClass } ) => {
                                             Dinh Thanh Thuan (Uruz)
                                         </span>
                                         <a href="tel:0967882713" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>096.788.2713</a>
-                                    </li>
-                                    <li className="mil-light-soft" style={{marginBottom: '0'}}>
-                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap', fontWeight: 500}}>
-                                            Business Development Manager
-                                        </span>
-                                        <span className="mil-light-soft" style={{display: 'block', fontSize: '16px', marginBottom: '4px', whiteSpace: 'nowrap'}}>
-                                            Tran Thanh Liem
-                                        </span>
-                                        <a href="tel:0838673344" className="mil-light-soft" style={{fontSize: '16px', whiteSpace: 'nowrap', display: 'block'}}>083.867.3344</a>
                                     </li>
                                 </ul>
                             </div>
@@ -112,5 +103,3 @@ const DefaultFooter = ( { extraClass } ) => {
   );
 };
 export default DefaultFooter;
-
-
