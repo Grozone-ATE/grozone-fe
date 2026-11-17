@@ -118,12 +118,17 @@ export async function getStaticPaths() {
 
     return {
       paths,
-      fallback: 'blocking'
+      fallback: false
     }
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getServiceData(params.id)
+    const postData = await getServiceData(params?.id)
+    if (!postData) {
+      return {
+        notFound: true
+      }
+    }
     const relatedServices = await getRelatedServices(params.id)
 
     return {

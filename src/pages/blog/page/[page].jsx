@@ -67,7 +67,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps( { params } ) {
-    const page = Number(params?.page) || 1
+    const rawPage = String(params?.page ?? '')
+    if (!/^[1-9]\d*$/.test(rawPage)) {
+      return {
+        notFound: true,
+      }
+    }
+    const page = Number(rawPage)
     const { posts, total } = getPaginatedPostsData( PER_PAGE, page );
     const categoriesData = await getSortedCategoriesData()
   
