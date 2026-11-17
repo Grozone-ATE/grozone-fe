@@ -8,7 +8,7 @@ const projectsDirectory = path.join(process.cwd(), 'src/data/projects')
 
 export function getSortedProjectsData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(projectsDirectory)
+  const fileNames = fs.readdirSync(projectsDirectory).filter(fileName => fileName.endsWith('.md'))
   const allData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
@@ -38,7 +38,7 @@ export function getSortedProjectsData() {
 
 export function getRelatedProjects(current_id) {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(projectsDirectory)
+  const fileNames = fs.readdirSync(projectsDirectory).filter(fileName => fileName.endsWith('.md'))
   const allData = [];
 
   fileNames.map(fileName => {
@@ -75,7 +75,7 @@ export function getRelatedProjects(current_id) {
 
 export function getAllProjectsIds() {
   const fileNames = fs.readdirSync(projectsDirectory)
-  return fileNames.map(fileName => {
+  return fileNames.filter(fileName => fileName.endsWith('.md')).map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, '')
@@ -85,7 +85,13 @@ export function getAllProjectsIds() {
 }
 
 export async function getProjectData(id) {
+  if (typeof id !== 'string' || !/^[A-Za-z0-9_-]+$/.test(id)) {
+    return null
+  }
   const fullPath = path.join(projectsDirectory, `${id}.md`)
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

@@ -10,7 +10,7 @@ export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  const allPostsData = fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -41,7 +41,7 @@ export function getCategoryPosts(cat_id) {
   // Get file names under /posts
   const allData = [];
   const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  const allPostsData = fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -77,7 +77,7 @@ export function getCategoryPosts(cat_id) {
 export function getPaginatedPostsData(limit, page) {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  const allPostsData = fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -112,7 +112,7 @@ export function getFeaturedPostsData(ids) {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allData = []
-  fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -147,7 +147,7 @@ export function getRelatedPosts(current_id) {
   const fileNames = fs.readdirSync(postsDirectory)
   const allData = [];
 
-  fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -181,7 +181,7 @@ export function getRelatedPosts(current_id) {
 
 export function getAllPostsIds() {
   const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  return fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, '')
@@ -191,7 +191,13 @@ export function getAllPostsIds() {
 }
 
 export async function getPostData(id) {
+  if (typeof id !== 'string' || !/^[A-Za-z0-9_-]+$/.test(id)) {
+    return null
+  }
   const fullPath = path.join(postsDirectory, `${id}.md`)
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

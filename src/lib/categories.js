@@ -8,7 +8,7 @@ const categoriesDirectory = path.join(process.cwd(), 'src/data/posts/categories'
 
 export function getSortedCategoriesData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(categoriesDirectory)
+  const fileNames = fs.readdirSync(categoriesDirectory).filter(fileName => fileName.endsWith('.md'))
   const allPostsData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
@@ -38,7 +38,7 @@ export function getSortedCategoriesData() {
 
 export function getAllCategoriesIds() {
   const fileNames = fs.readdirSync(categoriesDirectory)
-  return fileNames.map(fileName => {
+  return fileNames.filter(fileName => fileName.endsWith('.md')).map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, '')
@@ -48,7 +48,13 @@ export function getAllCategoriesIds() {
 }
 
 export async function getCategoryData(id) {
+  if (typeof id !== 'string' || !/^[A-Za-z0-9_-]+$/.test(id)) {
+    return null
+  }
   const fullPath = path.join(categoriesDirectory, `${id}.md`)
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

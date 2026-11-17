@@ -1,9 +1,9 @@
-# Grozone Production Site — grozone.co & www.grozone.co (and legacy grozone.vn)
+# Grozone Production Site — grozone.vn & www.grozone.vn
 # Upstream grozone-fe is on bookforge-internal network.
 # Automatic HTTPS via HTTP-01 ACME.
 # Point DNS A records (@ and www) to 157.66.101.217.
 
-grozone.co, www.grozone.co, grozone.vn, www.grozone.vn {
+grozone.vn, www.grozone.vn {
 	encode zstd gzip
 
 	header {
@@ -25,6 +25,16 @@ grozone.co, www.grozone.co, grozone.vn, www.grozone.vn {
 		path /img/*
 	}
 	header @public_assets Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
+
+	@scanner_probes {
+		not path /.well-known/*
+		path_regexp probe (?i)(?:^/\.|/\.\.(?:/|$)|/proc/self/|/etc/passwd|/wp-(?:admin|login|content|includes)(?:/|\.php|$)|/xmlrpc\.php$|/phpmyadmin(?:/|$))
+	}
+	@unnormalized_uri {
+		vars_regexp orig_probe {http.request.orig_uri.path} (?i)(?://|/\.(?:/|$)|/\.\.(?:/|$)|%2e%2e|%2f)
+	}
+	respond @scanner_probes 404
+	respond @unnormalized_uri 404
 
 	reverse_proxy grozone-fe:3000 {
 		transport http {

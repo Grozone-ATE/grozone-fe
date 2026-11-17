@@ -8,7 +8,7 @@ const servicesDirectory = path.join(process.cwd(), 'src/data/services')
 
 export function getSortedServicesData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(servicesDirectory)
+  const fileNames = fs.readdirSync(servicesDirectory).filter(fileName => fileName.endsWith('.md'))
   const allData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
@@ -41,7 +41,7 @@ export function getRelatedServices(current_id) {
   const fileNames = fs.readdirSync(servicesDirectory)
   const allData = [];
 
-  fileNames.filter((fileName) => fileName.includes('.md')).map(fileName => {
+  fileNames.filter((fileName) => fileName.endsWith('.md')).map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -87,7 +87,13 @@ export function getAllServicesIds() {
 }
 
 export async function getServiceData(id) {
+  if (typeof id !== 'string' || !/^[A-Za-z0-9_-]+$/.test(id)) {
+    return null
+  }
   const fullPath = path.join(servicesDirectory, `${id}.md`)
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

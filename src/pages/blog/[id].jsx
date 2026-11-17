@@ -82,7 +82,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id)
+    const postData = await getPostData(params?.id)
+    if (!postData) {
+      return {
+        notFound: true
+      }
+    }
     const relatedPosts = await getRelatedPosts(params.id)
 
     return {

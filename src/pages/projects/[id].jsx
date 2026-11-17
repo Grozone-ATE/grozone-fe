@@ -83,7 +83,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getProjectData(params.id)
+    const postData = await getProjectData(params?.id)
+    if (!postData) {
+      return {
+        notFound: true
+      }
+    }
     const allProjects = await getSortedProjectsData()
 
     return {

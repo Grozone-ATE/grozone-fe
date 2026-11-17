@@ -81,7 +81,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const categoryData = await getCategoryData(params.id)
+    const categoryData = await getCategoryData(params?.id)
+    if (!categoryData) {
+      return {
+        notFound: true
+      }
+    }
     const categoriesData = await getSortedCategoriesData()
     const categoryPosts = await getCategoryPosts(params.id)
 
